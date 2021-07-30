@@ -132,7 +132,7 @@ colback=kcblue,colframe=kcdarkblue,fonttitle=\bfseries, title=Key Concept~#2, af
 
 \title{Analisis político con R}
 \author{Jeshua Romero Guadarrama}
-\date{2021-07-29}
+\date{2021-07-30}
 
 \begin{document}
 \maketitle
@@ -157,9 +157,13 @@ Publicado por Jeshua Romero Guadarrama en colaboración con JeshuaNomics:
 { Instagram}
 
 Jeshua Romero Guadarrama es economista y actuario por la Universidad Nacional Autónoma de México, quien ha construido el presente proyecto en colaboración con JeshuaNomics, ubicado en la Ciudad de México, se puede contactar mediante el siguiente correo electrónico: \href{mailto:jeshuanomics@gmail.com}{\nolinkurl{jeshuanomics@gmail.com}}.
-Última actualización el jueves 29 del 07 de 2021
+Última actualización el viernes 30 del 07 de 2021
 
-El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es \textbf{Teorías políticas contemporáneas: Una introducción}, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg).
+Los estudiantes con poca experiencia en el análisis avanzado de políticas a menudo tienen dificultades para entender los beneficios de desarrollar habilidades de programación estadística en \textbf{R} al momento de aplicar diversos métodos descriptivos e inferenciales. Análisis político con R por Jeshua Romero Guadarrama (2021), ofrece una introducción interactiva a los aspectos esenciales de la programación por medio del lenguaje y software estadístico \textbf{R}, así como una guía para la aplicación de la teoría política y análisis detallado de políticas públicas en entornos específicos. En otras palabras, el objetivo es que los estudiantes se adentren al mundo de la política aplicada mediante ejemplos empíricos presentados en la vida diaria y haciendo uso de las habilidades de programación recién adquiridas. Dicho objetivo se encuentra respaldado por ejercicios de programación interactivos y la incorporación de visualizaciones dinámicas de conceptos fundamentales mediante la flexibilidad de JavaScript, a través de la biblioteca D3.js.
+
+En los últimos años, el lenguaje de programación estadística \textbf{R} se ha convertido en una parte integral del plan de estudios de las clases de análisis político y estadística que se imparten en las universidades. Regularmente una gran parte de los estudiantes no han estado expuestos a ningún lenguaje de programación antes y, por lo tanto, tienen dificultades para participar en el aprendizaje de \textbf{R} por sí mismos. Con poca experiencia en el análisis avanzado de estadísticas, es natural que los novicios tengan dificultades para comprender los beneficios de desarrollar habilidades en \textbf{R} para aprender y aplicar la estadística. Estos incluyen particularmente la capacidad de realizar, documentar y comunicar estudios empíricos y tener las facilidades para programar estudios de simulación, lo cual es útil para, por ejemplo, comprender y validar teoremas que generalmente no se asimilan o entienden fácilmente con el estudio de las fórmulas. Al ser un economista aplicado y analista político, me gustaría que mis colegas desarrollen capacidades de gran valor; en consecuencia, deseo compartir con las nuevas generaciones de politólogos y economistas mis conocimientos.
+
+En lugar de confrontar a los estudiantes con ejercicios de codificación puros y literatura clásica complementaria, he pensado que sería mejor proporcionar material de aprendizaje interactivo que combine el código en \textbf{R} con el contenido del curso de texto \emph{Introducción a la Econometría} de \citet{stock2015} que sirve de base para el presente material. El presente trabajo es un complemento empírico interactivo al estilo de un informe de investigación reproducible que permite a los estudiantes no solo aprender cómo los resultados de los estudios de casos se pueden replicar con \textbf{R}, sino que también fortalece su capacidad para utilizar las habilidades recién adquiridas en otras aplicaciones empíricas.
 
 \hypertarget{las-convenciones-usadas-en-el-presente-curso}{%
 \subsubsection*{Las convenciones usadas en el presente curso}\label{las-convenciones-usadas-en-el-presente-curso}}
@@ -167,11 +171,11 @@ El presente texto nace al calor de las exigencias pedagógicas de todos los ciud
 
 \begin{itemize}
 \item
-  El texto \emph{en cursiva} indica nuevos términos, nombres y similares.
+  El texto \emph{en cursiva} indica nuevos términos, nombres, botones y similares.
 \item
-  El texto \textbf{en negrita} se usa generalmente en párrafos para referirse a términos que se recomienda memorizar.
+  El texto \textbf{en negrita} se usa generalmente en párrafos para referirse al código \textbf{R}. Esto incluye comandos, variables, funciones, tipos de datos, bases de datos y nombres de archivos.
 \item
-  Texto de ancho constante sobre fondo gris indica un enfoque teórico o metodológico común en la Práctica por la Ciencia Política.
+  Texto de ancho constante sobre fondo gris indica un código \textbf{R} que usted puede escribir literalmente. Puede aparecer en párrafos para una mejor distinción entre declaraciones de código ejecutables y no ejecutables, pero se encontrará principalmente en forma de grandes bloques de código \textbf{R}. Estos bloques se denominan fragmentos de código.
 \end{itemize}
 
 \hypertarget{reconocimiento}{%
@@ -179,313 +183,6 @@ El presente texto nace al calor de las exigencias pedagógicas de todos los ciud
 \addcontentsline{toc}{subsubsection}{Reconocimiento}
 
 A mi alma máter: Universidad Nacional Autónoma de México (Facultad de Economía y Facultad de Ciencias). Por brindarme valiosas oportunidades que coadyuvaron a mi formación.
-
-\hypertarget{uxedndice-de-contenido}{%
-\section*{Índice de contenido}\label{uxedndice-de-contenido}}
-\addcontentsline{toc}{section}{Índice de contenido}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Introducción
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Consideraciones generales: La teoría científica social.
-\item
-  Cuestiones metodológicas.
-\item
-  Principios actuales.
-\item
-  Críticas a la ciencia.
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  La teoría política
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Primera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Fases de la actividad científica: Teorías representativas y normativas.
-  \item
-    La descripción.
-  \item
-    La explicación.
-  \item
-    La generalización.
-  \item
-    Las teoría y cuasi-teorías.
-  \item
-    Clasificaciones.
-  \item
-    Dicotomías.
-  \item
-    Analogías.
-  \end{itemize}
-\item
-  Segunda parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    La evaluación del fenómeno político: Ciencia y valoración.
-  \item
-    Los componentes del juicio normativo: descripción, evaluación técnica, juicio normativo, justificación del juicio normativo.
-  \end{itemize}
-\item
-  Tercera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    El concepto teórico político.
-  \item
-    Comparaciones con otras ciencias: Teoría y filosofía política.
-  \item
-    Ciencia política como disciplina autónoma.
-  \item
-    Teoría política e historia de las ideas.
-  \item
-    Teorías generales y de alcance medio.
-  \item
-    Dificultades para la elaboración teórica.
-  \end{itemize}
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  Las teorías normativas
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Primera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Rasgos generales: Condiciones históricas y trasfondos ideológicos.
-  \item
-    Clasificación de las teorías normativas.
-  \item
-    Raíces intelectuales.
-  \item
-    Fundamentos.
-  \item
-    Finalidad.
-  \item
-    Relaciones.
-  \item
-    Metodología.
-  \end{itemize}
-\item
-  Segunda parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Teorías políticas normativas clásicas: chinas, hindúes, judías, islámicas, griegas, romanas, medievales y modernas.
-  \end{itemize}
-\item
-  Tercera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Teorías políticas normativas contemporáneas: El asalto al absolutismo.
-  \item
-    Las consecuencias de la Revolución Francesa.
-  \item
-    Socialismos y nacionalismos.
-  \item
-    Las teorías normativas actuales.
-  \end{itemize}
-\item
-  Cuarta parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Enfoques metodológicos usuales.
-  \item
-    Métodos: histórico, analógico, práctico, tópico, pedagógico.
-  \item
-    El pragmatismo metodológico.
-  \end{itemize}
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  Las teorías empírico-analíticas
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Primera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Rasgos generales: El positivismo, el empirismo y sus derivados.
-  \item
-    El objeto y el método.
-  \item
-    Problemas actuales.
-  \end{itemize}
-\item
-  Segunda parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Behaviorismo, estructural-funcionalismo y enfoque sistémico.
-  \item
-    El enfoque comparatista: Descripción de los enfoques.
-  \item
-    Síntesis de obras teóricas de estas corrientes.
-  \end{itemize}
-\item
-  Tercera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Las explicaciones de base psicológica individual: La Psicología del estímulo-respuesta.
-  \item
-    La psicología de la Gestalt.
-  \item
-    La teoría del campo.
-  \item
-    El freudismo ortodoxo.
-  \item
-    El neofreudismo.
-  \end{itemize}
-\item
-  Cuarta parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    El Formalismo.
-  \item
-    La teoría de los juegos.
-  \item
-    La Teoría de la información y la cibernética.
-  \item
-    Modelos y simulaciones.
-  \end{itemize}
-\item
-  Quinta parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Enfoques metodológicos usuales: Puntos en común.
-  \item
-    Particularidades metodológicas.
-  \item
-    Reflexiones sobre el lenguaje y la elaboración conceptual.
-  \end{itemize}
-\end{itemize}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\tightlist
-\item
-  Las teorías critico-dialécticas
-\end{enumerate}
-
-\begin{itemize}
-\tightlist
-\item
-  Primera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Introducción general: Repercusiones del tema
-  \item
-    Aportes perdurables del marxismo.
-  \item
-    El marxismo clásico. Rasgos generales: Marx y Engels.
-  \item
-    Contenido del marxismo.
-  \item
-    Primera y segunda generación de sucesores.
-  \end{itemize}
-\item
-  Segunda parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    El marxismo occidental: La escuela de Frankfurt.
-  \item
-    Otros intelectuales europeos marxistas.
-  \item
-    Intelectuales norteamericanos marxistas.
-  \item
-    La Nueva Izquierda.
-  \end{itemize}
-\item
-  Tercera parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    La labor teórica en los países socialistas europeos.
-  \end{itemize}
-\item
-  Cuarta parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Las teorías crítico-dialécticas en los países del tercer mundo: El maoísmo y sus derivados asiáticos.
-  \item
-    El socialismo africano.
-  \item
-    El marxismo latinoamericano: Justo, Mariátegui y Haya de la Torre.
-  \item
-    La nueva izquierda latinoamericana, el castrismo, el sandinismo, el allendismo chileno.
-  \item
-    Relaciones del marxismo latinoamericano con la teología de la liberación.
-  \end{itemize}
-\item
-  Quinta parte
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Enfoques metodológicos usuales: Materialismo dialéctico y materialismo histórico.
-  \item
-    Teoría y praxis.
-  \item
-    Otros aportes metodológicos.
-  \end{itemize}
-\end{itemize}
 
 \begin{itemize}
 \tightlist

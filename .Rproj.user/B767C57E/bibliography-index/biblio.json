@@ -1,0 +1,4516 @@
+{
+    "sources": [
+        {
+            "URL": "http://www.urfie.net/",
+            "author": [
+                {
+                    "family": "Heiss",
+                    "given": "Florian"
+                }
+            ],
+            "id": "heiss2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "CreateSpace Independent Publishing Platform",
+            "title": "Using R for Introductory Econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "C."
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "A."
+                }
+            ],
+            "id": "kleiber2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "title": "Applied Econometrics with R",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Stock",
+                    "given": "J. H."
+                },
+                {
+                    "family": "Watson",
+                    "given": "M. W."
+                }
+            ],
+            "id": "stock2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Pearson Education Limited",
+            "title": "Introduction to Econometrics, Third Update, Global Edition",
+            "type": "book"
+        },
+        {
+            "URL": "http://yihui.name/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wooldridge",
+                    "given": "Jeffrey"
+                }
+            ],
+            "edition": "Sixth",
+            "id": "wooldridge2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Cengage Learning",
+            "title": "Introductory Econometrics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "White",
+                    "given": "Halbert"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "white1980",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "page": "pp. 817-838",
+            "publisher": "The Econometric Society",
+            "title": "A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "author": [
+                {
+                    "family": "Card",
+                    "given": "D."
+                },
+                {
+                    "family": "Krueger",
+                    "given": "Alan B."
+                }
+            ],
+            "container-title": "The American Economic Review",
+            "id": "card1994",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "772-793",
+            "title": "Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania",
+            "title-short": "Minimum Wages and Employment",
+            "type": "article-journal",
+            "volume": "84"
+        },
+        {
+            "author": [
+                {
+                    "family": "Card",
+                    "given": "D."
+                }
+            ],
+            "id": "card1993",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "publisher": "National Bureau of Economic Research",
+            "title": "Using geographic variation in college proximity to estimate the return to schooling",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
+                    "family": "Granger",
+                    "given": "C. W. J."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "granger1969",
+            "issued": {
+                "date-parts": [
+                    [
+                        1969
+                    ]
+                ]
+            },
+            "page": "424-438",
+            "publisher": "The Econometric Society",
+            "title": "Investigating Causal Relations by Econometric Models and Cross-Spectral Methods",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "ISSN": "01621459",
+            "author": [
+                {
+                    "family": "Dickey",
+                    "given": "David A."
+                },
+                {
+                    "family": "Fuller",
+                    "given": "Wayne A."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "dickey1979",
+            "issue": "366",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "pp. 427-431",
+            "publisher": "American Statistical Association",
+            "title": "Distribution of the Estimators for Autoregressive Time Series with a Unit Root",
+            "type": "article-journal",
+            "volume": "74"
+        },
+        {
+            "author": [
+                {
+                    "family": "Chow",
+                    "given": "Gregory C."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "chow1960",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1960
+                    ]
+                ]
+            },
+            "page": "591-605",
+            "publisher": "The Econometric Society",
+            "title": "Tests of Equality Between Sets of Coefficients in Two Linear Regressions",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "DOI": "10.1080/01621459.1960.10482067",
+            "author": [
+                {
+                    "family": "Quandt",
+                    "given": "Richard E."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "quandt1960",
+            "issue": "290",
+            "issued": {
+                "date-parts": [
+                    [
+                        1960
+                    ]
+                ]
+            },
+            "page": "324-330",
+            "publisher": "Taylor & Francis",
+            "title": "Tests of the Hypothesis That a Linear Regression System Obeys Two Separate Regimes",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "author": [
+                {
+                    "family": "Newey",
+                    "given": "Whitney K."
+                },
+                {
+                    "family": "West",
+                    "given": "Kenneth D."
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "newey1987",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "page": "703-08",
+            "title": "A Simple, Positive Semi-definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "DOI": "10.1080/01621459.1949.10483290",
+            "author": [
+                {
+                    "family": "Cochrane",
+                    "given": "D."
+                },
+                {
+                    "family": "Orcutt",
+                    "given": "G. H"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "cochrane1949",
+            "issue": "245",
+            "issued": {
+                "date-parts": [
+                    [
+                        1949
+                    ]
+                ]
+            },
+            "page": "32-61",
+            "publisher": "Taylor & Francis",
+            "title": "Application of Least Squares Regression to Relationships Containing Auto-Correlated Error Terms",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Elliott",
+                    "given": "Graham"
+                },
+                {
+                    "family": "Rothenberg",
+                    "given": "Thomas J"
+                },
+                {
+                    "family": "Stock",
+                    "given": "James H"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "elliott1996",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1996
+                    ]
+                ]
+            },
+            "page": "813-836",
+            "title": "Efficient Tests for an Autoregressive Unit Root",
+            "type": "article-journal",
+            "volume": "64"
+        },
+        {
+            "author": [
+                {
+                    "family": "Engle",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Granger",
+                    "given": "Clive"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "engle1987",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "page": "251-76",
+            "title": "Co-integration and Error Correction: Representation, Estimation and Testing",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "author": [
+                {
+                    "family": "Engle",
+                    "given": "Robert"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "engle1982",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1982
+                    ]
+                ]
+            },
+            "page": "987-1007",
+            "title": "Autoregressive conditional heteroscedasticity with estimates of the variance of united kingdom inflation",
+            "type": "article-journal",
+            "volume": "50"
+        },
+        {
+            "author": [
+                {
+                    "family": "MacKinnon",
+                    "given": "James G"
+                },
+                {
+                    "family": "White",
+                    "given": "Halbert"
+                }
+            ],
+            "container-title": "Journal of Econometrics",
+            "id": "mackinnon1985",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1985
+                    ]
+                ]
+            },
+            "page": "305-325",
+            "publisher": "Elsevier",
+            "title": "Some heteroskedasticity-consistent covariance matrix estimators with improved finite sample properties",
+            "type": "article-journal",
+            "volume": "29"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bollerslev",
+                    "given": "Tim"
+                }
+            ],
+            "container-title": "Journal of Econometrics",
+            "id": "bollerslev1986",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1986
+                    ]
+                ]
+            },
+            "page": "307-327",
+            "title": "Generalized Autoregressive Conditional Heteroskedasticity",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
+            "URL": "https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf",
+            "author": [
+                {
+                    "family": "Venables",
+                    "given": "W. N."
+                },
+                {
+                    "family": "Smith",
+                    "given": "D. M."
+                }
+            ],
+            "id": "venables2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "title": "An Introduction to R",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=AER",
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "R-AER",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "AER: Applied Econometrics with R",
+            "type": "book",
+            "version": "1.2-9"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A Language and Environment for Statistical Computing",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "0.22"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=car",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-car",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "car: Companion to Applied Regression",
+            "type": "book",
+            "version": "3.0-10"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=carData",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-carData",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "carData: Companion to Applied Regression Data Sets",
+            "type": "book",
+            "version": "3.0-4"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=devtools",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                }
+            ],
+            "id": "R-devtools",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "devtools: Tools to Make Developing R Packages Easier",
+            "type": "book",
+            "version": "2.4.0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "François",
+                    "given": "Romain"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                }
+            ],
+            "id": "R-dplyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "dplyr: A Grammar of Data Manipulation",
+            "type": "book",
+            "version": "1.0.5"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dynlm",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "R-dynlm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "dynlm: Dynamic Linear Regression",
+            "type": "book",
+            "version": "0.3-6"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                }
+            ],
+            "id": "R-fBasics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "fBasics: Rmetrics - Markets and Basic Statistics",
+            "type": "book",
+            "version": "3042.89.1"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                },
+                {
+                    "family": "Boudt",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Chausse",
+                    "given": "Pierre"
+                },
+                {
+                    "family": "Miklovac",
+                    "given": "Michal"
+                }
+            ],
+            "id": "R-fGarch",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "fGarch: Rmetrics - Autoregressive Conditional Heteroskedastic Modelling",
+            "type": "book",
+            "version": "3042.83.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=forecast",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob"
+                },
+                {
+                    "family": "Athanasopoulos",
+                    "given": "George"
+                },
+                {
+                    "family": "Bergmeir",
+                    "given": "Christoph"
+                },
+                {
+                    "family": "Caceres",
+                    "given": "Gabriel"
+                },
+                {
+                    "family": "Chhay",
+                    "given": "Leanne"
+                },
+                {
+                    "family": "O’Hara-Wild",
+                    "given": "Mitchell"
+                },
+                {
+                    "family": "Petropoulos",
+                    "given": "Fotios"
+                },
+                {
+                    "family": "Razbash",
+                    "given": "Slava"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Earo"
+                },
+                {
+                    "family": "Yasmeen",
+                    "given": "Farah"
+                }
+            ],
+            "id": "R-forecast",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "forecast: Forecasting Functions for Time Series and Linear Models",
+            "type": "book",
+            "version": "8.14"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                },
+                {
+                    "family": "Dunnington",
+                    "given": "Dewey"
+                }
+            ],
+            "id": "R-ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics",
+            "type": "book",
+            "version": "3.3.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=kableExtra",
+            "author": [
+                {
+                    "family": "Zhu",
+                    "given": "Hao"
+                }
+            ],
+            "id": "R-kableExtra",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "kableExtra: Construct Complex Table with kable and Pipe Syntax",
+            "type": "book",
+            "version": "1.3.4"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "knitr: A General-Purpose Package for Dynamic Report Generation in R",
+            "type": "book",
+            "version": "1.33"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lmtest",
+            "author": [
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Farebrother",
+                    "given": "Richard W."
+                },
+                {
+                    "family": "Cummins",
+                    "given": "Clint"
+                }
+            ],
+            "id": "R-lmtest",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "lmtest: Testing Linear Regression Models",
+            "type": "book",
+            "version": "0.9-38"
+        },
+        {
+            "URL": "http://www.stats.ox.ac.uk/pub/MASS4/",
+            "author": [
+                {
+                    "family": "Ripley",
+                    "given": "Brian"
+                }
+            ],
+            "id": "R-MASS",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "MASS: Support Functions and Datasets for Venables and Ripley’s MASS",
+            "type": "book",
+            "version": "7.3-53.1"
+        },
+        {
+            "URL": "http://mvtnorm.R-forge.R-project.org",
+            "author": [
+                {
+                    "family": "Genz",
+                    "given": "Alan"
+                },
+                {
+                    "family": "Bretz",
+                    "given": "Frank"
+                },
+                {
+                    "family": "Miwa",
+                    "given": "Tetsuhisa"
+                },
+                {
+                    "family": "Mi",
+                    "given": "Xuefei"
+                },
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                }
+            ],
+            "id": "R-mvtnorm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "mvtnorm: Multivariate Normal and t Distributions",
+            "type": "book",
+            "version": "1.1-1"
+        },
+        {
+            "URL": "https://svn.r-project.org/R-packages/trunk/nlme",
+            "author": [
+                {
+                    "family": "Pinheiro",
+                    "given": "José"
+                },
+                {
+                    "family": "Bates",
+                    "given": "Douglas"
+                },
+                {
+                    "literal": "R-core"
+                }
+            ],
+            "id": "R-nlme",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "nlme: Linear and Nonlinear Mixed Effects Models",
+            "type": "book",
+            "version": "3.1-148"
+        },
+        {
+            "URL": "https://github.com/JeffreyRacine/R-Package-np",
+            "author": [
+                {
+                    "family": "Racine",
+                    "given": "Jeffrey S."
+                },
+                {
+                    "family": "Hayfield",
+                    "given": "Tristen"
+                }
+            ],
+            "id": "R-np",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "np: Nonparametric Kernel Smoothing Methods for Mixed Data Types",
+            "type": "book",
+            "version": "0.60-10"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=orcutt",
+            "author": [
+                {
+                    "family": "Spada",
+                    "given": "Stefano"
+                }
+            ],
+            "id": "R-orcutt",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "orcutt: Estimate Procedure in Case of First Order Autocorrelation",
+            "type": "book",
+            "version": "2.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=plm",
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                },
+                {
+                    "family": "Tappe",
+                    "given": "Kevin"
+                }
+            ],
+            "id": "R-plm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "plm: Linear Models for Panel Data",
+            "type": "book",
+            "version": "2.4-1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=plotly",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                },
+                {
+                    "family": "Parmer",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Hocking",
+                    "given": "Toby"
+                },
+                {
+                    "family": "Chamberlain",
+                    "given": "Scott"
+                },
+                {
+                    "family": "Ram",
+                    "given": "Karthik"
+                },
+                {
+                    "family": "Corvellec",
+                    "given": "Marianne"
+                },
+                {
+                    "family": "Despouy",
+                    "given": "Pedro"
+                }
+            ],
+            "id": "R-plotly",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "plotly: Create Interactive Web Graphics via plotly.js",
+            "type": "book",
+            "version": "4.9.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=quantmod",
+            "author": [
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                },
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua M."
+                }
+            ],
+            "id": "R-quantmod",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "quantmod: Quantitative Financial Modelling Framework",
+            "type": "book",
+            "version": "0.4.18"
+        },
+        {
+            "URL": "https://qua.st/rddtools/",
+            "author": [
+                {
+                    "family": "Stigler",
+                    "given": "Matthieu"
+                },
+                {
+                    "family": "Quast",
+                    "given": "Bastiaan"
+                }
+            ],
+            "id": "R-rddtools",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "rddtools: Toolbox for Regression Discontinuity Design (RDD)",
+            "type": "book",
+            "version": "1.5.0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=readxl",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "R-readxl",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "readxl: Read Excel Files",
+            "type": "book",
+            "version": "1.3.1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "rmarkdown: Dynamic Documents for R",
+            "type": "book",
+            "version": "2.8"
+        },
+        {
+            "URL": "http://sandwich.R-Forge.R-project.org/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "id": "R-sandwich",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "sandwich: Robust Covariance Matrix Estimators",
+            "type": "book",
+            "version": "3.0-0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=scales",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Seidel",
+                    "given": "Dana"
+                }
+            ],
+            "id": "R-scales",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "scales: Scale Functions for Visualization",
+            "type": "book",
+            "version": "1.1.1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=stargazer",
+            "author": [
+                {
+                    "family": "Hlavac",
+                    "given": "Marek"
+                }
+            ],
+            "id": "R-stargazer",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "stargazer: Well-Formatted Regression and Summary Statistics Tables",
+            "type": "book",
+            "version": "5.2.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=strucchange",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                }
+            ],
+            "id": "R-strucchange",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "strucchange: Testing, Monitoring, and Dating Structural Changes",
+            "type": "book",
+            "version": "1.5-2"
+        },
+        {
+            "URL": "https://github.com/therneau/survival",
+            "author": [
+                {
+                    "family": "Therneau",
+                    "given": "Terry M"
+                }
+            ],
+            "id": "R-survival",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "survival: Survival Analysis",
+            "type": "book",
+            "version": "3.1-12"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tidyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "tidyr: Tidy Messy Data",
+            "type": "book",
+            "version": "1.1.3"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                },
+                {
+                    "family": "Maechler",
+                    "given": "Martin"
+                },
+                {
+                    "family": "Byers",
+                    "given": "Joe W."
+                }
+            ],
+            "id": "R-timeDate",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "timeDate: Rmetrics - Chronological and Calendar Objects",
+            "type": "book",
+            "version": "3043.102"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=timeSeries",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                }
+            ],
+            "id": "R-timeSeries",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "timeSeries: Financial Time Series Objects (Rmetrics)",
+            "type": "book",
+            "version": "3062.100"
+        },
+        {
+            "URL": "https://github.com/joshuaulrich/TTR",
+            "author": [
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua"
+                }
+            ],
+            "id": "R-TTR",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "TTR: Technical Trading Rules",
+            "type": "book",
+            "version": "0.24.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=urca",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "id": "R-urca",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "urca: Unit Root and Cointegration Tests for Time Series Data",
+            "type": "book",
+            "version": "1.3-0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=usethis",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "R-usethis",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "usethis: Automate Package and Project Setup",
+            "type": "book",
+            "version": "2.0.1"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "id": "R-vars",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "vars: VAR Modelling",
+            "type": "book",
+            "version": "1.5-3"
+        },
+        {
+            "URL": "https://github.com/joshuaulrich/xts",
+            "author": [
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                },
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua M."
+                }
+            ],
+            "id": "R-xts",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "xts: eXtensible Time Series",
+            "type": "book",
+            "version": "0.12.1"
+        },
+        {
+            "URL": "https://zoo.R-Forge.R-project.org/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                },
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                }
+            ],
+            "id": "R-zoo",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series (Z’s Ordered Observations)",
+            "type": "book",
+            "version": "1.8-9"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=AER",
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "AER2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "publisher-place": "New York",
+            "title": "Applied Econometrics with R",
+            "type": "book",
+            "version": "ISBN 978-0-387-77316-2"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "ISBN 978-1138700109"
+        },
+        {
+            "URL": "https://socialsciences.mcmaster.ca/jfox/Books/Companion/",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                }
+            ],
+            "edition": "Third",
+            "id": "car2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "Sage",
+            "publisher-place": "Thousand Oaks CA",
+            "title": "An R Companion to Applied Regression",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.jstatsoft.org/article/view/v027i03",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J"
+                },
+                {
+                    "family": "Khandakar",
+                    "given": "Yeasmin"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "forecast2008",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-22",
+            "title": "Automatic time series forecasting: the forecast package for R",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "ISBN": "978-3-319-24277-4",
+            "URL": "https://ggplot2.tidyverse.org",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "ggplot22016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag New York",
+            "title": "ggplot2: Elegant Graphics for Data Analysis",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book",
+            "version": "ISBN 978-1498716963"
+        },
+        {
+            "URL": "http://www.crcpress.com/product/isbn/9781466561595",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing Reproducible Computational Research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "knitr: A Comprehensive Tool for Reproducible Research in R",
+            "type": "chapter",
+            "version": "ISBN 978-1466561595"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/doc/Rnews/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                }
+            ],
+            "container-title": "R News",
+            "id": "lmtest2002",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "7-10",
+            "title": "Diagnostic Checking in Regression Relationships",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "URL": "https://www.stats.ox.ac.uk/pub/MASS4/",
+            "author": [
+                {
+                    "family": "Venables",
+                    "given": "W. N."
+                },
+                {
+                    "family": "Ripley",
+                    "given": "B. D."
+                }
+            ],
+            "edition": "Fourth",
+            "id": "MASS2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Modern Applied Statistics with S",
+            "type": "book",
+            "version": "ISBN 0-387-95457-0"
+        },
+        {
+            "ISBN": "978-3-642-01688-2",
+            "author": [
+                {
+                    "family": "Genz",
+                    "given": "Alan"
+                },
+                {
+                    "family": "Bretz",
+                    "given": "Frank"
+                }
+            ],
+            "collection-title": "Lecture notes in statistics",
+            "id": "mvtnorm2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "publisher-place": "Heidelberg",
+            "title": "Computation of Multivariate Normal and t Probabilities",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v27/i05/",
+            "author": [
+                {
+                    "family": "Hayfield",
+                    "given": "Tristen"
+                },
+                {
+                    "family": "Racine",
+                    "given": "Jeffrey S."
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "np2008",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "Nonparametric Econometrics: The np Package",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=orcutt",
+            "author": [
+                {
+                    "family": "Stefano",
+                    "given": "Spada"
+                },
+                {
+                    "family": "Quartagno",
+                    "given": "Matteo"
+                },
+                {
+                    "family": "Tamburini",
+                    "given": "Marco"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                }
+            ],
+            "id": "orcutt2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "orcutt: Estimate Procedure in Case of First Order Autocorrelation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "id": "plm2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Panel Data Econometrics with R: the plm package",
+            "type": "book"
+        },
+        {
+            "DOI": "10.18637/jss.v027.i02",
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "plm2008",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-43",
+            "title": "Panel Data Econometrics in R: The plm Package",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.18637/jss.v082.i03",
+            "author": [
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "plm2017",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "1-27",
+            "title": "Robust Standard Error Estimators for Panel Models: A Unifying Approach",
+            "type": "article-journal",
+            "volume": "82"
+        },
+        {
+            "ISBN": "9781138331457",
+            "URL": "https://plotly-r.com",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                }
+            ],
+            "id": "plotly2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Interactive Web-Based Data Visualization with R, plotly, and shiny",
+            "type": "book"
+        },
+        {
+            "URL": "https://qua.st/rddtools/",
+            "author": [
+                {
+                    "family": "Stigler",
+                    "given": "Matthieu"
+                },
+                {
+                    "family": "Quast",
+                    "given": "Bastiaan"
+                }
+            ],
+            "id": "rddtools2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "The Graduate Institute",
+            "publisher-place": "Maison de la paix, Geneva, Switzerland",
+            "title": "rddtools: A toolbox for regression discontinuity in R",
+            "type": "report"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown: The Definitive Guide",
+            "type": "book",
+            "version": "ISBN 9781138359338"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown Cookbook",
+            "type": "book",
+            "version": "ISBN 9780367563837"
+        },
+        {
+            "DOI": "10.18637/jss.v095.i01",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Köll",
+                    "given": "Susanne"
+                },
+                {
+                    "family": "Graham",
+                    "given": "Nathaniel"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "1-36",
+            "title": "Various Versatile Variances: An Object-Oriented Implementation of Clustered Covariances in R",
+            "type": "article-journal",
+            "volume": "95"
+        },
+        {
+            "DOI": "10.18637/jss.v011.i10",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2004",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "1-17",
+            "title": "Econometric Computing with HC and HAC Covariance Matrix Estimators",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.18637/jss.v016.i09",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2006",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "1-16",
+            "title": "Object-Oriented Computation of Sandwich Estimators",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v07/i02/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "strucchange2002",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "1-38",
+            "title": "strucchange: An R Package for Testing for Structural Change in Linear Regression Models",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Krämer",
+                    "given": "Walter"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                }
+            ],
+            "container-title": "Computational Statistics & Data Analysis",
+            "id": "strucchange2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "109-123",
+            "title": "Testing and Dating of Structural Changes in Practice",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Computational Statistics & Data Analysis",
+            "id": "strucchange2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "2987-3008",
+            "title": "Implementing a Class of Structural Change Tests: An Econometric Computing Approach",
+            "type": "article-journal",
+            "volume": "50"
+        },
+        {
+            "ISBN": "0-387-98784-3",
+            "author": [
+                {
+                    "literal": "Terry M. Therneau"
+                },
+                {
+                    "literal": "Patricia M. Grambsch"
+                }
+            ],
+            "id": "survival-book",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Modeling Survival Data: Extending the Cox Model",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "B."
+                }
+            ],
+            "edition": "Second",
+            "id": "urca2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Analysis of Integrated and Cointegrated Time Series with R",
+            "type": "book",
+            "version": "ISBN 0-387-27960-1"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v27/i04/",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "vars2008a",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "VAR, SVAR and SVEC Models: Implementation Within R Package vars",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "B."
+                }
+            ],
+            "edition": "Second",
+            "id": "vars2008b",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Analysis of Integrated and Cointegrated Time Series with R",
+            "type": "book",
+            "version": "ISBN 0-387-27960-1"
+        },
+        {
+            "DOI": "10.18637/jss.v014.i06",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "zoo2005",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "page": "1-27",
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=AER",
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "R-AER",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "AER: Applied Econometrics with R",
+            "type": "book",
+            "version": "1.2-9"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A Language and Environment for Statistical Computing",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "0.22"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=car",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-car",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "car: Companion to Applied Regression",
+            "type": "book",
+            "version": "3.0-10"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=carData",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                },
+                {
+                    "family": "Price",
+                    "given": "Brad"
+                }
+            ],
+            "id": "R-carData",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "carData: Companion to Applied Regression Data Sets",
+            "type": "book",
+            "version": "3.0-4"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=devtools",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Hester",
+                    "given": "Jim"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                }
+            ],
+            "id": "R-devtools",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "devtools: Tools to Make Developing R Packages Easier",
+            "type": "book",
+            "version": "2.4.0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dplyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "François",
+                    "given": "Romain"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Müller",
+                    "given": "Kirill"
+                }
+            ],
+            "id": "R-dplyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "dplyr: A Grammar of Data Manipulation",
+            "type": "book",
+            "version": "1.0.5"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=dynlm",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "R-dynlm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "dynlm: Dynamic Linear Regression",
+            "type": "book",
+            "version": "0.3-6"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                }
+            ],
+            "id": "R-fBasics",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "fBasics: Rmetrics - Markets and Basic Statistics",
+            "type": "book",
+            "version": "3042.89.1"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                },
+                {
+                    "family": "Boudt",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Chausse",
+                    "given": "Pierre"
+                },
+                {
+                    "family": "Miklovac",
+                    "given": "Michal"
+                }
+            ],
+            "id": "R-fGarch",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "fGarch: Rmetrics - Autoregressive Conditional Heteroskedastic Modelling",
+            "type": "book",
+            "version": "3042.83.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=forecast",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob"
+                },
+                {
+                    "family": "Athanasopoulos",
+                    "given": "George"
+                },
+                {
+                    "family": "Bergmeir",
+                    "given": "Christoph"
+                },
+                {
+                    "family": "Caceres",
+                    "given": "Gabriel"
+                },
+                {
+                    "family": "Chhay",
+                    "given": "Leanne"
+                },
+                {
+                    "family": "O’Hara-Wild",
+                    "given": "Mitchell"
+                },
+                {
+                    "family": "Petropoulos",
+                    "given": "Fotios"
+                },
+                {
+                    "family": "Razbash",
+                    "given": "Slava"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Earo"
+                },
+                {
+                    "family": "Yasmeen",
+                    "given": "Farah"
+                }
+            ],
+            "id": "R-forecast",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "forecast: Forecasting Functions for Time Series and Linear Models",
+            "type": "book",
+            "version": "8.14"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=ggplot2",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Henry",
+                    "given": "Lionel"
+                },
+                {
+                    "family": "Pedersen",
+                    "given": "Thomas Lin"
+                },
+                {
+                    "family": "Takahashi",
+                    "given": "Kohske"
+                },
+                {
+                    "family": "Wilke",
+                    "given": "Claus"
+                },
+                {
+                    "family": "Woo",
+                    "given": "Kara"
+                },
+                {
+                    "family": "Yutani",
+                    "given": "Hiroaki"
+                },
+                {
+                    "family": "Dunnington",
+                    "given": "Dewey"
+                }
+            ],
+            "id": "R-ggplot2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics",
+            "type": "book",
+            "version": "3.3.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=kableExtra",
+            "author": [
+                {
+                    "family": "Zhu",
+                    "given": "Hao"
+                }
+            ],
+            "id": "R-kableExtra",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "kableExtra: Construct Complex Table with kable and Pipe Syntax",
+            "type": "book",
+            "version": "1.3.4"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "knitr: A General-Purpose Package for Dynamic Report Generation in R",
+            "type": "book",
+            "version": "1.33"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=lmtest",
+            "author": [
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Farebrother",
+                    "given": "Richard W."
+                },
+                {
+                    "family": "Cummins",
+                    "given": "Clint"
+                }
+            ],
+            "id": "R-lmtest",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "lmtest: Testing Linear Regression Models",
+            "type": "book",
+            "version": "0.9-38"
+        },
+        {
+            "URL": "http://www.stats.ox.ac.uk/pub/MASS4/",
+            "author": [
+                {
+                    "family": "Ripley",
+                    "given": "Brian"
+                }
+            ],
+            "id": "R-MASS",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "MASS: Support Functions and Datasets for Venables and Ripley’s MASS",
+            "type": "book",
+            "version": "7.3-53.1"
+        },
+        {
+            "URL": "http://mvtnorm.R-forge.R-project.org",
+            "author": [
+                {
+                    "family": "Genz",
+                    "given": "Alan"
+                },
+                {
+                    "family": "Bretz",
+                    "given": "Frank"
+                },
+                {
+                    "family": "Miwa",
+                    "given": "Tetsuhisa"
+                },
+                {
+                    "family": "Mi",
+                    "given": "Xuefei"
+                },
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                }
+            ],
+            "id": "R-mvtnorm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "mvtnorm: Multivariate Normal and t Distributions",
+            "type": "book",
+            "version": "1.1-1"
+        },
+        {
+            "URL": "https://svn.r-project.org/R-packages/trunk/nlme",
+            "author": [
+                {
+                    "family": "Pinheiro",
+                    "given": "José"
+                },
+                {
+                    "family": "Bates",
+                    "given": "Douglas"
+                },
+                {
+                    "literal": "R-core"
+                }
+            ],
+            "id": "R-nlme",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "nlme: Linear and Nonlinear Mixed Effects Models",
+            "type": "book",
+            "version": "3.1-148"
+        },
+        {
+            "URL": "https://github.com/JeffreyRacine/R-Package-np",
+            "author": [
+                {
+                    "family": "Racine",
+                    "given": "Jeffrey S."
+                },
+                {
+                    "family": "Hayfield",
+                    "given": "Tristen"
+                }
+            ],
+            "id": "R-np",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "np: Nonparametric Kernel Smoothing Methods for Mixed Data Types",
+            "type": "book",
+            "version": "0.60-10"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=orcutt",
+            "author": [
+                {
+                    "family": "Spada",
+                    "given": "Stefano"
+                }
+            ],
+            "id": "R-orcutt",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "orcutt: Estimate Procedure in Case of First Order Autocorrelation",
+            "type": "book",
+            "version": "2.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=plm",
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                },
+                {
+                    "family": "Tappe",
+                    "given": "Kevin"
+                }
+            ],
+            "id": "R-plm",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "plm: Linear Models for Panel Data",
+            "type": "book",
+            "version": "2.4-1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=plotly",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                },
+                {
+                    "family": "Parmer",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Hocking",
+                    "given": "Toby"
+                },
+                {
+                    "family": "Chamberlain",
+                    "given": "Scott"
+                },
+                {
+                    "family": "Ram",
+                    "given": "Karthik"
+                },
+                {
+                    "family": "Corvellec",
+                    "given": "Marianne"
+                },
+                {
+                    "family": "Despouy",
+                    "given": "Pedro"
+                }
+            ],
+            "id": "R-plotly",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "plotly: Create Interactive Web Graphics via plotly.js",
+            "type": "book",
+            "version": "4.9.3"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=quantmod",
+            "author": [
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                },
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua M."
+                }
+            ],
+            "id": "R-quantmod",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "quantmod: Quantitative Financial Modelling Framework",
+            "type": "book",
+            "version": "0.4.18"
+        },
+        {
+            "URL": "https://qua.st/rddtools/",
+            "author": [
+                {
+                    "family": "Stigler",
+                    "given": "Matthieu"
+                },
+                {
+                    "family": "Quast",
+                    "given": "Bastiaan"
+                }
+            ],
+            "id": "R-rddtools",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "rddtools: Toolbox for Regression Discontinuity Design (RDD)",
+            "type": "book",
+            "version": "1.5.0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=readxl",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "R-readxl",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "readxl: Read Excel Files",
+            "type": "book",
+            "version": "1.3.1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "rmarkdown: Dynamic Documents for R",
+            "type": "book",
+            "version": "2.8"
+        },
+        {
+            "URL": "http://sandwich.R-Forge.R-project.org/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "id": "R-sandwich",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "sandwich: Robust Covariance Matrix Estimators",
+            "type": "book",
+            "version": "3.0-0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=scales",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Seidel",
+                    "given": "Dana"
+                }
+            ],
+            "id": "R-scales",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "scales: Scale Functions for Visualization",
+            "type": "book",
+            "version": "1.1.1"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=stargazer",
+            "author": [
+                {
+                    "family": "Hlavac",
+                    "given": "Marek"
+                }
+            ],
+            "id": "R-stargazer",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "stargazer: Well-Formatted Regression and Summary Statistics Tables",
+            "type": "book",
+            "version": "5.2.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=strucchange",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                }
+            ],
+            "id": "R-strucchange",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "strucchange: Testing, Monitoring, and Dating Structural Changes",
+            "type": "book",
+            "version": "1.5-2"
+        },
+        {
+            "URL": "https://github.com/therneau/survival",
+            "author": [
+                {
+                    "family": "Therneau",
+                    "given": "Terry M"
+                }
+            ],
+            "id": "R-survival",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "survival: Survival Analysis",
+            "type": "book",
+            "version": "3.1-12"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=tidyr",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "R-tidyr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "tidyr: Tidy Messy Data",
+            "type": "book",
+            "version": "1.1.3"
+        },
+        {
+            "URL": "https://www.rmetrics.org",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                },
+                {
+                    "family": "Setz",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Chalabi",
+                    "given": "Yohan"
+                },
+                {
+                    "family": "Maechler",
+                    "given": "Martin"
+                },
+                {
+                    "family": "Byers",
+                    "given": "Joe W."
+                }
+            ],
+            "id": "R-timeDate",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "timeDate: Rmetrics - Chronological and Calendar Objects",
+            "type": "book",
+            "version": "3043.102"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=timeSeries",
+            "author": [
+                {
+                    "family": "Wuertz",
+                    "given": "Diethelm"
+                }
+            ],
+            "id": "R-timeSeries",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "timeSeries: Financial Time Series Objects (Rmetrics)",
+            "type": "book",
+            "version": "3062.100"
+        },
+        {
+            "URL": "https://github.com/joshuaulrich/TTR",
+            "author": [
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua"
+                }
+            ],
+            "id": "R-TTR",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "TTR: Technical Trading Rules",
+            "type": "book",
+            "version": "0.24.2"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=urca",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "id": "R-urca",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "urca: Unit Root and Cointegration Tests for Time Series Data",
+            "type": "book",
+            "version": "1.3-0"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=usethis",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jennifer"
+                }
+            ],
+            "id": "R-usethis",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "usethis: Automate Package and Project Setup",
+            "type": "book",
+            "version": "2.0.1"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "id": "R-vars",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "vars: VAR Modelling",
+            "type": "book",
+            "version": "1.5-3"
+        },
+        {
+            "URL": "https://github.com/joshuaulrich/xts",
+            "author": [
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                },
+                {
+                    "family": "Ulrich",
+                    "given": "Joshua M."
+                }
+            ],
+            "id": "R-xts",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "xts: eXtensible Time Series",
+            "type": "book",
+            "version": "0.12.1"
+        },
+        {
+            "URL": "https://zoo.R-Forge.R-project.org/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                },
+                {
+                    "family": "Ryan",
+                    "given": "Jeffrey A."
+                }
+            ],
+            "id": "R-zoo",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series (Z’s Ordered Observations)",
+            "type": "book",
+            "version": "1.8-9"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=AER",
+            "author": [
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "id": "AER2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "publisher-place": "New York",
+            "title": "Applied Econometrics with R",
+            "type": "book",
+            "version": "ISBN 978-0-387-77316-2"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "ISBN 978-1138700109"
+        },
+        {
+            "URL": "https://socialsciences.mcmaster.ca/jfox/Books/Companion/",
+            "author": [
+                {
+                    "family": "Fox",
+                    "given": "John"
+                },
+                {
+                    "family": "Weisberg",
+                    "given": "Sanford"
+                }
+            ],
+            "edition": "Third",
+            "id": "car2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "Sage",
+            "publisher-place": "Thousand Oaks CA",
+            "title": "An R Companion to Applied Regression",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.jstatsoft.org/article/view/v027i03",
+            "author": [
+                {
+                    "family": "Hyndman",
+                    "given": "Rob J"
+                },
+                {
+                    "family": "Khandakar",
+                    "given": "Yeasmin"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "forecast2008",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-22",
+            "title": "Automatic time series forecasting: the forecast package for R",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "ISBN": "978-3-319-24277-4",
+            "URL": "https://ggplot2.tidyverse.org",
+            "author": [
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                }
+            ],
+            "id": "ggplot22016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag New York",
+            "title": "ggplot2: Elegant Graphics for Data Analysis",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book",
+            "version": "ISBN 978-1498716963"
+        },
+        {
+            "URL": "http://www.crcpress.com/product/isbn/9781466561595",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing Reproducible Computational Research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "knitr: A Comprehensive Tool for Reproducible Research in R",
+            "type": "chapter",
+            "version": "ISBN 978-1466561595"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/doc/Rnews/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Hothorn",
+                    "given": "Torsten"
+                }
+            ],
+            "container-title": "R News",
+            "id": "lmtest2002",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "7-10",
+            "title": "Diagnostic Checking in Regression Relationships",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "URL": "https://www.stats.ox.ac.uk/pub/MASS4/",
+            "author": [
+                {
+                    "family": "Venables",
+                    "given": "W. N."
+                },
+                {
+                    "family": "Ripley",
+                    "given": "B. D."
+                }
+            ],
+            "edition": "Fourth",
+            "id": "MASS2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Modern Applied Statistics with S",
+            "type": "book",
+            "version": "ISBN 0-387-95457-0"
+        },
+        {
+            "ISBN": "978-3-642-01688-2",
+            "author": [
+                {
+                    "family": "Genz",
+                    "given": "Alan"
+                },
+                {
+                    "family": "Bretz",
+                    "given": "Frank"
+                }
+            ],
+            "collection-title": "Lecture notes in statistics",
+            "id": "mvtnorm2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "publisher-place": "Heidelberg",
+            "title": "Computation of Multivariate Normal and t Probabilities",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v27/i05/",
+            "author": [
+                {
+                    "family": "Hayfield",
+                    "given": "Tristen"
+                },
+                {
+                    "family": "Racine",
+                    "given": "Jeffrey S."
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "np2008",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "Nonparametric Econometrics: The np Package",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=orcutt",
+            "author": [
+                {
+                    "family": "Stefano",
+                    "given": "Spada"
+                },
+                {
+                    "family": "Quartagno",
+                    "given": "Matteo"
+                },
+                {
+                    "family": "Tamburini",
+                    "given": "Marco"
+                },
+                {
+                    "family": "Robinson",
+                    "given": "David"
+                }
+            ],
+            "id": "orcutt2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "orcutt: Estimate Procedure in Case of First Order Autocorrelation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "id": "plm2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Panel Data Econometrics with R: the plm package",
+            "type": "book"
+        },
+        {
+            "DOI": "10.18637/jss.v027.i02",
+            "author": [
+                {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "plm2008",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "1-43",
+            "title": "Panel Data Econometrics in R: The plm Package",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.18637/jss.v082.i03",
+            "author": [
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "plm2017",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "1-27",
+            "title": "Robust Standard Error Estimators for Panel Models: A Unifying Approach",
+            "type": "article-journal",
+            "volume": "82"
+        },
+        {
+            "ISBN": "9781138331457",
+            "URL": "https://plotly-r.com",
+            "author": [
+                {
+                    "family": "Sievert",
+                    "given": "Carson"
+                }
+            ],
+            "id": "plotly2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Interactive Web-Based Data Visualization with R, plotly, and shiny",
+            "type": "book"
+        },
+        {
+            "URL": "https://qua.st/rddtools/",
+            "author": [
+                {
+                    "family": "Stigler",
+                    "given": "Matthieu"
+                },
+                {
+                    "family": "Quast",
+                    "given": "Bastiaan"
+                }
+            ],
+            "id": "rddtools2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "The Graduate Institute",
+            "publisher-place": "Maison de la paix, Geneva, Switzerland",
+            "title": "rddtools: A toolbox for regression discontinuity in R",
+            "type": "report"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown: The Definitive Guide",
+            "type": "book",
+            "version": "ISBN 9781138359338"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown Cookbook",
+            "type": "book",
+            "version": "ISBN 9780367563837"
+        },
+        {
+            "DOI": "10.18637/jss.v095.i01",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Köll",
+                    "given": "Susanne"
+                },
+                {
+                    "family": "Graham",
+                    "given": "Nathaniel"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2020",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "1-36",
+            "title": "Various Versatile Variances: An Object-Oriented Implementation of Clustered Covariances in R",
+            "type": "article-journal",
+            "volume": "95"
+        },
+        {
+            "DOI": "10.18637/jss.v011.i10",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2004",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "1-17",
+            "title": "Econometric Computing with HC and HAC Covariance Matrix Estimators",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "DOI": "10.18637/jss.v016.i09",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "sandwich2006",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "1-16",
+            "title": "Object-Oriented Computation of Sandwich Estimators",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v07/i02/",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "strucchange2002",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "1-38",
+            "title": "strucchange: An R Package for Testing for Structural Change in Linear Regression Models",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Kleiber",
+                    "given": "Christian"
+                },
+                {
+                    "family": "Krämer",
+                    "given": "Walter"
+                },
+                {
+                    "family": "Hornik",
+                    "given": "Kurt"
+                }
+            ],
+            "container-title": "Computational Statistics & Data Analysis",
+            "id": "strucchange2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "109-123",
+            "title": "Testing and Dating of Structural Changes in Practice",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                }
+            ],
+            "container-title": "Computational Statistics & Data Analysis",
+            "id": "strucchange2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "2987-3008",
+            "title": "Implementing a Class of Structural Change Tests: An Econometric Computing Approach",
+            "type": "article-journal",
+            "volume": "50"
+        },
+        {
+            "ISBN": "0-387-98784-3",
+            "author": [
+                {
+                    "literal": "Terry M. Therneau"
+                },
+                {
+                    "literal": "Patricia M. Grambsch"
+                }
+            ],
+            "id": "survival-book",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Modeling Survival Data: Extending the Cox Model",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "B."
+                }
+            ],
+            "edition": "Second",
+            "id": "urca2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Analysis of Integrated and Cointegrated Time Series with R",
+            "type": "book",
+            "version": "ISBN 0-387-27960-1"
+        },
+        {
+            "URL": "http://www.jstatsoft.org/v27/i04/",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "Bernhard"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "vars2008a",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "VAR, SVAR and SVEC Models: Implementation Within R Package vars",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "URL": "http://www.pfaffikus.de",
+            "author": [
+                {
+                    "family": "Pfaff",
+                    "given": "B."
+                }
+            ],
+            "edition": "Second",
+            "id": "vars2008b",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "publisher-place": "New York",
+            "title": "Analysis of Integrated and Cointegrated Time Series with R",
+            "type": "book",
+            "version": "ISBN 0-387-27960-1"
+        },
+        {
+            "DOI": "10.18637/jss.v014.i06",
+            "author": [
+                {
+                    "family": "Zeileis",
+                    "given": "Achim"
+                },
+                {
+                    "family": "Grothendieck",
+                    "given": "Gabor"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "zoo2005",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "page": "1-27",
+            "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A Language and Environment for Statistical Computing",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "0.22"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "knitr: A General-Purpose Package for Dynamic Report Generation in R",
+            "type": "book",
+            "version": "1.33"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "rmarkdown: Dynamic Documents for R",
+            "type": "book",
+            "version": "2.8"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "bookdown: Authoring Books and Technical Documents with R Markdown",
+            "type": "book",
+            "version": "ISBN 978-1138700109"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic Documents with R and knitr",
+            "type": "book",
+            "version": "ISBN 978-1498716963"
+        },
+        {
+            "URL": "http://www.crcpress.com/product/isbn/9781466561595",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing Reproducible Computational Research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "title": "knitr: A Comprehensive Tool for Reproducible Research in R",
+            "type": "chapter",
+            "version": "ISBN 978-1466561595"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown: The Definitive Guide",
+            "type": "book",
+            "version": "ISBN 9781138359338"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R Markdown Cookbook",
+            "type": "book",
+            "version": "ISBN 9780367563837"
+        }
+    ],
+    "project_biblios": [
+        "book.bib",
+        "packages.bib"
+    ]
+}

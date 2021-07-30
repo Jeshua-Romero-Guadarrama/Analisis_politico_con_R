@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 output: 
   bookdown::word_document2: default
   bookdown::pdf_book:
-    pandoc_args: ["--csl", "apa-old-doi-prefix.csl"]
+    pandoc_args: ["+RTS", "-K64m", "-RTS", "--csl", "apa-old-doi-prefix.csl"]
     includes:
       in_header: preamble.tex
     citation_package: natbib
@@ -36,7 +36,9 @@ github-repo: "https://github.com/Jeshua-Romero-Guadarrama/Analisis_politico_con_
 description: "El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es **Teorías políticas contemporáneas: Una introducción**, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)."
 url: 'https://jeshua-romero-guadarrama.github.io/Analisis_politico_con_R/'
 tags: [Academia, Teoría política, Ciencia política, Teoría política, Práctica política]
+favicon: "images/logo.png"
 ---
+
 # Prefacio {-}
 
 ```{r, echo = F}
@@ -77,15 +79,19 @@ cat('<hr style="background-color:#03193b;height:2px">')
 cat('<hr style="background-color:#03193b;height:2px">')
 ```
 
-El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es **Teorías políticas contemporáneas: Una introducción**, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg).
+Los estudiantes con poca experiencia en el análisis avanzado de políticas a menudo tienen dificultades para entender los beneficios de desarrollar habilidades de programación estadística en **R** al momento de aplicar diversos métodos descriptivos e inferenciales. <i>Análisis político con R</i> por Jeshua Romero Guadarrama (2021), ofrece una introducción interactiva a los aspectos esenciales de la programación por medio del lenguaje y software estadístico **R**, así como una guía para la aplicación de la teoría política y análisis detallado de políticas públicas en entornos específicos. En otras palabras, el objetivo es que los estudiantes se adentren al mundo de la política aplicada mediante ejemplos empíricos presentados en la vida diaria y haciendo uso de las habilidades de programación recién adquiridas. Dicho objetivo se encuentra respaldado por ejercicios de programación interactivos y la incorporación de visualizaciones dinámicas de conceptos fundamentales mediante la flexibilidad de JavaScript, a través de la biblioteca D3.js.
+
+En los últimos años, el lenguaje de programación estadística **R** se ha convertido en una parte integral del plan de estudios de las clases de análisis político y estadística que se imparten en las universidades. Regularmente una gran parte de los estudiantes no han estado expuestos a ningún lenguaje de programación antes y, por lo tanto, tienen dificultades para participar en el aprendizaje de **R** por sí mismos. Con poca experiencia en el análisis avanzado de estadísticas, es natural que los novicios tengan dificultades para comprender los beneficios de desarrollar habilidades en **R** para aprender y aplicar la estadística. Estos incluyen particularmente la capacidad de realizar, documentar y comunicar estudios empíricos y tener las facilidades para programar estudios de simulación, lo cual es útil para, por ejemplo, comprender y validar teoremas que generalmente no se asimilan o entienden fácilmente con el estudio de las fórmulas. Al ser un economista aplicado y analista político, me gustaría que mis colegas desarrollen capacidades de gran valor; en consecuencia, deseo compartir con las nuevas generaciones de politólogos y economistas mis conocimientos.
+
+En lugar de confrontar a los estudiantes con ejercicios de codificación puros y literatura clásica complementaria, he pensado que sería mejor proporcionar material de aprendizaje interactivo que combine el código en **R** con el contenido del curso de texto *Introducción a la Econometría* de @stock2015 que sirve de base para el presente material. El presente trabajo es un complemento empírico interactivo al estilo de un informe de investigación reproducible que permite a los estudiantes no solo aprender cómo los resultados de los estudios de casos se pueden replicar con **R**, sino que también fortalece su capacidad para utilizar las habilidades recién adquiridas en otras aplicaciones empíricas.
 
 #### Las convenciones usadas en el presente curso {-}
 
-+ El texto *en cursiva* indica nuevos términos, nombres y similares.
++ El texto *en cursiva* indica nuevos términos, nombres, botones y similares.
 
-+ El texto **en negrita** se usa generalmente en párrafos para referirse a términos que se recomienda memorizar. 
++ El texto **en negrita** se usa generalmente en párrafos para referirse al código **R**. Esto incluye comandos, variables, funciones, tipos de datos, bases de datos y nombres de archivos.
 
-+ <code>Texto de ancho constante sobre fondo gris</code> indica un enfoque teórico o metodológico común en la Práctica por la Ciencia Política. 
++ <code>Texto de ancho constante sobre fondo gris</code> indica un código **R** que usted puede escribir literalmente. Puede aparecer en párrafos para una mejor distinción entre declaraciones de código ejecutables y no ejecutables, pero se encontrará principalmente en forma de grandes bloques de código **R**. Estos bloques se denominan fragmentos de código.
 
 #### Reconocimiento {-}
 
@@ -98,98 +104,3 @@ cat('<br>
 Esta obra está autorizado bajo la [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).')
 ```
 
-## Índice de contenido {-}
-
-1. Introducción
-  - Consideraciones generales: La teoría científica social. 
-  - Cuestiones metodológicas.
-  - Principios actuales.
-  - Críticas a la ciencia.
-2. La teoría política
-  - Primera parte
-    + Fases de la actividad científica: Teorías representativas y normativas.
-    + La descripción.
-    + La explicación.
-    + La generalización.
-    + Las teoría y cuasi-teorías.
-    + Clasificaciones.
-    + Dicotomías.
-    + Analogías.
-  - Segunda parte
-    + La evaluación del fenómeno político: Ciencia y valoración.
-    + Los componentes del juicio normativo: descripción, evaluación técnica, juicio normativo, justificación del juicio normativo.
-  - Tercera parte
-    + El concepto teórico político.
-    + Comparaciones con otras ciencias: Teoría y filosofía política.
-    + Ciencia política como disciplina autónoma.
-    + Teoría política e historia de las ideas.
-    + Teorías generales y de alcance medio.
-    + Dificultades para la elaboración teórica.
-3. Las teorías normativas
-  - Primera parte
-    + Rasgos generales: Condiciones históricas y trasfondos ideológicos.
-    + Clasificación de las teorías normativas.
-    + Raíces intelectuales.
-    + Fundamentos.
-    + Finalidad.
-    + Relaciones.
-    + Metodología.
-  - Segunda parte
-    + Teorías políticas normativas clásicas: chinas, hindúes, judías, islámicas, griegas, romanas, medievales y modernas.
-  - Tercera parte
-    + Teorías políticas normativas contemporáneas: El asalto al absolutismo.
-    + Las consecuencias de la Revolución Francesa.
-    + Socialismos y nacionalismos.
-    + Las teorías normativas actuales.
-  - Cuarta parte
-    + Enfoques metodológicos usuales. 
-    + Métodos: histórico, analógico, práctico, tópico, pedagógico. 
-    + El pragmatismo metodológico.
-4. Las teorías empírico-analíticas
-  - Primera parte
-    + Rasgos generales: El positivismo, el empirismo y sus derivados.
-    + El objeto y el método.
-    + Problemas actuales.
-  - Segunda parte
-    + Behaviorismo, estructural-funcionalismo y enfoque sistémico. 
-    + El enfoque comparatista: Descripción de los enfoques.
-    + Síntesis de obras teóricas de estas corrientes.
-  - Tercera parte
-    + Las explicaciones de base psicológica individual: La Psicología del estímulo-respuesta.
-    + La psicología de la Gestalt.
-    + La teoría del campo.
-    + El freudismo ortodoxo.
-    + El neofreudismo.
-  - Cuarta parte
-    + El Formalismo.
-    + La teoría de los juegos.
-    + La Teoría de la información y la cibernética.
-    + Modelos y simulaciones.
-  - Quinta parte
-    + Enfoques metodológicos usuales: Puntos en común.
-    + Particularidades metodológicas.
-    + Reflexiones sobre el lenguaje y la elaboración conceptual.
-5. Las teorías critico-dialécticas
-  - Primera parte
-    + Introducción general: Repercusiones del tema
-    + Aportes perdurables del marxismo.
-    + El marxismo clásico. Rasgos generales: Marx y Engels.
-    + Contenido del marxismo.
-    + Primera y segunda generación de sucesores.
-  - Segunda parte
-    + El marxismo occidental: La escuela de Frankfurt.
-    + Otros intelectuales europeos marxistas.
-    + Intelectuales norteamericanos marxistas.
-    + La Nueva Izquierda.
-  - Tercera parte
-    + La labor teórica en los países socialistas europeos.
-  - Cuarta parte
-    + Las teorías crítico-dialécticas en los países del tercer mundo: El maoísmo y sus derivados asiáticos.
-    + El socialismo africano.
-    + El marxismo latinoamericano: Justo, Mariátegui y Haya de la Torre.
-    + La nueva izquierda latinoamericana, el castrismo, el sandinismo, el allendismo chileno. 
-    + Relaciones del marxismo latinoamericano con la teología de la liberación.
-  - Quinta parte
-    + Enfoques metodológicos usuales: Materialismo dialéctico y materialismo histórico.
-    + Teoría y praxis.
-    + Otros aportes metodológicos. 

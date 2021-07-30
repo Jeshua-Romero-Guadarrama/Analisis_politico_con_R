@@ -24,15 +24,15 @@
 <meta name="author" content="Jeshua Romero Guadarrama" />
 
 
-<meta name="date" content="2021-07-29" />
+<meta name="date" content="2021-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
-  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
 
-<link rel="next" href="índice-de-contenido.html"/>
+<link rel="next" href="referencias-bibliográficas.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -88,6 +88,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="toc.css" type="text/css" />
@@ -106,10 +128,7 @@
 <li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
-<ul>
-<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
 <li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
 <li class="divider"></li>
 <li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
@@ -142,13 +161,13 @@
 <div id="header">
 <h1 class="title">Analisis político con R</h1>
 <p class="author"><em>Jeshua Romero Guadarrama</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-07-29</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-07-30</em></p>
 </div>
 <div id="prefacio" class="section level1 unnumbered">
 <h1>Prefacio</h1>
 <hr style="background-color:#03193b;height:2px">
 <center>
-<img style = 'width:60%;' src='images/Analisis_politico_con_R.png'>
+<img style = 'width:60%;' src='images/Analisis_politico_con_R.PNG'>
 </center>
 <hr style="background-color:#03193b;height:2px">
 <center>
@@ -175,16 +194,18 @@
 </center>
 <p><br> Jeshua Romero Guadarrama es economista y actuario por la <a href="http://www.economia.unam.mx/">Universidad Nacional Autónoma de México</a>, quien ha construido el presente proyecto en colaboración con <a href="https://www.jeshuanomics.com">JeshuaNomics</a>, ubicado en la Ciudad de México, se puede contactar mediante el siguiente correo electrónico: <a href="mailto:jeshuanomics@gmail.com" class="email">jeshuanomics@gmail.com</a>.
 <br>
-<br> Última actualización el jueves 29 del 07 de 2021
+<br> Última actualización el viernes 30 del 07 de 2021
 <br></p>
 <hr style="background-color:#03193b;height:2px">
-<p>El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es <strong>Teorías políticas contemporáneas: Una introducción</strong>, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg).</p>
+<p>Los estudiantes con poca experiencia en el análisis avanzado de políticas a menudo tienen dificultades para entender los beneficios de desarrollar habilidades de programación estadística en <strong>R</strong> al momento de aplicar diversos métodos descriptivos e inferenciales. <i>Análisis político con R</i> por Jeshua Romero Guadarrama (2021), ofrece una introducción interactiva a los aspectos esenciales de la programación por medio del lenguaje y software estadístico <strong>R</strong>, así como una guía para la aplicación de la teoría política y análisis detallado de políticas públicas en entornos específicos. En otras palabras, el objetivo es que los estudiantes se adentren al mundo de la política aplicada mediante ejemplos empíricos presentados en la vida diaria y haciendo uso de las habilidades de programación recién adquiridas. Dicho objetivo se encuentra respaldado por ejercicios de programación interactivos y la incorporación de visualizaciones dinámicas de conceptos fundamentales mediante la flexibilidad de JavaScript, a través de la biblioteca D3.js.</p>
+<p>En los últimos años, el lenguaje de programación estadística <strong>R</strong> se ha convertido en una parte integral del plan de estudios de las clases de análisis político y estadística que se imparten en las universidades. Regularmente una gran parte de los estudiantes no han estado expuestos a ningún lenguaje de programación antes y, por lo tanto, tienen dificultades para participar en el aprendizaje de <strong>R</strong> por sí mismos. Con poca experiencia en el análisis avanzado de estadísticas, es natural que los novicios tengan dificultades para comprender los beneficios de desarrollar habilidades en <strong>R</strong> para aprender y aplicar la estadística. Estos incluyen particularmente la capacidad de realizar, documentar y comunicar estudios empíricos y tener las facilidades para programar estudios de simulación, lo cual es útil para, por ejemplo, comprender y validar teoremas que generalmente no se asimilan o entienden fácilmente con el estudio de las fórmulas. Al ser un economista aplicado y analista político, me gustaría que mis colegas desarrollen capacidades de gran valor; en consecuencia, deseo compartir con las nuevas generaciones de politólogos y economistas mis conocimientos.</p>
+<p>En lugar de confrontar a los estudiantes con ejercicios de codificación puros y literatura clásica complementaria, he pensado que sería mejor proporcionar material de aprendizaje interactivo que combine el código en <strong>R</strong> con el contenido del curso de texto <em>Introducción a la Econometría</em> de <span class="citation"><a href="#ref-stock2015" role="doc-biblioref">Stock and Watson</a> (<a href="#ref-stock2015" role="doc-biblioref">2015</a>)</span> que sirve de base para el presente material. El presente trabajo es un complemento empírico interactivo al estilo de un informe de investigación reproducible que permite a los estudiantes no solo aprender cómo los resultados de los estudios de casos se pueden replicar con <strong>R</strong>, sino que también fortalece su capacidad para utilizar las habilidades recién adquiridas en otras aplicaciones empíricas.</p>
 <div id="las-convenciones-usadas-en-el-presente-curso" class="section level4 unnumbered">
 <h4>Las convenciones usadas en el presente curso</h4>
 <ul>
-<li><p>El texto <em>en cursiva</em> indica nuevos términos, nombres y similares.</p></li>
-<li><p>El texto <strong>en negrita</strong> se usa generalmente en párrafos para referirse a términos que se recomienda memorizar.</p></li>
-<li><p><code>Texto de ancho constante sobre fondo gris</code> indica un enfoque teórico o metodológico común en la Práctica por la Ciencia Política.</p></li>
+<li><p>El texto <em>en cursiva</em> indica nuevos términos, nombres, botones y similares.</p></li>
+<li><p>El texto <strong>en negrita</strong> se usa generalmente en párrafos para referirse al código <strong>R</strong>. Esto incluye comandos, variables, funciones, tipos de datos, bases de datos y nombres de archivos.</p></li>
+<li><p><code>Texto de ancho constante sobre fondo gris</code> indica un código <strong>R</strong> que usted puede escribir literalmente. Puede aparecer en párrafos para una mejor distinción entre declaraciones de código ejecutables y no ejecutables, pero se encontrará principalmente en forma de grandes bloques de código <strong>R</strong>. Estos bloques se denominan fragmentos de código.</p></li>
 </ul>
 </div>
 <div id="reconocimiento" class="section level4 unnumbered">
@@ -193,6 +214,13 @@
 <p><br>
 <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.eu.svg" alt="Creative Commons License" /></p>
 <p>Esta obra está autorizado bajo la <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-stock2015" class="csl-entry">
+Stock, J. H., and M. W. Watson. 2015. <em><span>I</span>ntroduction to <span>E</span>conometrics, <span>T</span>hird <span>U</span>pdate, <span>G</span>lobal <span>E</span>dition</em>. <span>P</span>earson <span>E</span>ducation <span>L</span>imited.
 </div>
 </div>
             </section>
@@ -201,7 +229,7 @@
         </div>
       </div>
 
-<a href="índice-de-contenido.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="referencias-bibliográficas.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
