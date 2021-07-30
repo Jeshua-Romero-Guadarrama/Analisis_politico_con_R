@@ -1,0 +1,6 @@
+Package: placeholder
+Type: Book
+Title: Análisis Político Usando R
+Version: 0.0.1
+Imports: bookdown
+Remotes: rstudio/bookdown
