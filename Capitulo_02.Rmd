@@ -1,6 +1,6 @@
 # **Capitulo 2: Carga y manipulación de datos** {#Capitulo2Cargaymanipulacióndedatos}
 
-```{r, 390, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
 cat('<hr style="background-color:#03193b;height:2px">')
 ```
 
@@ -24,7 +24,7 @@ Ingresar datos **R** es bastante fácil. Hay tres formas principales de importar
 
     Primero, consideramos cómo leer en un archivo de texto delimitado con el comando **read.table**. **R** leerá en una variedad de archivos delimitados. (¿Para todas las opciones asociadas con este tipo de comando **?read.table** en **R**.) En los datos basados en texto, normalmente cada línea representa una observación única y algún delimitador designado separa cada variable de la línea. El predeterminado para **read.table** es un archivo delimitado por espacios en el que cualquier espacio en blanco designa variables diferentes. Dado que nuestro Poe et al. archivo de datos, llamado **hmnrghts.txt**, está separado por espacios, podemos leer nuestro archivo en **R** usando la siguiente línea de código. Este archivo de datos está disponible en el Dataverse mencionado en la página vii o en el enlace de contenido del capítulo en la página 13. Es posible que deba utilizar **setwd** comando introducido en el Cap. 1 apuntar **R** a la carpeta donde ha guardado los datos. Después de esto, ejecute el siguiente código:
     
-```{r, warning=F, message=F, eval=T}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 hmnrghts<-read.table("hmnrghts.txt",
     header=TRUE, na="NA")
 ```

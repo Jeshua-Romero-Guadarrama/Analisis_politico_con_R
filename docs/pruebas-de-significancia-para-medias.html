@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Pruebas de significancia para medias | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</title>
+  <meta name="description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Pruebas de significancia para medias | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R/" />
+  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+  <meta property="og:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pruebas de significancia para medias | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  
+  <meta name="twitter:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+
+<meta name="author" content="Jeshua Romero Guadarrama" />
+
+
+<meta name="date" content="2021-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="prev" href="5-Inferenciasbásicasyasociaciónbivariante.html"/>
+<link rel="next" href="6-Modeloslinealesydiagnósticosderegresión.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<!-- font families -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
+
+<script src="js/hideOutput.js"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
+
+ <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        jax: ["input/TeX","output/CommonHTML"]
+      });
+      MathJax.Hub.processSectionDelay = 0;
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110299877-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110299877-1');
+</script>
+
+<!-- open review block -->
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
+<li class="chapter" data-level="1" data-path="1-Capítulo1.html"><a href="1-Capítulo1.html"><i class="fa fa-check"></i><b>1</b> Obtener R y descargar paquetes</a>
+<ul>
+<li class="chapter" data-level="" data-path="antecedentes-e-instalación.html"><a href="antecedentes-e-instalación.html"><i class="fa fa-check"></i>Antecedentes e instalación**</a></li>
+<li><a href="dónde-puedo-conseguir-r.html#dónde-puedo-conseguir-r"><strong>1.2 ¿Dónde puedo conseguir <em>R</em>?</strong></a></li>
+<li><a href="introducción-una-primera-sesión-en-r.html#introducción-una-primera-sesión-en-r"><strong>1.3 Introducción: Una primera sesión en <em>R</em></strong></a></li>
+<li><a href="guardar-entrada-y-salida.html#guardar-entrada-y-salida"><strong>1.4 Guardar entrada y salida</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Capitulo2Cargaymanipulacióndedatos.html"><a href="2-Capitulo2Cargaymanipulacióndedatos.html"><i class="fa fa-check"></i><b>2</b> <strong>Capitulo 2: Carga y manipulación de datos</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="lectura-de-datos.html"><a href="lectura-de-datos.html"><i class="fa fa-check"></i>Lectura de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Visualizaciondedatos.html"><a href="3-Visualizaciondedatos.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos</a>
+<ul>
+<li><a href="gráficos-univariados-en-el-paquete-base.html#gráficos-univariados-en-el-paquete-base">Gráficos univariados en el paquete <code>base</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficos-univariados-en-el-paquete-base.html"><a href="gráficos-univariados-en-el-paquete-base.html"><i class="fa fa-check"></i>Gráficos de barras</a></li>
+</ul></li>
+<li><a href="la-función-plot.html#la-función-plot">La función <strong>plot</strong></a>
+<ul>
+<li><a href="la-función-plot.html#gráficos-lineales-con-plot">Gráficos lineales con <strong>plot</strong></a></li>
+<li><a href="la-función-plot.html#construcción-de-figuras-con-plot-detalles-adicionales">Construcción de figuras con <strong>plot</strong>: Detalles adicionales</a></li>
+<li class="chapter" data-level="" data-path="la-función-plot.html"><a href="la-función-plot.html"><i class="fa fa-check"></i>Funciones complementarias</a></li>
+</ul></li>
+<li><a href="usar-gráficos-lattice-en-r.html#usar-gráficos-lattice-en-r">Usar gráficos <strong>lattice</strong> en R</a></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica.html"><a href="problemas-de-práctica.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Estadísticasdescriptivas.html"><a href="4-Estadísticasdescriptivas.html"><i class="fa fa-check"></i><b>4</b> Estadísticas descriptivas</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i>Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#tablas-de-frecuencia"><i class="fa fa-check"></i>Tablas de frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i>Medidas de dispersión</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#cuantiles-y-percentiles"><i class="fa fa-check"></i>Cuantiles y percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica-1.html"><a href="problemas-de-práctica-1.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-Inferenciasbásicasyasociaciónbivariante.html"><a href="5-Inferenciasbásicasyasociaciónbivariante.html"><i class="fa fa-check"></i><b>5</b> Inferencias básicas y asociación bivariante</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-significancia-para-medias.html"><a href="pruebas-de-significancia-para-medias.html"><i class="fa fa-check"></i>Pruebas de significancia para medias</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-Modeloslinealesydiagnósticosderegresión.html"><a href="6-Modeloslinealesydiagnósticosderegresión.html"><i class="fa fa-check"></i><b>6</b> Modelos lineales y diagnósticos de regresión</a></li>
+<li class="chapter" data-level="7" data-path="7-Modeloslinealesgeneralizados.html"><a href="7-Modeloslinealesgeneralizados.html"><i class="fa fa-check"></i><b>7</b> Modelos lineales generalizados</a></li>
+<li class="chapter" data-level="8" data-path="8-Usodepaquetesparaaplicarmodelosavanzados.html"><a href="8-Usodepaquetesparaaplicarmodelosavanzados.html"><i class="fa fa-check"></i><b>8</b> Uso de paquetes para aplicar modelos avanzados</a></li>
+<li class="chapter" data-level="9" data-path="9-Análisisdeseriestemporales.html"><a href="9-Análisisdeseriestemporales.html"><i class="fa fa-check"></i><b>9</b> Análisis de series temporales</a></li>
+<li class="chapter" data-level="10" data-path="10-Álgebralinealconaplicacionesdeprogramación.html"><a href="10-Álgebralinealconaplicacionesdeprogramación.html"><i class="fa fa-check"></i><b>10</b> Álgebra lineal con aplicaciones de programación</a></li>
+<li class="chapter" data-level="11" data-path="11-Herramientasdeprogramaciónadicionales.html"><a href="11-Herramientasdeprogramaciónadicionales.html"><i class="fa fa-check"></i><b>11</b> Herramientas de programación adicionales</a></li>
+<li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
+<li class="divider"></li>
+<li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
+<li><a href="https://github.com/JeshuaNomics" class="fa fa-github"><span class="label">  Git Hub</span></a></li>	
+<li><a href="https://www.facebook.com/JeshuaNomics/" class="fa fa-facebook"><span class="label">  Facebook</span></a></li>
+<li><a href="https://twitter.com/JeshuaNomics" class="fa fa-twitter"><span class="label">  Twitter</span></a></li>
+<li><a href="https://www.linkedin.com/in/jeshua-romero-guadarrama/" class="fa fa-linkedin"><span class="label">  Linkedin</span></a></li>
+<li><a href="https://vk.com/jeshuanomics" class="fa fa-vk"><span class="label">  Vkontakte</span></a></li>
+<li><a href="https://jeshuanomics.tumblr.com/" class="fa fa-tumblr"><span class="label">  Tumblr</span></a></li>
+<li><a href="https://www.youtube.com/channel/UCY7f84mJGvMN7TF7XI4-Jgg?view_as=subscriber/" class="fa fa-youtube-play"><span class="label">  YouTube</span></a></li>	
+<li><a href="https://www.instagram.com/JeshuaNomics/" class="fa fa-instagram"><span class="label">  Instagram</span></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pruebas-de-significancia-para-medias" class="section level2 unnumbered">
+<h2>Pruebas de significancia para medias</h2>
+<p>Antes de calcular cualquier estadística inferencial, debemos cargar los datos de LaLonde una vez más. Los usuarios que ya han instalado la biblioteca cem pueden simplemente escribir:</p>
+<p>biblioteca (cem)</p>
+<p>datos (LL)</p>
+<p>Los usuarios que no instalaron cem en el Cap. 4 deberá escribir install.packages (“cem”) antes de que las dos líneas de código anteriores funcionen correctamente. Una vez que estos datos se cargan en la memoria, nuevamente con el nombre LL , podemos pasar al análisis aplicado 1 .</p>
+<p>Comenzamos probando hipótesis sobre la media de una población (o poblaciones múltiples). Primero consideramos el caso en el que queremos probar si la media de alguna población de interés difiere de algún valor de interés. Para realizar esta prueba de significancia, necesitamos: (1) nuestra estimación de la media muestral, (2) el error estándar de nuestra estimación media y (3) una hipótesis nula y alternativa. La media muestral se definió anteriormente en la ecuación. ( 4.1 ), y el error estándar de nuestra estimación es simplemente la desviación estándar de la variable [definida en la Ec. ( 4.5 )] dividido por la raíz cuadrada del tamaño de nuestra muestra, sX/norte–√ .</p>
+<p>Al definir nuestras hipótesis nula y alternativa, definimos la hipótesis nula en función de algún valor de interés que nos gustaría descartar como valor posible del parámetro de población. Por tanto, si decimos:
+H0:μ =μ0
+Esto significa que nuestra hipótesis nula ( H 0 ) es que la media poblacional ( μ ) es igual a algún valor numérico que establezcamos ( μ 0 ). Nuestra hipótesis de investigación es la hipótesis alternativa que nos gustaría rechazar esta nula a favor. Tenemos tres opciones para posibles hipótesis de investigación:
+HA:HA:HA:μ &gt;μ0μ &lt;μ0μ ≠μ0
+Las dos primeras se denominan pruebas de una cola e indican que creemos que la media de la población debería ser, respectivamente, mayor o menor que el valor propuesto μ 0 . La mayoría de las hipótesis de investigación deben considerarse como una de las pruebas de una cola, aunque ocasionalmente el analista no tiene una expectativa fuerte sobre si la media debe ser mayor o menor. La tercera alternativa enumerada define la prueba de dos colas, que pregunta si la media es simplemente diferente (o no igual) del valor μ 0 .
+Una vez que hemos formulado nuestra hipótesis, calculamos una relación t como nuestro estadístico de prueba para la hipótesis. Nuestro estadístico de prueba incluye la media muestral, el error estándar y la media poblacional definida por la hipótesis nula ( μ 0 ). Esta fórmula es:
+t =X¯-μ0S E (X¯|H0)=X¯-μ0sX/norte–√
+(5,1)
+Esta se distribuye t de Student con n - 1 grados de libertad bajo el valor nulo (y asintóticamente normal). 2 Una vez que tenemos esta estadística de prueba, calculamos nuestro valor p de la siguiente manera:
+p - v a l u e =⎧⎩⎨⎪⎪PAG(t∗≤ t |H0)PAG(t∗≥ t |H0)PAG( |t∗-μ0| ≥ | t -μ0| |H0)HA: μ &lt;μ0HA: μ &gt;μ0HA: μ ≠μ0
+En este caso, suponga que t ∗ es el valor real de nuestra estadística que calculamos. La acción típica en este caso es tener un nivel de confianza predefinido y decidir si rechazar la hipótesis nula o no en función de si el valor p indica que el rechazo se puede realizar con ese nivel de confianza. Por ejemplo, si un analista estuviera dispuesto a rechazar una hipótesis nula si pudiera hacerlo con un 90% de confianza, entonces si p  &lt;0,10, rechazaría la hipótesis nula y concluiría que la hipótesis de investigación es correcta. Muchos usuarios también proceden a informar el valor p para que los lectores puedan sacar conclusiones sobre la importancia por sí mismos.
+R hace que todos estos cálculos sean muy sencillos, haciendo todo esto en una sola línea de código de usuario. Supongamos que tuviéramos la hipótesis de que, en 1974, la población de estadounidenses desempleados a largo plazo tenía un ingreso inferior a $ 6.059, una estimación del gobierno del ingreso medio para la población general de estadounidenses. En este caso, nuestra hipótesis es:
+H0:HA:μ = 6059μ &lt; 6059
+Esta es una prueba de una sola cola porque ni siquiera pensamos en la idea de que los desempleados de larga duración puedan tener un ingreso promedio más alto que la población en general. Más bien, simplemente preguntamos si la media de nuestra población de interés es perceptiblemente inferior a 6.059 dólares o no. Para probar esta hipótesis en R , escribimos:
+t.test (LL $ re74, mu = 6059, alternativa = “menos”)</p>
+<p>El primer argumento de la prueba t enumera nuestra variable de interés, LL $ re74 , para la cual R calcula automáticamente la media muestral y el error estándar. En segundo lugar, el argumento mu = 6059 enumera el valor de interés de nuestra hipótesis nula. Asegúrese de incluir este argumento: si lo olvida, el comando aún se ejecutará asumiendo que quiere mu = 0 , lo cual es una tontería en este caso. Finalmente, especificamos nuestra hipótesis alternativa como “menos” . Esto significa que creemos que la media de la población es menor que la cantidad nula presentada. El resultado de este comando se imprime como:</p>
+<p>Prueba t para una muestra</p>
+<p>datos: LL $ re74</p>
+<p>t = -10.4889, gl = 721, valor de p &lt;2.2e-16</p>
+<p>hipótesis alternativa: la media verdadera es menor que 6059</p>
+<p>Intervalo de confianza del 95 por ciento:</p>
+<pre><code> -Inf 4012.025</code></pre>
+<p>estimaciones de muestra:</p>
+<p>media de x</p>
+<p>3630.738</p>
+<p>Esto presenta una larga lista de información: al final, informa la media muestral de 3630,738. Anteriormente, nos muestra que el valor de nuestra relación t es - 10. 4889, junto con el hecho de que nuestra distribución t tiene 721 grados de libertad. En cuanto al valor p , cuando R imprime el valor p &lt;2.2e-16 , esto significa que p es tan minúsculo que es más pequeño que el nivel de precisión decimal de R , mucho menos cualquier umbral de significación común. Por lo tanto, podemos rechazar la hipótesis nula y concluir que los estadounidenses desempleados de larga duración tenían un ingreso significativamente más bajo que los $ 6.059 en 1974.</p>
+<p>5.1.1 Prueba de diferencia de medias de dos muestras, muestras independientes
+Como alternativa al uso de una muestra para hacer una inferencia sobre la media de la población relevante, podemos tener dos muestras y querer probar si las medias de las dos poblaciones son iguales. En este caso, si llamamos al conjunto de observaciones de una muestra xy a las observaciones de la segunda muestra y , entonces formularíamos nuestra hipótesis nula como:
+H0:μX=μy
+Nuevamente, emparejaremos esto con una de las tres hipótesis alternativas:
+HA:HA:HA:μX<μyμX>μyμX≠μy
+Una vez más, las dos primeras hipótesis alternativas posibles son pruebas de una cola en las que tenemos una expectativa clara sobre qué media de la población debería ser mayor. La tercera alternativa posible simplemente evalúa si las medias son diferentes. Al construir nuestro estadístico de prueba a partir de esta hipótesis nula, confiamos en el hecho de que H 0 también implica μ x - μ y  = 0. Usando este hecho, construimos nuestra relación t como:
+t =(X¯-y¯) - (μX-μy)S E (X¯-y¯|H0)
+(5,2)
+La última pregunta es cómo calculamos el error estándar. Nuestro cálculo depende de si estamos dispuestos a asumir que la varianza es la misma en cada población. Bajo el supuesto de varianza desigual, calculamos el error estándar como:
+S E (X¯-y¯|H0) =s2XnorteX+s2ynortey——–√
+(5,3)
+Bajo el supuesto de igual varianza, tenemos:
+S E (X¯-y¯|H0) =(norteX- 1 )s2X+ (nortey- 1 )s2ynorteX+nortey- 2——————-√1norteX+1nortey——–√
+(5,4)
+Como ejemplo, podemos realizar una prueba con la última observación de ingresos en la Demostración Nacional de Trabajo Apoyado, que se midió en 1978. Supongamos que nuestra hipótesis es que el ingreso en 1978 fue mayor entre los individuos que recibieron el tratamiento de participar en el programa ( y ) que entre los que fueron observaciones de control y no llegaron a participar en el programa ( x ). Nuestra hipótesis en este caso es:
+H0:HA:μX=μyμX&lt;μy
+Una vez más, esta es una prueba de una cola porque no estamos considerando la idea de que el tratamiento podría haber reducido los ingresos a largo plazo. Más bien, el tratamiento aumentó los ingresos en relación con las observaciones de control o no tuvo un efecto perceptible. R nos permite realizar esta prueba t de dos muestras utilizando cualquiera de los supuestos. Los comandos para variaciones desiguales e iguales, respectivamente, son:
+t.test (re78 ~ tratado, datos = LL, alternativa = “menos,” var.equal = F)</p>
+<p>t.test (re78 ~ tratado, datos = LL, alternativa = “menos,” var.equal = T)</p>
+<p>El primer argumento, tratado nuevamente , está en notación funcional e indica que los ingresos en 1978 se están separando en función de los valores del indicador de tratamiento. La opción de datos nos permite nombrar el conjunto de datos para que no tengamos que llamarlo para cada variable. Cuando establecemos alternativa = “menos” , estamos declarando que nuestra hipótesis alternativa significa que el ingreso promedio para el valor más bajo de los tratados (grupo 0, el control) debe ser menor que el promedio para el valor más alto de los tratados (grupo 1, el grupo tratado). La única diferencia entre los comandos es que el primero establece var.equal = F de modo que las varianzas se asumen desiguales, y el segundo establece var.equal = T de modo que las varianzas se asumen iguales.</p>
+<p>Los resultados se imprimen de la siguiente manera. Para el supuesto de varianzas desiguales, vemos:</p>
+<p>Prueba t de dos muestras de Welch</p>
+<p>datos: re78 por tratado</p>
+<p>t = -1.8154, gl = 557.062, valor p = 0.035</p>
+<p>hipótesis alternativa: la verdadera diferencia de medias es menor</p>
+<p>de 0</p>
+<p>Intervalo de confianza del 95 por ciento:</p>
+<pre><code>  -Inf -81.94117</code></pre>
+<p>estimaciones de muestra:</p>
+<p>media en el grupo 0 media en el grupo 1</p>
+<pre><code>   5090.048 5976.352</code></pre>
+<p>Mientras tanto, para el supuesto de igual varianza, vemos:</p>
+<p>Prueba t de dos muestras</p>
+<p>datos: re78 por tratado</p>
+<p>t = -1,8774, gl = 720, valor p = 0,03043</p>
+<p>hipótesis alternativa: la verdadera diferencia de medias es menor</p>
+<p>de 0</p>
+<p>Intervalo de confianza del 95 por ciento:</p>
+<pre><code>  -Inf -108.7906</code></pre>
+<p>estimaciones de muestra:</p>
+<p>media en el grupo 0 media en el grupo 1</p>
+<pre><code>   5090.048 5976.352</code></pre>
+<p>Los resultados son bastante similares, como era de esperar. Ambos informan las mismas estimaciones de las medias para el grupo de control (5090.048) y el grupo tratado (5976.352). Sin embargo, debido a que el error estándar se calcula de manera diferente, obtenemos valores t ligeramente diferentes en cada caso (y grados de libertad calculados de manera diferente para las varianzas desiguales). La p-valor es ligeramente mayor cuando se asumen varianzas desiguales, pero en este caso cualquiera de las opciones arroja una conclusión similar. Por lo tanto, en cualquier caso, rechazamos la hipótesis nula al nivel de confianza del 95% y concluimos que para el grupo tratado el ingreso fue mayor en 1978 que para el grupo de control. Cabe señalar que una limitación de una prueba como esta es que no hemos controlado ninguna de las otras variables que se sabe que influyen en los ingresos, y la asignación de tratamiento no fue aleatoria en este caso. Capítulos 6 - 8 ofrecen varios ejemplos de métodos diseñados para controlar estadísticamente para otros predictores. Específicamente, en la Sect. 8.3 volvemos a visitar este ejemplo exacto con una técnica más avanzada.</p>
+<p>5.1.2 Comparación de medias con muestras dependientes
+Un tercer estadístico de prueba relacionado con la media que quizás deseemos calcular es una diferencia de medias con una muestra dependiente (por ejemplo, comparando muestras emparejadas). En otras palabras, suponga que tenemos una situación en la que cada observación de la muestra 1 coincide con una observación de la muestra 2. Esto podría significar que estamos estudiando a la misma persona antes y después de un evento, una persona que realiza la misma tarea con diferentes tratamientos, utilizando un estudio de gemelos, o el uso de métodos de emparejamiento para emparejar las observaciones tratadas con las observaciones de control. En este caso, ya no deberíamos tratar cada muestra como independiente, sino calcular las diferencias para cada emparejamiento y analizar las diferencias. Una manera fácil de pensar en esto sería crear una nueva variable, w i  =  x i - y i donde x y y están adaptadas para cada caso i . En este caso, nuestra hipótesis nula es H 0 :  μ w  = 0, y nuestra hipótesis alternativa puede ser cualquiera de las tres opciones:
+HA:HA:HA:μw&lt; 0μw&gt; 0μw≠ 0
+El estadístico de prueba en este caso viene dado por la Ec. ( 5.5 ), calculado para la nueva variable w .
+t =w¯- 0S E (w¯|H0)=w¯sw/norte–√
+(5,5)
+Como puede verse, este es efectivamente el mismo estadístico de prueba que en la Ec. ( 5.1 ) con w como variable de interés y 0 como valor nulo. El usuario técnicamente podría crear la variable w por sí mismo y luego simplemente aplicar el código para una prueba de significancia de muestra única para una media.
+Sin embargo, más rápidamente, este procedimiento podría automatizarse insertando dos variables separadas para las observaciones vinculadas en el comando t -test. Supongamos, por ejemplo, que quisiéramos saber si nuestras observaciones de control vieron un aumento en sus ingresos de 1974 a 1978. Es posible que los salarios no aumenten durante este tiempo porque estos números se registran en términos reales. Sin embargo, si los salarios aumentaron, entonces observar cómo cambiaron para el grupo de control puede servir como una buena base para comparar el cambio en los salarios del grupo tratado en el mismo período de tiempo. Para realizar esta prueba t de muestra pareada para nuestras observaciones de control, escribimos:</p>
+<p>LL.0 &lt;-subconjunto (LL, tratado == 0)</p>
+<p>t.test (LL.0 $ re74, LL.0 $ re78, emparejado = T, alternativa = “menos”)</p>
+<p>En la primera línea creamos un subconjunto solo de nuestras observaciones de control. En la segunda línea, nuestro primer argumento es la medida del ingreso en 1974, y el segundo es el ingreso en 1978. En tercer lugar, especificamos la opción paired = T : esto es crítico , de lo contrario R asumirá que cada variable forma una muestra independiente, pero en nuestro caso se trata de una muestra pareada en la que cada individuo ha sido observado dos veces. (Con este fin, al escribir paired = F en su lugar, esto nos da la sintaxis para una prueba t de dos muestras si nuestras muestras separadas están en columnas de datos diferentes). Finalmente, alternativa = “menos” significa que esperamos que la media de la primera observación, en 1974, sea menor que la media de la segunda, en 1978. Nuestros resultados son:</p>
+<p>Prueba t pareada</p>
+<p>datos: LL.0 $ re74 y LL.0 $ re78</p>
+<p>t = -3.8458, gl = 424, valor p = 6.93e-05</p>
+<p>hipótesis alternativa: la verdadera diferencia de medias es</p>
+<p>menos de 0</p>
+<p>Intervalo de confianza del 95 por ciento:</p>
+<pre><code> -Inf -809.946</code></pre>
+<p>estimaciones de muestra:</p>
+<p>media de las diferencias</p>
+<pre><code>          -1417.563</code></pre>
+<p>Este resultado nos dice que las ganancias fueron en promedio $ 1,417.56 más bajas en 1974 que en 1978. Nuestra relación t es t  = −3. 8458, y el valor p correspondiente es p  = 0. 00007. Por lo tanto, en cualquier umbral de confianza común, podemos rechazar la hipótesis nula y concluir que los ingresos eran más altos en 1978 que en 1974 entre los desempleados de larga duración que no recibieron el tratamiento .</p>
+<p>Solo como comparación final, podríamos calcular el mismo tipo de prueba en el grupo tratado de la siguiente manera:</p>
+<p>LL.1 &lt;-subconjunto (LL, tratado == 1)</p>
+<p>t.test (LL.1 $ re74, LL.1 $ re78, emparejado = T, alternativa = “menos”)</p>
+<p>Los resultados son algo similares:</p>
+<p>Prueba t pareada</p>
+<p>datos: LL.1 $ re74 y LL.1 $ re78</p>
+<p>t = -4.7241, gl = 296, valor p = 1.788e-06</p>
+<p>hipótesis alternativa: la verdadera diferencia de medias es</p>
+<p>menos de 0</p>
+<p>Intervalo de confianza del 95 por ciento:</p>
+<pre><code>  -Inf -1565.224</code></pre>
+<p>estimaciones de muestra:</p>
+<p>media de las diferencias</p>
+<pre><code>          -2405,353</code></pre>
+<p>Observamos un crecimiento mayor de $ 2,405.35 entre las observaciones tratadas, y este resultado también es discernible estadísticamente. Esta mayor tasa de crecimiento es alentadora para el potencial de ganancias a largo plazo del programa. Para obtener puntos de bonificación, se anima al lector a buscar técnicas de diferencias en diferencias y considerar cómo podrían aplicarse a estudios con un diseño como este.</p>
+<p>5.2 Tabulaciones cruzadas
+En situaciones en las que queremos analizar la asociación entre dos variables nominales u ordinales, una tabulación cruzada suele ser una buena herramienta para la inferencia. Una tabulación cruzada prueba la hipótesis de que una variable categórica independiente afecta la distribución condicional de una variable categórica dependiente. El investigador pregunta: ¿Serán notablemente más o menos frecuentes ciertos valores de la variable dependiente al pasar de una categoría de una variable independiente a otra? Al evaluar este efecto, el analista siempre debe desglosar los porcentajes relativos de las categorías de la variable dependiente dentro de las categorías de la variable independiente. Mucha gente comete un error al desglosar los porcentajes dentro de las categorías de la variable dependiente; tal error impide que un investigador evalúe sustancialmente la hipótesis establecida de que la variable independiente causa la variable dependiente y no al revés. Los resultados de una tabulación cruzada comparan sustancialmente los porcentajes del mismo valor de la variable dependiente en todas las categorías de la variable independiente.</p>
+<p>Algunos errores comunes que se deben evitar: Primero, una vez más, evite desglosar los porcentajes por la variable dependiente. En segundo lugar, evite comparar el mayor porcentaje en cada categoría de una variable independiente. La hipótesis establece que la frecuencia de la variable dependiente variará según el valor de la variable independiente; no discute qué valor de la variable dependiente será más frecuente. Por último, evite hacer inferencias basadas en la magnitud pura de porcentajes; la tarea del investigador es observar las diferencias en la distribución. Por ejemplo, si la elección del voto es la variable dependiente y el 66% de los republicanos apoya al candidato demócrata, mientras que el 94% de los demócratas apoya al candidato demócrata, el investigador no debe centrarse en el apoyo de la mayoría de ambos partidos. En lugar de,</p>
+<p>Considere dos ejemplos del conjunto de datos de LaLonde. Primero, podemos simplemente preguntarnos si estar desempleado en 1974 ( u74 ) sirvió como un buen predictor de estar desempleado en 1975 ( u75 ). Tendríamos que pensar que el estado laboral anterior de un individuo determina el estado laboral actual. Para construir una tabulación cruzada en R , necesitamos instalar el paquete gmodels y luego cargar la biblioteca. Una vez hecho esto, podemos usar la función CrossTable :</p>
+<p>install.packages (’’ gmodels ’’)</p>
+<p>biblioteca (gmodels)</p>
+<p>Tabla cruzada (y = LL $ u75, x = LL $ u74, prop.c = F, prop.t = F,</p>
+<pre><code> prop.chisq = F, chisq = T, formato = &quot;SPSS&quot;)</code></pre>
+<p>En este código, y especifica la variable de columna y x especifica la variable de fila. Esto significa que nuestra variable dependiente forma las columnas y la independiente forma las filas. Porque queremos que la distribución condicional de la variable dependiente para cada valor dado de la variable independiente, el opciones prop.c , prop.t y prop.chisq se ajustan a FALSO (en referencia a apuntalar Ortion de la c OLUMNA, t otal muestra y contribución al chisquare estadística). Esto significa que cada celda solo contiene la frecuencia bruta y el porcentaje de fila, que corresponde a la distribución condicionada a la variable independiente. La opción chisq = T informa la prueba Chi-cuadrado ( χ 2 ) de Pearson . Bajo esta prueba, la hipótesis nula es que las dos variables son independientes entre sí. La hipótesis alternativa es que conocer el valor de una variable cambia la distribución esperada de la otra. 3 Al establecer la opción de formato en SPSS , en lugar de SAS , se nos presentan porcentajes en nuestras celdas, en lugar de proporciones.</p>
+<p>Los resultados de este comando se imprimen a continuación:</p>
+<p>Contenido de la celda</p>
+<div class="line-block">————————- |</div>
+<div class="line-block">Contar |</div>
+<div class="line-block">Porcentaje de fila |</div>
+<div class="line-block">————————- |</div>
+<p>Total de observaciones en la tabla: 722</p>
+<pre><code>         | LL $ u75
+
+  LL $ u74 | 0 | 1 | Total de filas |</code></pre>
+<p>————- | ———– | ———– | ———– |</p>
+<pre><code>       0 | 386 | 9 | 395 |
+
+         | 97,722% | 2,278% | 54,709% |</code></pre>
+<p>————- | ———– | ———– | ———– |</p>
+<pre><code>       1 | 47 | 280 | 327 |
+
+         | 14,373% | 85,627% | 45,291% |</code></pre>
+<p>————- | ———– | ———– | ———– |</p>
+<p>Total de la columna | 433 | 289 | 722 |</p>
+<p>————- | ———– | ———– | ———– |</p>
+<p>Estadísticas para todos los factores de la tabla</p>
+<p>Prueba de chi-cuadrado de Pearson</p>
+<hr />
+<p>Chi ^ 2 = 517.7155 gl = 1 p = 1.329138e-114</p>
+<p>Prueba de chi-cuadrado de Pearson con continuidad de Yates</p>
+<p>corrección</p>
+<hr />
+<p>Chi ^ 2 = 514.2493 gl = 1 p = 7.545799e-114</p>
+<pre><code>   Frecuencia mínima esperada: 130.8906</code></pre>
+<p>Como podemos ver, entre los que estaban empleados en 1974 ( u74 = 0), el 97,7% estaban empleados en 1975. Entre los que estaban desempleados en 1974 ( u75 = 1), el 14,4% estaban empleados en 1975. 4 Esto corresponde a un 83,3 puntos porcentuales de diferencia entre las categorías. Este vasto efecto indica que la situación laboral en 1 año, de hecho, engendra una situación laboral en el año siguiente. Además, nuestra estadística de prueba es χ21 d f= 517,7155con un minúsculo valor p correspondiente . Por tanto, rechazamos la hipótesis nula de que la situación laboral en 1974 es independiente de la situación laboral en 1975 y concluimos que la situación laboral en 1974 condiciona la distribución de la situación laboral en 1975.</p>
+<p>Como pregunta más interesante, podríamos preguntarnos si recibir el tratamiento de la Demostración Nacional de Trabajo con Apoyo da forma a la situación laboral en 1975. Probaríamos esta hipótesis con el código:</p>
+<p>Tabla cruzada (y = LL $ u75, x = LL $ tratado, prop.c = F, prop.t = F,</p>
+<pre><code> prop.chisq = F, chisq = T, formato = &quot;SPSS&quot;)</code></pre>
+<p>El resultado de este comando es:</p>
+<p>Contenido de la celda</p>
+<div class="line-block">————————- |</div>
+<div class="line-block">Contar |</div>
+<div class="line-block">Porcentaje de fila |</div>
+<div class="line-block">————————- |</div>
+<p>Total de observaciones en la tabla: 722</p>
+<pre><code>         | LL $ u75</code></pre>
+<p>LL $ tratado | 0 | 1 | Total de filas |</p>
+<p>————- | ———– | ———– | ———– |</p>
+<pre><code>       0 | 247 | 178 | 425 |
+
+         | 58,118% | 41,882% | 58,864% |</code></pre>
+<p>————- | ———– | ———– | ———– |</p>
+<pre><code>       1 | 186 | 111 | 297 |
+
+         | 62,626% | 37,374% | 41,136% |</code></pre>
+<p>————- | ———– | ———– | ———– |</p>
+<p>Total de la columna | 433 | 289 | 722 |</p>
+<p>————- | ———– | ———– | ———– |</p>
+<p>Estadísticas para todos los factores de la tabla</p>
+<p>Prueba de chi-cuadrado de Pearson</p>
+<hr />
+<p>Chi ^ 2 = 1.480414 gl = 1 p = 0.2237097</p>
+<p>Prueba de chi-cuadrado de Pearson con continuidad de Yates</p>
+<p>corrección</p>
+<hr />
+<p>Chi ^ 2 = 1.298555 gl = 1 p = 0.2544773</p>
+<pre><code>   Frecuencia mínima esperada: 118,8823</code></pre>
+<p>Sustancialmente, los efectos están en la dirección esperada. Entre las observaciones de control ( tratadas = 0), el 58,1% se empleó en 1975. Entre las observaciones tratadas ( tratadas = 1), el 62,6% se empleó en 1975. Por lo tanto, vemos un aumento de 4,5 puntos porcentuales en el empleo entre las observaciones tratadas sobre las observaciones de control. Sin embargo, nuestra estadística de prueba es χ21 d f= 1.4804. El valor p correspondiente es p  = 0. 2237. Por lo tanto, si establecemos nuestro umbral de confianza en 90% o algo más alto, no rechazaríamos la hipótesis nula y concluiríamos que no había una relación discernible entre el tratamiento y la situación laboral.</p>
+<p>5.3 Coeficientes de correlación
+Como un adelanto al siguiente capítulo, concluimos nuestra mirada a las estadísticas de dos variables, mostrando cómo calcular un coeficiente de correlación de R . Los coeficientes de correlación se calculan como una medida de asociación entre dos variables continuas. Nos centramos específicamente en la r de Pearson , el coeficiente de correlación para una relación lineal. Este valor muestra qué tan bien la variable independiente predice linealmente la variable dependiente. Esta medida variará entre -1 y 1. Un coeficiente de correlación de 0 sugiere la ausencia de cualquier relación lineal entre las dos variables. (Aunque, lo que es más importante, una relación no lineal también puede producir r = 0 y algunas conclusiones erróneas.) Un valor de 1 implicaría una relación positiva perfecta, y un valor de - 1 indicaría una relación negativa perfecta. El cuadrado de la r de Pearson ( r 2 ) calcula la cantidad de varianza explicada por el predictor.</p>
+<p>La fórmula para un coeficiente de correlación de Pearson es esencialmente la covarianza de dos variables, x y y , dividido por la desviación estándar de cada variable:
+r =∑nortei = 1(XI-X¯) (yI-y¯)∑nortei = 1(XI-X¯)———–√∑nortei = 1(yI-y¯)———–√
+(5,6)
+Dentro de R , esta cantidad se calcula con el comando cor . 5
+Supongamos que quisiéramos evaluar si el número de años de educación sirvió como un buen predictor de nuestra primera medida de ingresos, en 1974. Podríamos escribir:</p>
+<p>cor (LL $ educación, LL $ re74)</p>
+<p>cor (LL $ educación, LL $ re74) ^ 2</p>
+<p>La primera línea calcula el propio coeficiente de correlación real. R devuelve una impresión de: [1] 0.08916458 . Por lo tanto, nuestro coeficiente de correlación es r  = 0. 0892. La segunda línea recalcula la correlación y eleva al cuadrado el resultado para todos a la vez. Esto nos dice que r 2  = 0. 0080. La implicación de este hallazgo es que al conocer el número de años de educación de un encuestado, podríamos explicar el 0,8% de la varianza en los ingresos de 1974. A primera vista, esto parece algo débil, pero como consejo general, siempre mida r 2 (o múltiples R 2, en el capítulo siguiente) valores comparándolos con otros hallazgos en la misma área. Algunos tipos de modelos explicarán habitualmente el 90% de la varianza, mientras que otros lo harán bien para explicar el 5% de la varianza.</p>
+<p>Como ejemplo final, podemos considerar la idea de que los ingresos engendran ingresos. Considere qué tan bien se correlacionan los ingresos en 1975 con los ingresos en 1978. Calculamos esto escribiendo:</p>
+<p>cor (LL $ re75, LL $ re78)</p>
+<p>cor (LL $ re75, LL $ re78) ^ 2</p>
+<p>La primera línea devuelve el coeficiente de correlación entre estas dos variables, imprimiendo: [1] 0.1548982 . Nuestra estimación de r  = 0. 1549 indica que los valores altos de ingresos en 1975 corresponden generalmente a valores altos de ingresos en 1978. En este caso, la segunda línea devuelve r 2  = 0. 0240. Esto significa que podemos explicar el 2.4% de la varianza del ingreso en 1978 al saber lo que alguien ganó en 1975.</p>
+<p>Recuerde que las herramientas gráficas del Cap. 3 puede ayudarnos a comprender nuestros datos, incluidos los resultados que cuantificamos, como los coeficientes de correlación. Si nos preguntamos por qué los ingresos anteriores no predicen mejor los ingresos posteriores, podríamos dibujar un diagrama de dispersión de la siguiente manera:</p>
+<p>plot (x = LL $ re75, y = LL $ re78, xlab = “Ingresos de 1975,” ylab = “Ingresos de 1978,”</p>
+<pre><code> asp = 1, xlim = c (0,60000), ylim = c (0,60000), pch = &quot;.&quot;)</code></pre>
+<p>Tenga en cuenta que se ha utilizado el asp = 1 opción para establecer el asp relación ect de los dos ejes en 1. Esto garantiza que la escala de los dos ejes se mantiene para ser el mismo que es apropiado, ya que se miden ambas variables en la figura en dólares ajustados a la inflación. La salida se muestra en la Fig.  5.1 . Como puede verse, muchas de las observaciones se agrupan en cero en uno o ambos años, por lo que existe un grado limitado en el que una relación lineal caracteriza estos datos.
+Abrir imagen en nueva ventanaFigura 5.1
+Figura 5.1
+Diagrama de dispersión de los ingresos en 1975 y 1978 a partir de los datos de la demostración nacional de trabajo con apoyo</p>
+<p>Ahora tenemos varias inferencias básicas en la mano: pruebas t sobre medias y pruebas χ 2 para tabulaciones cruzadas. La diferencia en las pruebas de medias, las tabulaciones cruzadas y los coeficientes de correlación también nos han dado un buen sentido para evaluar las relaciones bivariadas. En el próximo capítulo, pasaremos a la estadística multivariante, específicamente utilizando métodos de regresión lineal. Esto se basará en las técnicas lineales que utilizan los coeficientes de correlación y nos permitirá introducir el concepto de control estadístico.</p>
+<p>5.4 Problemas de práctica
+Cargue la biblioteca extranjera y descargue la de Alvarez et al. (2013), que se guardan en el archivo con formato Stata alpl2013.dta . Este archivo está disponible en el Dataverse mencionado en la página vii o en el contenido del capítulo mencionado en la página 63. Estos datos provienen de un experimento de campo en Salta, Argentina, en el que algunos votantes emitieron sus votos a través del voto electrónico y otros votaron en el entorno tradicional. Las variables son: un indicador de si el votante utilizó el voto electrónico o el voto tradicional ( EV ), grupo de edad ( age_group ), educación ( educ ), trabajador de cuello blanco ( white_collar ), no un trabajador de tiempo completo ( not_full_time ), hombre ( masculino ), una variable de conteo para el número de seis posibles dispositivos tecnológicos utilizados ( tecnología), una escala ordinal para el conocimiento político ( pol_info ), un vector de caracteres que nombra el lugar de votación ( polling_place ), si el encuestado piensa que los trabajadores electorales están calificados ( able_auth ), si el votante evaluó la experiencia de votación positivamente ( eval_voting ), si el votante evaluó la velocidad de la votación como rápida ( speed ), si el votante está seguro de que su voto está siendo contado ( sure_counted ), si el votante pensó que votar era fácil ( easy_voting ), si el votante confía en el secreto de la boleta ( conf_secret ), si el votante piensa que las elecciones de Salta están limpias ( how_clean), si el votante piensa que el voto electrónico debería reemplazar el voto tradicional ( accept_evoting ), y si el votante prefiere seleccionar candidatos de diferentes partidos electrónicamente ( eselect_cand ).
+1.
+Considere la cantidad de dispositivos tecnológicos. Pruebe la hipótesis de que el votante salteño promedio ha utilizado más de tres de estos seis dispositivos. (Formalmente: H 0 :  μ  = 3;  H A :  μ  &gt; 3.)</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Realice dos pruebas de diferencia de medias de muestras independientes:
+un.
+¿Existe alguna diferencia entre hombres y mujeres en la cantidad de dispositivos tecnológicos que han utilizado?</li>
+</ol>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>¿Existe alguna diferencia en la forma en que los votantes ven positivamente la experiencia de votar ( eval_voting ) en función de si utilizaron el voto electrónico o el voto tradicional ( EV )?</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Construya dos tabulaciones cruzadas:
+un.
+Construya una tabulación cruzada donde la variable dependiente es qué tan positivamente ven los votantes la experiencia de votación ( eval_voting ) y la variable independiente es si usaron el voto electrónico o el voto tradicional ( EV ). ¿Depende la distribución de la evaluación del voto de si el votante utilizó el voto electrónico? Esta tabulación cruzada abordó la misma pregunta que se plantea en el # 2.b. ¿Qué enfoque es más apropiado aquí?</li>
+</ol>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Construya una tabulación cruzada donde la variable dependiente es qué tan positivamente ven los votantes la experiencia de votar ( eval_voting ) y la variable independiente es la escala ordinal de conocimiento político ( pol_info ). ¿Cambia la distribución de la evaluación del voto con el nivel de conocimiento político del votante?</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Considere la correlación entre el nivel de educación ( educ ) y el conocimiento político ( pol_info ):
+un.
+Calcule la r de Pearson entre estas dos variables.</li>
+</ol>
+<ol start="2" style="list-style-type: upper-alpha">
+<li>Muchos argumentan que, con dos variables ordinales, una medida de correlación más apropiada es la ρ de Spearman , que es una correlación de rango. Calcule ρ y contraste los resultados de r .</li>
+</ol>
+<p>Notas al pie
+1 .
+Como antes, estos datos también están disponibles en formato separado por comas en el archivo llamado LL.csv . Este archivo de datos se puede descargar del Dataverse en la página vii o del enlace de contenido del capítulo en la página 63.</p>
+<p>2 .
+Este estadístico tiene una distribución t porque la media muestral tiene una distribución muestral distribuida normalmente y el error estándar muestral tiene una distribución muestral χ 2 con n - 1 grados de libertad. La razón de estas dos distribuciones produce una distribución t .</p>
+<p>3 .
+Tenga en cuenta que esta es una prueba simétrica de asociación. La prueba en sí no tiene noción de cuál es la variable dependiente o independiente.</p>
+<p>4 .
+Para obtener niveles más significativos que 0 y 1 en este caso, necesitaríamos crear copias de las variables u74 y u75 que registraron cada valor como texto (por ejemplo, “Desempleado” y “Empleado”). El comando recodificar de la biblioteca de automóviles ofrece una forma sencilla de hacer esto, si lo desea.</p>
+<p>5 .
+El comando cor también proporciona una opción de método para la cual los argumentos disponibles son pearson , kendall (que calcula τ de Kendall , una correlación de rango) y spearman (que calcula ρ de Spearman , otra correlación de rango). Se anima a los usuarios a leer sobre los métodos alternativos antes de utilizarlos. Aquí, nos centramos en el método de Pearson predeterminado.</p>
+<p>Material suplementario
+318886_1_En_5_MOESM1_ESM.zip (1 mb)
+Dataverse (2,154 KB)
+Referencias
+Alvarez RM, Levin I, Pomares J, Leiras M (2013) Votar de forma segura y sencilla: el impacto del voto electrónico en la percepción ciudadana. Polit Sci Res Methods 1 (1): 117-137
+CrossRefGoogle Académico
+LaLonde RJ (1986) Evaluación de las evaluaciones econométricas de programas de formación con datos experimentales. Am Econ Rev 76 (4): 604–620
+Google Académico</p>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="5-Inferenciasbásicasyasociaciónbivariante.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-Modeloslinealesydiagnósticosderegresión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": true,
+"whatsapp": false,
+"all": ["vk", "linkedin", "twitter", "facebook"],
+"tumblr": false,
+"youtube": false,
+"instagram": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Jeshua-Romero-Guadarrama/CienciaPolitica/edit/master/Capitulo_05.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Ciencia_de_datos_para_el_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.epub"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

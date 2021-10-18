@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.4 Guardar entrada y salida | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</title>
+  <meta name="description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.4 Guardar entrada y salida | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R/" />
+  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+  <meta property="og:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.4 Guardar entrada y salida | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  
+  <meta name="twitter:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+
+<meta name="author" content="Jeshua Romero Guadarrama" />
+
+
+<meta name="date" content="2021-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="prev" href="introducción-una-primera-sesión-en-r.html"/>
+<link rel="next" href="2-Capitulo2Cargaymanipulacióndedatos.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<!-- font families -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
+
+<script src="js/hideOutput.js"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
+
+ <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        jax: ["input/TeX","output/CommonHTML"]
+      });
+      MathJax.Hub.processSectionDelay = 0;
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110299877-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110299877-1');
+</script>
+
+<!-- open review block -->
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
+<li class="chapter" data-level="1" data-path="1-Capítulo1.html"><a href="1-Capítulo1.html"><i class="fa fa-check"></i><b>1</b> Obtener R y descargar paquetes</a>
+<ul>
+<li class="chapter" data-level="" data-path="antecedentes-e-instalación.html"><a href="antecedentes-e-instalación.html"><i class="fa fa-check"></i>Antecedentes e instalación**</a></li>
+<li><a href="dónde-puedo-conseguir-r.html#dónde-puedo-conseguir-r"><strong>1.2 ¿Dónde puedo conseguir <em>R</em>?</strong></a></li>
+<li><a href="introducción-una-primera-sesión-en-r.html#introducción-una-primera-sesión-en-r"><strong>1.3 Introducción: Una primera sesión en <em>R</em></strong></a></li>
+<li><a href="guardar-entrada-y-salida.html#guardar-entrada-y-salida"><strong>1.4 Guardar entrada y salida</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Capitulo2Cargaymanipulacióndedatos.html"><a href="2-Capitulo2Cargaymanipulacióndedatos.html"><i class="fa fa-check"></i><b>2</b> <strong>Capitulo 2: Carga y manipulación de datos</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="lectura-de-datos.html"><a href="lectura-de-datos.html"><i class="fa fa-check"></i>Lectura de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Visualizaciondedatos.html"><a href="3-Visualizaciondedatos.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos</a>
+<ul>
+<li><a href="gráficos-univariados-en-el-paquete-base.html#gráficos-univariados-en-el-paquete-base">Gráficos univariados en el paquete <code>base</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficos-univariados-en-el-paquete-base.html"><a href="gráficos-univariados-en-el-paquete-base.html"><i class="fa fa-check"></i>Gráficos de barras</a></li>
+</ul></li>
+<li><a href="la-función-plot.html#la-función-plot">La función <strong>plot</strong></a>
+<ul>
+<li><a href="la-función-plot.html#gráficos-lineales-con-plot">Gráficos lineales con <strong>plot</strong></a></li>
+<li><a href="la-función-plot.html#construcción-de-figuras-con-plot-detalles-adicionales">Construcción de figuras con <strong>plot</strong>: Detalles adicionales</a></li>
+<li class="chapter" data-level="" data-path="la-función-plot.html"><a href="la-función-plot.html"><i class="fa fa-check"></i>Funciones complementarias</a></li>
+</ul></li>
+<li><a href="usar-gráficos-lattice-en-r.html#usar-gráficos-lattice-en-r">Usar gráficos <strong>lattice</strong> en R</a></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica.html"><a href="problemas-de-práctica.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Estadísticasdescriptivas.html"><a href="4-Estadísticasdescriptivas.html"><i class="fa fa-check"></i><b>4</b> Estadísticas descriptivas</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i>Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#tablas-de-frecuencia"><i class="fa fa-check"></i>Tablas de frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i>Medidas de dispersión</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#cuantiles-y-percentiles"><i class="fa fa-check"></i>Cuantiles y percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica-1.html"><a href="problemas-de-práctica-1.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-Inferenciasbásicasyasociaciónbivariante.html"><a href="5-Inferenciasbásicasyasociaciónbivariante.html"><i class="fa fa-check"></i><b>5</b> Inferencias básicas y asociación bivariante</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-significancia-para-medias.html"><a href="pruebas-de-significancia-para-medias.html"><i class="fa fa-check"></i>Pruebas de significancia para medias</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-Modeloslinealesydiagnósticosderegresión.html"><a href="6-Modeloslinealesydiagnósticosderegresión.html"><i class="fa fa-check"></i><b>6</b> Modelos lineales y diagnósticos de regresión</a></li>
+<li class="chapter" data-level="7" data-path="7-Modeloslinealesgeneralizados.html"><a href="7-Modeloslinealesgeneralizados.html"><i class="fa fa-check"></i><b>7</b> Modelos lineales generalizados</a></li>
+<li class="chapter" data-level="8" data-path="8-Usodepaquetesparaaplicarmodelosavanzados.html"><a href="8-Usodepaquetesparaaplicarmodelosavanzados.html"><i class="fa fa-check"></i><b>8</b> Uso de paquetes para aplicar modelos avanzados</a></li>
+<li class="chapter" data-level="9" data-path="9-Análisisdeseriestemporales.html"><a href="9-Análisisdeseriestemporales.html"><i class="fa fa-check"></i><b>9</b> Análisis de series temporales</a></li>
+<li class="chapter" data-level="10" data-path="10-Álgebralinealconaplicacionesdeprogramación.html"><a href="10-Álgebralinealconaplicacionesdeprogramación.html"><i class="fa fa-check"></i><b>10</b> Álgebra lineal con aplicaciones de programación</a></li>
+<li class="chapter" data-level="11" data-path="11-Herramientasdeprogramaciónadicionales.html"><a href="11-Herramientasdeprogramaciónadicionales.html"><i class="fa fa-check"></i><b>11</b> Herramientas de programación adicionales</a></li>
+<li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
+<li class="divider"></li>
+<li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
+<li><a href="https://github.com/JeshuaNomics" class="fa fa-github"><span class="label">  Git Hub</span></a></li>	
+<li><a href="https://www.facebook.com/JeshuaNomics/" class="fa fa-facebook"><span class="label">  Facebook</span></a></li>
+<li><a href="https://twitter.com/JeshuaNomics" class="fa fa-twitter"><span class="label">  Twitter</span></a></li>
+<li><a href="https://www.linkedin.com/in/jeshua-romero-guadarrama/" class="fa fa-linkedin"><span class="label">  Linkedin</span></a></li>
+<li><a href="https://vk.com/jeshuanomics" class="fa fa-vk"><span class="label">  Vkontakte</span></a></li>
+<li><a href="https://jeshuanomics.tumblr.com/" class="fa fa-tumblr"><span class="label">  Tumblr</span></a></li>
+<li><a href="https://www.youtube.com/channel/UCY7f84mJGvMN7TF7XI4-Jgg?view_as=subscriber/" class="fa fa-youtube-play"><span class="label">  YouTube</span></a></li>	
+<li><a href="https://www.instagram.com/JeshuaNomics/" class="fa fa-instagram"><span class="label">  Instagram</span></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="guardar-entrada-y-salida" class="section level2 unnumbered">
+<h2><strong>1.4 Guardar entrada y salida</strong></h2>
+<p>Al analizar datos o programar en R, un usuario nunca se meterá en problemas serios siempre que siga dos reglas básicas:</p>
+<ol style="list-style-type: decimal">
+<li>Deje siempre intactos los archivos de datos originales. Cualquier versión revisada de los datos debe escribirse en un archivo <em>nuevo</em>. Si está trabajando con un conjunto de datos particularmente grande y difícil de manejar, escriba un programa corto que se adapte a lo que necesita, guarde el archivo limpiado por separado y luego escriba el código que funcione con el nuevo archivo.</li>
+<li>Escriba todo el código de entrada en una secuencia de comandos que se guarda. Los usuarios generalmente deben evitar escribir código directamente en la consola. Esto incluye código para limpiar, recodificar y remodelar datos, así como para realizar análisis o desarrollar nuevos programas.</li>
+</ol>
+<p>Si se siguen estas dos reglas, entonces el usuario siempre recuperará su trabajo hasta el punto de que se produzca algún error u omisión. Entonces, incluso si, en la administración de datos, se pierde o pierde información esencial, o incluso si un revisor de una revista nombra un predictor que un modelo debe agregar, el usuario siempre puede volver sobre sus pasos. Al llamar al conjunto de datos original con el programa guardado, el usuario puede realizar ajustes <em>menores</em> en el código para incorporar una nueva función de análisis o recuperar información perdida. Por el contrario, si los datos originales se sobrescriben o el código de entrada no se guarda, entonces el usuario probablemente tendrá que iniciar el proyecto completo desde el principio, lo que es una pérdida de tiempo.</p>
+<p>Un <em>archivo de script</em> en R es simplemente texto sin formato, generalmente guardado con el sufijo <tt>.R</tt>. Para crear un nuevo archivo de script en R, simplemente elija <em>Archivo <span class="math inline">\(\rightarrow\)</span> Nuevo documento</em> en el menú desplegable para abrir el documento. Alternativamente, la ventana de la consola que se muestra en la Fig. 1.2 muestra un ícono que parece una página en blanco en la parte superior de la pantalla (segundo ícono de la derecha). Al hacer clic en esto, también se creará un nuevo archivo de script R. Una vez abierto, se aplican los comandos normales <em>Guardar</em> y <em>Guardar como</em> del menú <em>Archivo</em>. Para abrir un script existente, seleccione <em>Archivo <span class="math inline">\(\rightarrow\)</span> Abrir documento</em> en el menú desplegable, o haga clic en el icono en la parte superior de la pantalla que parece un página con escritura (tercer icono desde la derecha en la Fig. 1.2). Cuando se trabaja con un archivo de secuencia de comandos, cualquier código dentro del archivo se puede ejecutar en la consola simplemente resaltando el código de interés y escribiendo el atajo de teclado <tt>Ctrl + R</tt> en Windows o <tt>Cmd + Return</tt> en Mac. Además del editor de archivos de script predeterminado, también están disponibles editores de texto más sofisticados como Emacs y RWinEdt.</p>
+<p>El producto de cualquier sesión de R se guarda en el <em>directorio de trabajo</em>. El directorio de trabajo es la ruta de archivo predeterminada para todos los archivos que el usuario desea leer o escribir. El comando getwd (que significa ** get w ** orking ** d ** irectory) imprimirá el directorio de trabajo actual de R, mientras que setwd (** set w ** orking ** d ** irectory) le permite cambiar el directorio de trabajo como se desee. Dentro de una máquina con Windows, la sintaxis para verificar y luego configurar, el directorio de trabajo se vería así:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="guardar-entrada-y-salida.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>() </span>
+<span id="cb6-2"><a href="guardar-entrada-y-salida.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/temp/&quot;</span>)</span></code></pre></div>
+<p>This now writes any output files, be they data sets, figures, or printed output to the folder temp in the C: drive. Observe that R expects forward slashes to designate subdirectories, which contrasts from Windows’s typical use of backslashes. Hence, specifying C:/temp/ as the working directory points to C: in normal Windows syntax. Meanwhile for Mac or Unix, setting a working directory would be similar,andthepathdirectoryisprintedexactlyastheseoperatingsystemsdesignate them with forward slashes:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="guardar-entrada-y-salida.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;/Volumes/flashdisk/temp&quot;</span>)</span></code></pre></div>
+<p>Note that setwd can be called multiple times in a session, as needed. Also, specifying the full path for any file overrides the working directory.</p>
+<p>To <em>save output</em> from your session in R, try the sink command. As a general computing term, a <strong>sink</strong> is an output point for a program where data or results are written out. In R, this term accordingly refers to a file that records all of our printed output. To save your session’s ouput to the file Rintro.txt within the working directory type:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="guardar-entrada-y-salida.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>(<span class="st">&quot;Rintro.txt&quot;</span>)</span></code></pre></div>
+<p>Alternatively, if we wanted to override the working directory, in Windows for instance, we could have instead typed:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="guardar-entrada-y-salida.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>(<span class="st">&quot;C:/myproject/code/Rintro.txt&quot;</span>)</span></code></pre></div>
+<p>Now that we have created an output file, any output that normally would print to the console will instead print to the file Rintro.txt. (For this reason, in a first runofnewcode,itisusuallyadvisable toallowoutputtoprinttothescreenandthen rerun the code later to print to a file.) The print command is useful for creating output that can be easily followed. For instance, the command:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="guardar-entrada-y-salida.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;The mean of variable x is...&quot;</span>)</span></code></pre></div>
+<p>will print the following in the file Rintro.txt:</p>
+<p>[1] “The mean of variable x is…”</p>
+<p>Another useful printing command is the cat command (short for <strong>cat</strong>enate, to connect things together), which lets you mix objects in R with text. As a preview of simulation tools described in Chap.11, let us create a variable named x by means of simulation:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="guardar-entrada-y-salida.html#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)</span></code></pre></div>
+<p>By way of explanation: this syntax draws randomly 1000 times from a standard normal distribution and assigns the values to the vector x. Observe the arrow (&lt;-), formed with a <em>less than</em> sign and a <em>hyphen</em>, which is R’s assignment operator. Any time we assign something with the arrow (&lt;-) the name on the left (x in this case) allows us to recall the result of the operation on the right (rnorm(1000) in this case)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>. Now we can print the mean of these 1000 draws (which should be close to 0 in this case) to our output file as follows:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="guardar-entrada-y-salida.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;The mean of variable x is...&quot;</span>, <span class="fu">mean</span>(x), <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<p>With this syntax, objects from R can be embedded into the statement you print. The character puts in a carriage return. You also can print any statistical output using the either print or cat commands. Remember, your output does not go to the log file unless you use one of the print commands. Another option is to simply copy and paste results from the R console window into Word or a text editor. To turn off the sink command, simply type:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="guardar-entrada-y-salida.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sink</span>()</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Work Session Management</strong></li>
+</ol>
+<p>A key feature of R is that it is an <em>object-oriented</em> programming language. Variables, data frames, models, and outputs are all stored in memory as <em>objects</em>, or identified (and named) locations in memory with defined features. R stores in working memory any object you create using the name you define whenever you load data into memory or estimate a model. To <strong>l</strong>i<strong>s</strong>t the objects you have created in a session use either of the following commands:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="guardar-entrada-y-salida.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">objects</span>() </span>
+<span id="cb14-2"><a href="guardar-entrada-y-salida.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
+<p>To <strong>r</strong>e<strong>m</strong>ove all the objects in R type:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="guardar-entrada-y-salida.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>(<span class="at">all=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<p>As a rule, it is a good idea to use the rm command at the start of any new program. If the previous user saved his or her workspace, then they may have used objects sharing the same name as yours, which can create confusion.</p>
+<p>To <strong>q</strong>uit R either close the console window or type:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="guardar-entrada-y-salida.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">q</span>()</span></code></pre></div>
+<p>At this point, R will ask if you wish to save the workspace image. Generally, it is advisable not to do this, as starting with a clean slate in each session is more likely to prevent programming errors or confusion on the versions of objects loaded in memory.</p>
+<p>Finally, in many R sessions, we will need to load <em>packages</em>, or batches of code and data offering additional functionality not written in R’s base code. Throughout this book we will load several packages, particularly in Chap.8, where our focus will be on example packages written by prominent Political Scientists to implement cutting-edge methods. The necessary commands to load packages are install.packages, a command that automatically downloads and installs a package on a user’s copy of R, and library, a command that loads the package in a given session. Suppose we wanted to install the package MCMCpack. This package provides tools for Bayesian modeling that we will use in Chap.8. The form of the syntax for these commands is:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="guardar-entrada-y-salida.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;MCMCpack&quot;</span>) </span>
+<span id="cb17-2"><a href="guardar-entrada-y-salida.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MCMCpack)</span></code></pre></div>
+<p>Package installation is case and spelling sensitive. R will likely prompt you at this point to choose one of the CRAN mirrors from which to download this package: For faster downloading, users typically choose the mirror that is most geographically proximate. The install.packages command only needs to be run once per R installation for a particular package to be available on a machine. The library command needs to be run for every session that a user wishes to use the package. Hence, in the next session that we want to use MCMCpack, we need only type: library(MCMCpack).</p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Resources</strong></li>
+</ol>
+<p>Given the wide array of base functions that are available in R, much less the even wider array of functionality created by R packages, a book such as this cannot possibly address everything R is capable of doing. This book should serve as a resource introducing how a researcher can use R as a basic statistics program and offer some general pointers about the usage of packages and programming features. As questions emerge about topics not covered in this space, there are several other resources that may be of use:</p>
+<ul>
+<li>Within R, the <em>Help</em> pull down menu (also available by typing help.start() in the console) offers several manuals of use, including an “Introduction to R” and “Writing R Extensions.” This also opens an HTML-based search engine of the help files.</li>
+<li>UCLA’s Institute for Digital Research and Education offers several nice tutorials <a href="http://www.ats.ucla.edu/stat/r/">(http://www.ats.ucla.edu/stat/r/)</a>. The CRAN website also includes a variety of online manuals <a href="http://www.cran.r-project.org/other-docs.html">(http://www.cran.r-project.org/other-docs.html)</a>.</li>
+<li>Some nice interactive tutorials include swirl, which is a package you install in your own copy of R (more information:<a href="http://www.swirlstats.com/">http://www.swirlstats.com/)</a>, and Try R, which is completed online <a href="http://tryr.codeschool.com/">(http://tryr.codeschool.com/)</a>.</li>
+<li>Within the R console, the commands ?, help(), and help.search() all serve to find documentation. For instance, ?lm would find the documenta- tion for the linear model command. Alternatively, help.search(“linear model”) would search the documentation for a phrase.</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Practice Problems 11</li>
+</ol>
+<ul>
+<li>To search the internet for information,Rseek <a href="http://www.rseek.org/">(http://www.rseek.org/,</a> powered by Google) is a worthwhile search engine that searches only over websites focused on R.</li>
+<li>Finally, Twitter users reference R through the hashtag #rstats.</li>
+</ul>
+<p>At this point, users should now have R installed on their machine, hold a basic sense of how commands are entered and output is generated, and recognize where to find the vast resources available for R users. In the next six chapters, we will see how R can be used to fill the role of a statistical analysis or econometrics software program.</p>
+<p><strong>1.6 Practice Problems</strong></p>
+<p>Each chapter will end with a few practice problems. If you have tested all of the code from the in-chapter examples, you should be able to complete these on your own. If you have not done so already, go ahead and install R on your machine for free and try the in-chapter code. Then try the following questions.</p>
+<ol style="list-style-type: decimal">
+<li>Compute the following in R:</li>
+</ol>
+<ol style="list-style-type: decimal">
+<li>7 23</li>
+<li>8</li>
+</ol>
+<p>82C 1</p>
+<ol start="3" style="list-style-type: decimal">
+<li>cpos</li>
+<li>81</li>
+<li>ln<em>e</em>4</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Whatdoesthecommandcor do?Finddocumentationaboutitanddescribewhat the function does.</li>
+<li>What does the command runif do? Find documentation about it and describe what the function does.</li>
+<li>Create a vector named x that consists of 1000 draws from a standard normal distribution, using code just like you see in Sect.<a href="#_page6_x53.00_y53.15">1.3.</a> Create a second vector named y in the same way. Compute the correlation coefficient between the two vectors. What result do you get, and why do you get this result?</li>
+<li>Get a feel for how to decide when add-on packages might be useful for you. Log in to<a href="http://www.rseek.org">http://www.rseek.org</a>and look up what the stringr package does. What kinds of functionality does this package give you? When might you want to use it?</li>
+</ol>
+
+</div>
+<!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>The arrow (&lt;-) is the traditional assignment operator, though a single equals sign (=) also can serve for assignments.<a href="guardar-entrada-y-salida.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducción-una-primera-sesión-en-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-Capitulo2Cargaymanipulacióndedatos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": true,
+"whatsapp": false,
+"all": ["vk", "linkedin", "twitter", "facebook"],
+"tumblr": false,
+"youtube": false,
+"instagram": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Jeshua-Romero-Guadarrama/CienciaPolitica/edit/master/Capitulo_01.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Ciencia_de_datos_para_el_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.epub"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

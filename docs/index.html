@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Analisis político con R</title>
+  <title>Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</title>
   <meta name="description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Analisis político con R" />
+  <meta property="og:title" content="Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Analisis_politico_con_R/" />
-  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Analisis_politico_con_R//images/cover.png" />
+  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R/" />
+  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
   <meta property="og:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
-  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Analisis_politico_con_R" />
+  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Analisis político con R" />
+  <meta name="twitter:title" content="Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
   
   <meta name="twitter:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
-  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Analisis_politico_con_R//images/cover.png" />
+  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
 
 <meta name="author" content="Jeshua Romero Guadarrama" />
 
 
-<meta name="date" content="2021-07-30" />
+<meta name="date" content="2021-10-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
 
-<link rel="next" href="referencias-bibliográficas.html"/>
+<link rel="next" href="índice-de-contenido.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -87,6 +87,69 @@
 
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -129,6 +192,57 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
+<li class="chapter" data-level="1" data-path="1-Capítulo1.html"><a href="1-Capítulo1.html"><i class="fa fa-check"></i><b>1</b> Obtener R y descargar paquetes</a>
+<ul>
+<li class="chapter" data-level="" data-path="antecedentes-e-instalación.html"><a href="antecedentes-e-instalación.html"><i class="fa fa-check"></i>Antecedentes e instalación**</a></li>
+<li><a href="dónde-puedo-conseguir-r.html#dónde-puedo-conseguir-r"><strong>1.2 ¿Dónde puedo conseguir <em>R</em>?</strong></a></li>
+<li><a href="introducción-una-primera-sesión-en-r.html#introducción-una-primera-sesión-en-r"><strong>1.3 Introducción: Una primera sesión en <em>R</em></strong></a></li>
+<li><a href="guardar-entrada-y-salida.html#guardar-entrada-y-salida"><strong>1.4 Guardar entrada y salida</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Capitulo2Cargaymanipulacióndedatos.html"><a href="2-Capitulo2Cargaymanipulacióndedatos.html"><i class="fa fa-check"></i><b>2</b> <strong>Capitulo 2: Carga y manipulación de datos</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="lectura-de-datos.html"><a href="lectura-de-datos.html"><i class="fa fa-check"></i>Lectura de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Visualizaciondedatos.html"><a href="3-Visualizaciondedatos.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos</a>
+<ul>
+<li><a href="gráficos-univariados-en-el-paquete-base.html#gráficos-univariados-en-el-paquete-base">Gráficos univariados en el paquete <code>base</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficos-univariados-en-el-paquete-base.html"><a href="gráficos-univariados-en-el-paquete-base.html"><i class="fa fa-check"></i>Gráficos de barras</a></li>
+</ul></li>
+<li><a href="la-función-plot.html#la-función-plot">La función <strong>plot</strong></a>
+<ul>
+<li><a href="la-función-plot.html#gráficos-lineales-con-plot">Gráficos lineales con <strong>plot</strong></a></li>
+<li><a href="la-función-plot.html#construcción-de-figuras-con-plot-detalles-adicionales">Construcción de figuras con <strong>plot</strong>: Detalles adicionales</a></li>
+<li class="chapter" data-level="" data-path="la-función-plot.html"><a href="la-función-plot.html"><i class="fa fa-check"></i>Funciones complementarias</a></li>
+</ul></li>
+<li><a href="usar-gráficos-lattice-en-r.html#usar-gráficos-lattice-en-r">Usar gráficos <strong>lattice</strong> en R</a></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica.html"><a href="problemas-de-práctica.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Estadísticasdescriptivas.html"><a href="4-Estadísticasdescriptivas.html"><i class="fa fa-check"></i><b>4</b> Estadísticas descriptivas</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i>Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#tablas-de-frecuencia"><i class="fa fa-check"></i>Tablas de frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i>Medidas de dispersión</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#cuantiles-y-percentiles"><i class="fa fa-check"></i>Cuantiles y percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica-1.html"><a href="problemas-de-práctica-1.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-Inferenciasbásicasyasociaciónbivariante.html"><a href="5-Inferenciasbásicasyasociaciónbivariante.html"><i class="fa fa-check"></i><b>5</b> Inferencias básicas y asociación bivariante</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-significancia-para-medias.html"><a href="pruebas-de-significancia-para-medias.html"><i class="fa fa-check"></i>Pruebas de significancia para medias</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-Modeloslinealesydiagnósticosderegresión.html"><a href="6-Modeloslinealesydiagnósticosderegresión.html"><i class="fa fa-check"></i><b>6</b> Modelos lineales y diagnósticos de regresión</a></li>
+<li class="chapter" data-level="7" data-path="7-Modeloslinealesgeneralizados.html"><a href="7-Modeloslinealesgeneralizados.html"><i class="fa fa-check"></i><b>7</b> Modelos lineales generalizados</a></li>
+<li class="chapter" data-level="8" data-path="8-Usodepaquetesparaaplicarmodelosavanzados.html"><a href="8-Usodepaquetesparaaplicarmodelosavanzados.html"><i class="fa fa-check"></i><b>8</b> Uso de paquetes para aplicar modelos avanzados</a></li>
+<li class="chapter" data-level="9" data-path="9-Análisisdeseriestemporales.html"><a href="9-Análisisdeseriestemporales.html"><i class="fa fa-check"></i><b>9</b> Análisis de series temporales</a></li>
+<li class="chapter" data-level="10" data-path="10-Álgebralinealconaplicacionesdeprogramación.html"><a href="10-Álgebralinealconaplicacionesdeprogramación.html"><i class="fa fa-check"></i><b>10</b> Álgebra lineal con aplicaciones de programación</a></li>
+<li class="chapter" data-level="11" data-path="11-Herramientasdeprogramaciónadicionales.html"><a href="11-Herramientasdeprogramaciónadicionales.html"><i class="fa fa-check"></i><b>11</b> Herramientas de programación adicionales</a></li>
 <li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
 <li class="divider"></li>
 <li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
@@ -150,7 +264,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analisis político con R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</a>
           </h1>
         </div>
 
@@ -159,15 +273,15 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Analisis político con R</h1>
+<h1 class="title">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</h1>
 <p class="author"><em>Jeshua Romero Guadarrama</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-07-30</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-10-18</em></p>
 </div>
 <div id="prefacio" class="section level1 unnumbered">
 <h1>Prefacio</h1>
 <hr style="background-color:#03193b;height:2px">
 <center>
-<img style = 'width:60%;' src='images/Analisis_politico_con_R.png'>
+<img style = 'width:60%;' src='images/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.png'>
 </center>
 <hr style="background-color:#03193b;height:2px">
 <center>
@@ -192,14 +306,23 @@ div.csl-indent {
 <a href="https://www.youtube.com/channel/UCY7f84mJGvMN7TF7XI4-Jgg?view_as=subscriber/" class="fa fa-youtube-play"><span class="label"> YouTube</span></a>
 <a href="https://www.instagram.com/JeshuaNomics/" class="fa fa-instagram"><span class="label"> Instagram</span></a>
 </center>
-<p><br> Jeshua Romero Guadarrama es economista y actuario por la <a href="http://www.economia.unam.mx/">Universidad Nacional Autónoma de México</a>, quien ha construido el presente proyecto en colaboración con <a href="https://www.jeshuanomics.com">JeshuaNomics</a>, ubicado en la Ciudad de México, se puede contactar mediante el siguiente correo electrónico: <a href="mailto:jeshuanomics@gmail.com" class="email">jeshuanomics@gmail.com</a>.
 <br>
-<br> Última actualización el viernes 30 del 07 de 2021
+<p align="justify">
+Jeshua Romero Guadarrama es economista y actuario por la <a href="http://www.economia.unam.mx/">Universidad Nacional Autónoma de México</a>, quien ha construido el presente proyecto en colaboración con <a href="https://www.jeshuanomics.com">JeshuaNomics</a>, ubicado en la Ciudad de México, se puede contactar mediante el siguiente correo electrónico: <a href="mailto:jeshuanomics@gmail.com" class="email">jeshuanomics@gmail.com</a>.
+</p>
+<p><br>
+Última actualización el lunes 18 del 10 de 2021
 <br></p>
 <hr style="background-color:#03193b;height:2px">
-<p>Los estudiantes con poca experiencia en el análisis avanzado de políticas a menudo tienen dificultades para entender los beneficios de desarrollar habilidades de programación estadística en <strong>R</strong> al momento de aplicar diversos métodos descriptivos e inferenciales. <i>Análisis político con R</i> por Jeshua Romero Guadarrama (2021), ofrece una introducción interactiva a los aspectos esenciales de la programación por medio del lenguaje y software estadístico <strong>R</strong>, así como una guía para la aplicación de la teoría política y análisis detallado de políticas públicas en entornos específicos. En otras palabras, el objetivo es que los estudiantes se adentren al mundo de la política aplicada mediante ejemplos empíricos presentados en la vida diaria y haciendo uso de las habilidades de programación recién adquiridas. Dicho objetivo se encuentra respaldado por ejercicios de programación interactivos y la incorporación de visualizaciones dinámicas de conceptos fundamentales mediante la flexibilidad de JavaScript, a través de la biblioteca D3.js.</p>
-<p>En los últimos años, el lenguaje de programación estadística <strong>R</strong> se ha convertido en una parte integral del plan de estudios de las clases de análisis político y estadística que se imparten en las universidades. Regularmente una gran parte de los estudiantes no han estado expuestos a ningún lenguaje de programación antes y, por lo tanto, tienen dificultades para participar en el aprendizaje de <strong>R</strong> por sí mismos. Con poca experiencia en el análisis avanzado de estadísticas, es natural que los novicios tengan dificultades para comprender los beneficios de desarrollar habilidades en <strong>R</strong> para aprender y aplicar la estadística. Estos incluyen particularmente la capacidad de realizar, documentar y comunicar estudios empíricos y tener las facilidades para programar estudios de simulación, lo cual es útil para, por ejemplo, comprender y validar teoremas que generalmente no se asimilan o entienden fácilmente con el estudio de las fórmulas. Al ser un economista aplicado y analista político, me gustaría que mis colegas desarrollen capacidades de gran valor; en consecuencia, deseo compartir con las nuevas generaciones de politólogos y economistas mis conocimientos.</p>
-<p>En lugar de confrontar a los estudiantes con ejercicios de codificación puros y literatura clásica complementaria, he pensado que sería mejor proporcionar material de aprendizaje interactivo que combine el código en <strong>R</strong> con el contenido del curso de texto <em>Introducción a la Econometría</em> de <span class="citation"><a href="#ref-stock2015" role="doc-biblioref">Stock and Watson</a> (<a href="#ref-stock2015" role="doc-biblioref">2015</a>)</span> que sirve de base para el presente material. El presente trabajo es un complemento empírico interactivo al estilo de un informe de investigación reproducible que permite a los estudiantes no solo aprender cómo los resultados de los estudios de casos se pueden replicar con <strong>R</strong>, sino que también fortalece su capacidad para utilizar las habilidades recién adquiridas en otras aplicaciones empíricas.</p>
+<p align="justify">
+Los estudiantes con poca experiencia en el análisis avanzado de políticas a menudo tienen dificultades para entender los beneficios de desarrollar habilidades de programación estadística en <strong>R</strong> al momento de aplicar diversos métodos descriptivos e inferenciales. <i>Análisis político con R</i> por Jeshua Romero Guadarrama (2021), ofrece una introducción interactiva a los aspectos esenciales de la programación por medio del lenguaje y software estadístico <strong>R</strong>, así como una guía para la aplicación de la teoría política y análisis detallado de políticas públicas en entornos específicos. En otras palabras, el objetivo es que los estudiantes se adentren al mundo de la política aplicada mediante ejemplos empíricos presentados en la vida diaria y haciendo uso de las habilidades de programación recién adquiridas. Dicho objetivo se encuentra respaldado por ejercicios de programación interactivos y la incorporación de visualizaciones dinámicas de conceptos fundamentales mediante la flexibilidad de JavaScript, a través de la biblioteca D3.js.
+</p>
+<p align="justify">
+En los últimos años, el lenguaje de programación estadística <strong>R</strong> se ha convertido en una parte integral del plan de estudios de las clases de análisis político y estadística que se imparten en las universidades. Regularmente una gran parte de los estudiantes no han estado expuestos a ningún lenguaje de programación antes y, por lo tanto, tienen dificultades para participar en el aprendizaje de <strong>R</strong> por sí mismos. Con poca experiencia en el análisis avanzado de estadísticas, es natural que los novicios tengan dificultades para comprender los beneficios de desarrollar habilidades en <strong>R</strong> para aprender y aplicar la estadística. Estos incluyen particularmente la capacidad de realizar, documentar y comunicar estudios empíricos y tener las facilidades para programar estudios de simulación, lo cual es útil para, por ejemplo, comprender y validar teoremas que generalmente no se asimilan o entienden fácilmente con el estudio de las fórmulas. Al ser un economista aplicado y analista político, me gustaría que mis colegas desarrollen capacidades de gran valor; en consecuencia, deseo compartir con las nuevas generaciones de politólogos y economistas mis conocimientos.
+</p>
+<p align="justify">
+En lugar de confrontar a los estudiantes con ejercicios de codificación puros y literatura clásica complementaria, he pensado que sería mejor proporcionar material de aprendizaje interactivo que combine el código en <strong>R</strong> con el contenido del curso de texto <em>Introducción a la Econometría</em> de <span class="citation"><a href="#ref-stock2015" role="doc-biblioref">Stock and Watson</a> (<a href="#ref-stock2015" role="doc-biblioref">2015</a>)</span> que sirve de base para el presente material. El presente trabajo es un complemento empírico interactivo al estilo de un informe de investigación reproducible que permite a los estudiantes no solo aprender cómo los resultados de los estudios de casos se pueden replicar con <strong>R</strong>, sino que también fortalece su capacidad para utilizar las habilidades recién adquiridas en otras aplicaciones empíricas.
+</p>
 <div id="las-convenciones-usadas-en-el-presente-curso" class="section level4 unnumbered">
 <h4>Las convenciones usadas en el presente curso</h4>
 <ul>
@@ -210,11 +333,16 @@ div.csl-indent {
 </div>
 <div id="reconocimiento" class="section level4 unnumbered">
 <h4>Reconocimiento</h4>
-<p>A mi alma máter: Universidad Nacional Autónoma de México (Facultad de Economía y Facultad de Ciencias). Por brindarme valiosas oportunidades que coadyuvaron a mi formación.</p>
-<p><br>
-<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.eu.svg" alt="Creative Commons License" /></p>
-<p>Esta obra está autorizado bajo la <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-
+<p align="justify">
+A mi alma máter: Universidad Nacional Autónoma de México (Facultad de Economía y Facultad de Ciencias). Por brindarme valiosas oportunidades que coadyuvaron a mi formación.
+</p>
+<br>
+<center>
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.eu.svg" title="fig:" alt="Creative Commons License" />
+</center>
+<p align="justify">
+Esta obra está autorizado bajo la <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
 </div>
 </div>
 <h3>References</h3>
@@ -229,7 +357,7 @@ Stock, J. H., and M. W. Watson. 2015. <em><span>I</span>ntroduction to <span>E</
         </div>
       </div>
 
-<a href="referencias-bibliográficas.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="índice-de-contenido.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -275,7 +403,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Analisis_politico_con_R.pdf", "Analisis_politico_con_R.epub"],
+"download": ["Ciencia_de_datos_para_el_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.epub"],
 "toc": {
 "collapse": "subsection",
 "scroll_highlight": true
@@ -285,6 +413,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

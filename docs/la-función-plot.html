@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>La función plot | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</title>
+  <meta name="description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="La función plot | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R/" />
+  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+  <meta property="og:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="La función plot | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  
+  <meta name="twitter:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+
+<meta name="author" content="Jeshua Romero Guadarrama" />
+
+
+<meta name="date" content="2021-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="prev" href="gráficos-univariados-en-el-paquete-base.html"/>
+<link rel="next" href="usar-gráficos-lattice-en-r.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<!-- font families -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
+
+<script src="js/hideOutput.js"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
+
+ <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        jax: ["input/TeX","output/CommonHTML"]
+      });
+      MathJax.Hub.processSectionDelay = 0;
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110299877-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110299877-1');
+</script>
+
+<!-- open review block -->
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
+<li class="chapter" data-level="1" data-path="1-Capítulo1.html"><a href="1-Capítulo1.html"><i class="fa fa-check"></i><b>1</b> Obtener R y descargar paquetes</a>
+<ul>
+<li class="chapter" data-level="" data-path="antecedentes-e-instalación.html"><a href="antecedentes-e-instalación.html"><i class="fa fa-check"></i>Antecedentes e instalación**</a></li>
+<li><a href="dónde-puedo-conseguir-r.html#dónde-puedo-conseguir-r"><strong>1.2 ¿Dónde puedo conseguir <em>R</em>?</strong></a></li>
+<li><a href="introducción-una-primera-sesión-en-r.html#introducción-una-primera-sesión-en-r"><strong>1.3 Introducción: Una primera sesión en <em>R</em></strong></a></li>
+<li><a href="guardar-entrada-y-salida.html#guardar-entrada-y-salida"><strong>1.4 Guardar entrada y salida</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Capitulo2Cargaymanipulacióndedatos.html"><a href="2-Capitulo2Cargaymanipulacióndedatos.html"><i class="fa fa-check"></i><b>2</b> <strong>Capitulo 2: Carga y manipulación de datos</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="lectura-de-datos.html"><a href="lectura-de-datos.html"><i class="fa fa-check"></i>Lectura de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Visualizaciondedatos.html"><a href="3-Visualizaciondedatos.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos</a>
+<ul>
+<li><a href="gráficos-univariados-en-el-paquete-base.html#gráficos-univariados-en-el-paquete-base">Gráficos univariados en el paquete <code>base</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficos-univariados-en-el-paquete-base.html"><a href="gráficos-univariados-en-el-paquete-base.html"><i class="fa fa-check"></i>Gráficos de barras</a></li>
+</ul></li>
+<li><a href="la-función-plot.html#la-función-plot">La función <strong>plot</strong></a>
+<ul>
+<li><a href="la-función-plot.html#gráficos-lineales-con-plot">Gráficos lineales con <strong>plot</strong></a></li>
+<li><a href="la-función-plot.html#construcción-de-figuras-con-plot-detalles-adicionales">Construcción de figuras con <strong>plot</strong>: Detalles adicionales</a></li>
+<li class="chapter" data-level="" data-path="la-función-plot.html"><a href="la-función-plot.html"><i class="fa fa-check"></i>Funciones complementarias</a></li>
+</ul></li>
+<li><a href="usar-gráficos-lattice-en-r.html#usar-gráficos-lattice-en-r">Usar gráficos <strong>lattice</strong> en R</a></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica.html"><a href="problemas-de-práctica.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Estadísticasdescriptivas.html"><a href="4-Estadísticasdescriptivas.html"><i class="fa fa-check"></i><b>4</b> Estadísticas descriptivas</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i>Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#tablas-de-frecuencia"><i class="fa fa-check"></i>Tablas de frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i>Medidas de dispersión</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#cuantiles-y-percentiles"><i class="fa fa-check"></i>Cuantiles y percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica-1.html"><a href="problemas-de-práctica-1.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-Inferenciasbásicasyasociaciónbivariante.html"><a href="5-Inferenciasbásicasyasociaciónbivariante.html"><i class="fa fa-check"></i><b>5</b> Inferencias básicas y asociación bivariante</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-significancia-para-medias.html"><a href="pruebas-de-significancia-para-medias.html"><i class="fa fa-check"></i>Pruebas de significancia para medias</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-Modeloslinealesydiagnósticosderegresión.html"><a href="6-Modeloslinealesydiagnósticosderegresión.html"><i class="fa fa-check"></i><b>6</b> Modelos lineales y diagnósticos de regresión</a></li>
+<li class="chapter" data-level="7" data-path="7-Modeloslinealesgeneralizados.html"><a href="7-Modeloslinealesgeneralizados.html"><i class="fa fa-check"></i><b>7</b> Modelos lineales generalizados</a></li>
+<li class="chapter" data-level="8" data-path="8-Usodepaquetesparaaplicarmodelosavanzados.html"><a href="8-Usodepaquetesparaaplicarmodelosavanzados.html"><i class="fa fa-check"></i><b>8</b> Uso de paquetes para aplicar modelos avanzados</a></li>
+<li class="chapter" data-level="9" data-path="9-Análisisdeseriestemporales.html"><a href="9-Análisisdeseriestemporales.html"><i class="fa fa-check"></i><b>9</b> Análisis de series temporales</a></li>
+<li class="chapter" data-level="10" data-path="10-Álgebralinealconaplicacionesdeprogramación.html"><a href="10-Álgebralinealconaplicacionesdeprogramación.html"><i class="fa fa-check"></i><b>10</b> Álgebra lineal con aplicaciones de programación</a></li>
+<li class="chapter" data-level="11" data-path="11-Herramientasdeprogramaciónadicionales.html"><a href="11-Herramientasdeprogramaciónadicionales.html"><i class="fa fa-check"></i><b>11</b> Herramientas de programación adicionales</a></li>
+<li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
+<li class="divider"></li>
+<li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
+<li><a href="https://github.com/JeshuaNomics" class="fa fa-github"><span class="label">  Git Hub</span></a></li>	
+<li><a href="https://www.facebook.com/JeshuaNomics/" class="fa fa-facebook"><span class="label">  Facebook</span></a></li>
+<li><a href="https://twitter.com/JeshuaNomics" class="fa fa-twitter"><span class="label">  Twitter</span></a></li>
+<li><a href="https://www.linkedin.com/in/jeshua-romero-guadarrama/" class="fa fa-linkedin"><span class="label">  Linkedin</span></a></li>
+<li><a href="https://vk.com/jeshuanomics" class="fa fa-vk"><span class="label">  Vkontakte</span></a></li>
+<li><a href="https://jeshuanomics.tumblr.com/" class="fa fa-tumblr"><span class="label">  Tumblr</span></a></li>
+<li><a href="https://www.youtube.com/channel/UCY7f84mJGvMN7TF7XI4-Jgg?view_as=subscriber/" class="fa fa-youtube-play"><span class="label">  YouTube</span></a></li>	
+<li><a href="https://www.instagram.com/JeshuaNomics/" class="fa fa-instagram"><span class="label">  Instagram</span></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="la-función-plot" class="section level2 unnumbered">
+<h2>La función <strong>plot</strong></h2>
+<p>Pasamos ahora a <strong>plot</strong>, la función gráfica de caballo de batalla en el paquete <strong>base</strong>. El comando <strong>plot</strong> se presta naturalmente a gráficos bivariados. Para ver la suma total de argumentos que uno puede llamar usando <strong>plot</strong>, escriba <code>args (plot.default)</code> , que devuelve lo siguiente:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="la-función-plot.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">function</span> (x, <span class="at">y=</span><span class="cn">NULL</span>, <span class="at">type=</span><span class="st">&quot;p&quot;</span>, <span class="at">xlim=</span><span class="cn">NULL</span>, <span class="at">ylim=</span><span class="cn">NULL</span>,</span>
+<span id="cb26-2"><a href="la-función-plot.html#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="la-función-plot.html#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">log=</span><span class="st">&quot;&quot;</span>, <span class="at">main=</span><span class="cn">NULL</span>, <span class="at">sub=</span><span class="cn">NULL</span>, <span class="at">xlab=</span><span class="cn">NULL</span>, <span class="at">ylab=</span><span class="cn">NULL</span>,</span>
+<span id="cb26-4"><a href="la-función-plot.html#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="la-función-plot.html#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ann=</span><span class="fu">par</span>(<span class="st">&quot;ann&quot;</span>), <span class="at">axes=</span><span class="cn">TRUE</span>, <span class="at">frame.plot=</span>axes,</span>
+<span id="cb26-6"><a href="la-función-plot.html#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="la-función-plot.html#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.first=</span><span class="cn">NULL</span>, <span class="at">panel.last=</span><span class="cn">NULL</span>, <span class="at">asp=</span><span class="cn">NA</span>, ...)</span></code></pre></div>
+<p>Obviamente, están sucediendo muchas cosas debajo de la función <strong>plot</strong> genérica . Con el fin de comenzar con la creación de figuras en <strong>R</strong>  , queremos preguntarnos qué es esencial. La respuesta es sencilla: se debe especificar una variable <strong>x</strong>. Todo lo demás tiene un valor predeterminado o no es esencial. Para comenzar a experimentar con <strong>plot</strong>, continuamos utilizando los datos de cabildeo de salud del estado de 1997 cargados en la Sect. 3.1.1 .</p>
+<p>Con <strong>plot</strong>, podemos trazar las variables por separado con el comando <code>plot(varname)</code>, aunque esto es definitivamente menos informativo que los tipos de gráficos que se acaban de presentar en la Sección. 3.1 . Dicho esto, si simplemente quisiéramos ver todos los valores observados de la tasa de participación del lobby de las firmas financieras del estado de la salud (<strong>partratebusness</strong>), simplemente escribimos :</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="la-función-plot.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(health.fin<span class="sc">$</span>partratebusness,</span>
+<span id="cb27-2"><a href="la-función-plot.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="la-función-plot.html#cb27-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Lobby Participation Rate&quot;</span>)</span></code></pre></div>
+<p>La figura 3.4 a se devuelve en la interfaz gráfica R. Tenga en cuenta que esta figura traza la tasa de participación del lobby contra el número de fila en el marco de datos: con datos transversales, este índice es esencialmente insignificante. Por el contrario, si estuviéramos estudiando datos de series de tiempo y los datos se clasificaran a tiempo, podríamos observar cómo evoluciona la serie a lo largo del tiempo. Tenga en cuenta que usamos la opción <strong>ylab</strong> porque, de lo contrario, el valor predeterminado etiquetará nuestro eje vertical con el aspecto de mal gusto <code>health.fin$partratebusness</code>. (Pruébelo y pregúntese qué pensaría el editor de una revista sobre cómo se ve el resultado).</p>
+<center>
+<img style='float: center; width:50%' src='images/imagen_3.4.png'/>
+</center>
+<p><strong>Figura 3.4</strong> Tasa de participación del lobby de la industria de las finanzas de la salud solo y contra el número de establecimientos comerciales de finanzas de la salud. ( a ) Índice. ( b ) Número de establecimientos de salud</p>
+<p>Por supuesto, estamos más interesados ​​en las relaciones bivariadas. Podemos explorarlos fácilmente incorporando una variable x en el eje horizontal (generalmente <em>una variable independiente</em>) y una variable y en el eje vertical (generalmente <em>una variable dependiente</em>) en la llamada a graficar:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="la-función-plot.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y=</span>health.fin<span class="sc">$</span>partratebusness,<span class="at">x=</span>health.fin<span class="sc">$</span>supplybusiness,</span>
+<span id="cb28-2"><a href="la-función-plot.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="la-función-plot.html#cb28-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Lobby Participation Rate&quot;</span>,</span>
+<span id="cb28-4"><a href="la-función-plot.html#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="la-función-plot.html#cb28-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Number of Health Establishments&quot;</span>)</span></code></pre></div>
+<p>Esto produce la figura  3.4 b, donde nuestro eje horizontal se define por el número de empresas de financiación de la salud en un estado, y el eje vertical se define por la tasa de participación del lobby de estas empresas en el estado respectivo. Este gráfico muestra lo que parece ser una disminución en la tasa de participación a medida que aumenta el número de empresas, quizás en una relación curvilínea.</p>
+<p>Una herramienta útil es trazar la forma funcional de un modelo bivariado en el diagrama de dispersión de las dos variables. En el caso de la figura  3.4 b, es posible que deseemos comparar cómo una función lineal versus una función cuadrática o al cuadrado del número de empresas se ajusta al resultado de la tasa de participación del lobby. Para hacer esto, podemos ajustar dos modelos de regresión lineal, uno que incluye una función lineal de número de empresas y el otro que incluye una función cuadrática. Los detalles adicionales sobre los modelos de regresión se analizan más adelante en el Cap. 6 Nuestros dos modelos en este caso son:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="la-función-plot.html#cb29-1" aria-hidden="true" tabindex="-1"></a>finance.linear<span class="ot">&lt;-</span><span class="fu">lm</span>(partratebusness<span class="sc">~</span>supplybusiness,</span>
+<span id="cb29-2"><a href="la-función-plot.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="la-función-plot.html#cb29-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">data=</span>health.fin)</span>
+<span id="cb29-4"><a href="la-función-plot.html#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="la-función-plot.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(finance.linear)</span>
+<span id="cb29-6"><a href="la-función-plot.html#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="la-función-plot.html#cb29-7" aria-hidden="true" tabindex="-1"></a>finance.quadratic<span class="ot">&lt;-</span><span class="fu">lm</span>(partratebusness<span class="sc">~</span>supplybusiness<span class="sc">+</span></span>
+<span id="cb29-8"><a href="la-función-plot.html#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="la-función-plot.html#cb29-9" aria-hidden="true" tabindex="-1"></a>     <span class="fu">I</span>(supplybusiness<span class="sc">^</span><span class="dv">2</span>),<span class="at">data=</span>health.fin)</span>
+<span id="cb29-10"><a href="la-función-plot.html#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="la-función-plot.html#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(finance.quadratic)</span></code></pre></div>
+<p>El comando <strong>lm</strong> (<strong>l</strong>inear <strong>m</strong>odel ) se ajusta a nuestros modelos y el comando <code>summary</code> resume nuestros resultados. Nuevamente, los detalles de lm se discutirán en el cap. 6 Con el modelo que es una función lineal del número de empresas, simplemente podemos ingresar el nombre de nuestro modelo ajustado (<code>finance.linear</code>) en el comando <code>abline</code> para agregar nuestra línea de regresión ajustada al gráfico:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="la-función-plot.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y=</span>health.fin<span class="sc">$</span>partratebusness,<span class="at">x=</span>health.fin<span class="sc">$</span>supplybusiness,</span>
+<span id="cb30-2"><a href="la-función-plot.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="la-función-plot.html#cb30-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Lobby Participation Rate&quot;</span>,</span>
+<span id="cb30-4"><a href="la-función-plot.html#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="la-función-plot.html#cb30-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Number of Health Establishments&quot;</span>)</span>
+<span id="cb30-6"><a href="la-función-plot.html#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="la-función-plot.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(finance.linear)</span></code></pre></div>
+<p>Como se mencionó anteriormente, el comando <strong>abline</strong> es particularmente flexible. Un usuario puede especificar <strong>a</strong> como la intersección de una línea y <strong>b</strong> como la pendiente. Un usuario puede especificar <strong>h</strong> como el valor del eje vertical donde se dibuja una línea horizontal, o v como el valor del eje horizontal donde se dibuja una línea vertical. O, en este caso, se puede insertar un modelo de regresión con un predictor para dibujar la línea de regresión que mejor se ajuste. Los resultados se presentan en la figura  3.5 a.</p>
+<center>
+<img style='float: center; width:50%' src='images/imagen_3.5.png'/>
+</center>
+<p><strong>Figura 3.5</strong> Tasa de participación del lobby de la industria financiera de la salud contra el número de establecimientos de salud, modelos lineales y cuadráticos. ( a ) Función lineal. ( b ) Función cuadrática</p>
+<p>Alternativamente, podríamos volver a dibujar este gráfico con la relación cuadrática esbozada en él. Desafortunadamente, a pesar de la flexibilidad de <strong>abline</strong>, no puede trazar una relación cuadrática por defecto. La forma más fácil de trazar una forma funcional compleja es guardar los valores predichos del modelo, reordenar los datos según el predictor de interés y luego usar la función <strong>lines</strong> para agregar una línea conectada de todas las predicciones. Asegúrese de que los datos estén ordenados correctamente en el predictor; de lo contrario, la línea aparecerá como un desorden. El código en este caso es:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="la-función-plot.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">y=</span>health.fin<span class="sc">$</span>partratebusness,<span class="at">x=</span>health.fin<span class="sc">$</span>supplybusiness,</span>
+<span id="cb31-2"><a href="la-función-plot.html#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="la-función-plot.html#cb31-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Lobby Participation Rate&quot;</span>,</span>
+<span id="cb31-4"><a href="la-función-plot.html#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="la-función-plot.html#cb31-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Number of Health Establishments&quot;</span>)</span>
+<span id="cb31-6"><a href="la-función-plot.html#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="la-función-plot.html#cb31-7" aria-hidden="true" tabindex="-1"></a>finance.quadratic<span class="ot">&lt;-</span><span class="fu">lm</span>(partratebusness<span class="sc">~</span>supplybusiness<span class="sc">+</span></span>
+<span id="cb31-8"><a href="la-función-plot.html#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="la-función-plot.html#cb31-9" aria-hidden="true" tabindex="-1"></a>     <span class="fu">I</span>(supplybusiness<span class="sc">^</span><span class="dv">2</span>), <span class="at">data=</span>health.fin)</span>
+<span id="cb31-10"><a href="la-función-plot.html#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="la-función-plot.html#cb31-11" aria-hidden="true" tabindex="-1"></a>health.fin<span class="sc">$</span>quad.fit<span class="ot">&lt;-</span>finance.quadratic<span class="sc">$</span>fitted.values</span>
+<span id="cb31-12"><a href="la-función-plot.html#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="la-función-plot.html#cb31-13" aria-hidden="true" tabindex="-1"></a>health.fin<span class="ot">&lt;-</span>health.fin[<span class="fu">order</span>(health.fin<span class="sc">$</span>supplybusiness),]</span>
+<span id="cb31-14"><a href="la-función-plot.html#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="la-función-plot.html#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">y=</span>health.fin<span class="sc">$</span>quad.fit,<span class="at">x=</span>health.fin<span class="sc">$</span>supplybusiness)</span></code></pre></div>
+<p>Este resultado se presenta en la figura  3.5 b. Si bien aún no entraremos en detalles de <strong>lm</strong>, observe que <code>I(supplybusiness^2)</code> se usa como predictor. <strong>I</strong> significa “como <strong>i</strong>s,” por lo que nos permite calcular una fórmula matemática sobre la marcha. Después de volver a dibujar nuestro diagrama de dispersión original, estimamos nuestro modelo cuadrático y guardamos los valores ajustados en nuestro marco de datos como la variable <code>quad.fit</code>. En la cuarta línea, reordenamos nuestro marco de datos <code>health.fin</code> de acuerdo con los valores de nuestra variable de entrada <code>supplybusiness</code>. Esto se hace mediante el comando <strong>order</strong>, que enumera los índices vectoriales en orden de valor creciente. Finalmente, el comando <strong>lines</strong> toma nuestros valores predichos como las coordenadas verticales (<strong>y</strong>) y nuestros valores del número de empresas como las coordenadas horizontales (<strong>x</strong>). Esto agrega la línea al gráfico que muestra nuestra forma funcional cuadrática.</p>
+<div id="gráficos-lineales-con-plot" class="section level3 unnumbered">
+<h3>Gráficos lineales con <strong>plot</strong></h3>
+<p>Hasta ahora, nuestros análisis se han basado en el <strong>plot</strong> predeterminado de dibujar un diagrama de dispersión. Sin embargo, en el análisis de series de tiempo, un gráfico de líneas a lo largo del tiempo suele ser útil para observar las propiedades de la serie y cómo cambia con el tiempo. (Más información sobre esto está disponible en el Capítulo  9 ) Volviendo a los datos sobre la cobertura de noticias televisivas de la política energética planteados por primera vez en la Sect. 3.1 , visualicemos el resultado de la cobertura de la política energética y un insumo del precio del petróleo.</p>
+<p>Comenzando con la cantidad de historias de energía por mes, creamos esta trama de la siguiente manera:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="la-función-plot.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>pres.energy<span class="sc">$</span>Energy,<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">axes=</span>F,</span>
+<span id="cb32-2"><a href="la-función-plot.html#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="la-función-plot.html#cb32-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">&quot;Month&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;Television Stories on Energy&quot;</span>)</span>
+<span id="cb32-4"><a href="la-función-plot.html#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="la-función-plot.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>,<span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">37</span>,<span class="dv">73</span>,<span class="dv">109</span>,<span class="dv">145</span>),<span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Jan. 1969&quot;</span>,</span>
+<span id="cb32-6"><a href="la-función-plot.html#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="la-función-plot.html#cb32-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">&quot;Jan. 1972&quot;</span>,<span class="st">&quot;Jan. 1975&quot;</span>,<span class="st">&quot;Jan. 1978&quot;</span>,<span class="st">&quot;Jan. 1981&quot;</span>),</span>
+<span id="cb32-8"><a href="la-función-plot.html#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="la-función-plot.html#cb32-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex.axis=</span>.<span class="dv">7</span>)</span>
+<span id="cb32-10"><a href="la-función-plot.html#cb32-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-11"><a href="la-función-plot.html#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>)</span>
+<span id="cb32-12"><a href="la-función-plot.html#cb32-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-13"><a href="la-función-plot.html#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;gray60&quot;</span>)</span>
+<span id="cb32-14"><a href="la-función-plot.html#cb32-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-15"><a href="la-función-plot.html#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="fu">box</span>()</span></code></pre></div>
+<p>Esto produce la figura  3.6 a. En este caso, nuestros datos ya están ordenados por mes, por lo que si solo especificamos <strong>x</strong> sin <strong>y</strong>, <strong>R</strong> mostrará todos los valores en el orden temporal correcto<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>. ara designar que queremos un diagrama de líneas en lugar de un diagrama de dispersión de puntos, insertamos la letra <strong>l</strong> en la opción <strong>type = “l”</strong>. En este caso, hemos desactivado los ejes porque las marcas de graduación predeterminadas para el mes no son particularmente significativas. En su lugar, usamos el comando <strong>axis</strong> para insertar una etiqueta para el primer mes del año cada 3 años, ofreciendo una mejor sensación del tiempo real. Observe que en nuestra primera llamada a <strong>axis</strong>, usamos la opción <strong>cex.axis</strong> para encoger nuestras etiquetas al 70% del tamaño. Esto permite que las cinco etiquetas quepan en el gráfico. (Por ensayo y error, verá que <strong>R</strong> deja caer las etiquetas del eje que no encajarán en lugar de sobreimprimir el texto). Finalmente, usamos <strong>abline</strong> para mostrar el punto cero en el eje vertical, ya que este es un número significativo que refleja la ausencia completa. de la cobertura de la política energética en los informativos televisivos. Como demostraron nuestras cifras anteriores, vemos mucha más variabilidad y una media más alta después de los primeros 4 años. La cifra del precio del petróleo por barril se puede crear de manera similar:</p>
+<center>
+<img style='float: center; width:50%' src='images/imagen_3.5.png'/>
+</center>
+<p><strong>Figura 3.6</strong> Número de reportajes televisivos sobre política energética y precio del petróleo por barril, respectivamente, por mes. ( a</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="la-función-plot.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x=</span>pres.energy<span class="sc">$</span>oilc,<span class="at">type=</span><span class="st">&quot;l&quot;</span>,<span class="at">axes=</span>F,<span class="at">xlab=</span><span class="st">&quot;Month&quot;</span>,</span>
+<span id="cb33-2"><a href="la-función-plot.html#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="la-función-plot.html#cb33-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">&quot;Cost of Oil&quot;</span>)</span>
+<span id="cb33-4"><a href="la-función-plot.html#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="la-función-plot.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>,<span class="at">at=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">37</span>,<span class="dv">73</span>,<span class="dv">109</span>,<span class="dv">145</span>),<span class="at">labels=</span><span class="fu">c</span>(<span class="st">&quot;Jan. 1969&quot;</span>,</span>
+<span id="cb33-6"><a href="la-función-plot.html#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="la-función-plot.html#cb33-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">&quot;Jan. 1972&quot;</span>,<span class="st">&quot;Jan. 1975&quot;</span>,<span class="st">&quot;Jan. 1978&quot;</span>,<span class="st">&quot;Jan. 1981&quot;</span>),</span>
+<span id="cb33-8"><a href="la-función-plot.html#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="la-función-plot.html#cb33-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">cex.axis=</span>.<span class="dv">7</span>)</span>
+<span id="cb33-10"><a href="la-función-plot.html#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="la-función-plot.html#cb33-11" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>)</span>
+<span id="cb33-12"><a href="la-función-plot.html#cb33-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="la-función-plot.html#cb33-13" aria-hidden="true" tabindex="-1"></a><span class="fu">box</span>()</span></code></pre></div>
+<p>Nuevamente, los datos están ordenados, por lo que solo se necesita una variable. La figura 3.6 b presenta este gráfico.</p>
+</div>
+<div id="construcción-de-figuras-con-plot-detalles-adicionales" class="section level3 unnumbered">
+<h3>Construcción de figuras con <strong>plot</strong>: Detalles adicionales</h3>
+<p>Después de haber probado la mano con parcelas de la <strong>base</strong> de paquete, ahora itemize en detalle las funciones y opciones que aportan una considerable flexibilidad para crear figuras básicas en <strong>R</strong> . Tenga en cuenta que <strong>R</strong> en realidad ofrece la opción útil de comenzar con una pizarra en blanco y agregar elementos al gráfico bit a bit.</p>
+<p><strong>El sistema de coordenadas:</strong></p>
+<p>En la figura  3.4 , no nos preocupó establecer el sistema de coordenadas porque los datos efectivamente lo hicieron por nosotros. Pero a menudo, querrá establecer las dimensiones de la figura antes de trazar cualquier cosa, especialmente si está construyendo a partir del lienzo en blanco. El punto más importante aquí es que sus x e y deben ser de la misma longitud. Esto quizás sea obvio, pero los datos faltantes pueden crear dificultades que llevarán a <strong>R</strong> a oponerse.</p>
+<p><strong>Tipos de gráficos:</strong></p>
+<p>Ahora queremos graficar estas series, pero la función de trazado permite diferentes tipos de gráficos. Los diferentes tipos que se pueden incluir dentro de la función de gráfico genérico incluyen:</p>
+<ul>
+<li><strong>type = “p”</strong> Esto es el valor predeterminado y grafica la <strong>x</strong> y <strong>y</strong> coordenadas como <em>puntos</em>.</li>
+<li><strong>type = “l”</strong> Esto grafica la <strong>x</strong> y <strong>y</strong> coordenadas como <em>líneas</em>.</li>
+<li><strong>type = “n”</strong> Esto grafica la <strong>x</strong> y <strong>y</strong> coordenadas como <em>nada</em> (solo configura el espacio de coordenadas).</li>
+<li><strong>type = “O”</strong> Esto grafica la <strong>x</strong> y <strong>y</strong> coordenadas como <em>puntos y líneas</em> superpuestas (es decir, “overplots”).</li>
+<li><strong>type = “h”</strong> Esto grafica la <strong>x</strong> y <strong>y</strong> coordenadas como un <em>histograma como líneas verticales</em> (también llamado <em>diagrama de picos</em>).</li>
+<li><strong>type = “s”</strong> Esto grafica la <strong>x</strong> y <strong>y</strong> coordenadas como en <em>pasos de escalera como líneas</em>.</li>
+</ul>
+<p><strong>Ejes:</strong></p>
+<p>Es posible apagar los ejes, ajustar el espacio de coordenadas usando las opciones <strong>xlim</strong> e <strong>ylim</strong>, y crear sus propias etiquetas para los ejes.
+- <strong>axes =</strong> Le permite controlar si los ejes aparecen en la figura o no. Si tiene fuertes preferencias sobre cómo se crean sus ejes, puede desactivarlos seleccionando <strong>axes = F</strong> dentro de <strong>plot</strong> y luego cree sus propias etiquetas usando el comando de <strong>axis</strong> separado : <code>axis(side=1,at=c(2,4,6,8,10,12),labels=c(“Feb,” “Apr,”“June,”“Aug,”“Oct,”“Dec”))</code>
+- <strong>xlim =</strong>, <strong>ylim =</strong> Por ejemplo, si quisiéramos expandir el espacio desde el valor predeterminado de <strong>R</strong> , podríamos ingresar: <code>plot(x=ind.var, y=dep.var, type=“o,” xlim=c(-5, 17),ylim=c(-5, 15))</code>
+- <strong>xlab = "“<strong>, </strong>ylab =”"</strong> Crea etiquetas para los ejes <strong>x</strong> e <strong>y</strong>.</p>
+<p><strong>Estilo:</strong></p>
+<p>Hay una serie de opciones para ajustar el estilo en la figura, incluidos cambios en el tipo de línea, grosor de línea, color, estilo de punto y más. Algunos comandos comunes incluyen:
+- <strong>asp =</strong> Define el relación de <strong>asp</strong>ecto de la gráfica. Establecer <strong>asp = 1</strong> es una opción poderosa y útil que permite al usuario declarar que los dos ejes se miden en la misma escala. Consulte la Fig.  5.1 en la página 80 y la Fig.  8.4 en la página 159 como dos ejemplos de esta opción.<br />
+- <strong>lty =</strong> Selecciona el tipo de línea (sólida, discontinua, guión corto-largo, etc.).
+- <strong>lwd =</strong> Selecciona el ancho de la línea (líneas gruesas o delgadas).
+- <strong>pch =</strong> Selecciona el símbolo de trazado, puede ser un símbolo numerado (<strong>pch = 1</strong>) o una letra (<strong>pch = “D”</strong>).
+- <strong>col =</strong> Selecciona el color de las líneas o puntos de la figura.
+- <strong>cex =</strong> Factor de <strong>C</strong>haracter <strong>ex</strong>pansion (expansión de caracter) que ajusta el tamaño del texto y los símbolos en la figura. De manera similar, <strong>cex.axis</strong> ajusta el tamaño de la anotación del eje, <strong>cex.lab</strong> ajusta el tamaño de la fuente para las etiquetas del eje, <strong>cex.main</strong> ajusta el tamaño de la fuente del título y <strong>cex.sub</strong> ajusta el tamaño de la fuente de los subtítulos.</p>
+<p><strong>Parámetros gráficos:</strong></p>
+<p>La función <strong>par</strong> trae añadió funcionalidad para el trazado en <strong>R</strong> , dando el control del usuario sobre las representación gráfica (<strong>par</strong>ameters). Una característica notable de <strong>par</strong> es que le permite trazar múltiples llamadas de <strong>plot</strong> en un solo gráfico. Esto se logra seleccionando <strong>par(new = T)</strong>, mientras una ventana de trazado (o dispositivo) todavía está abierta y antes de la siguiente llamada a <strong>plot</strong>. Pero <em>ten cuidado</em>. Cada vez que use esta estrategia, incluya los comandos <strong>xlim</strong> e <strong>ylim</strong> en cada llamada para asegurarse de que el espacio de la gráfica se mantenga igual. También tenga cuidado de que los márgenes del gráfico no cambien de una llamada a la siguiente.</p>
+</div>
+<div id="funciones-complementarias" class="section level3 unnumbered">
+<h3>Funciones complementarias</h3>
+<p>También hay una serie de funciones complementarias que se pueden utilizar una vez que se ha creado el sistema de coordenadas básico mediante <strong>plot</strong>. Éstas incluyen:
+- <strong>arrows(x1, y1, x2, y2)</strong> Cree flechas dentro de la gráfica (útil para etiquetar puntos de datos particulares, series, etc.).
+- <strong>text(x1, x2, “text”)</strong> Cree texto dentro de la trama (modifique el tamaño del texto usando la opción de expansión de caracteres <strong>cex</strong>).
+- <strong>lineas (x, y)</strong> Crea una gráfica que conecte líneas.
+- <strong>puntos (x, y)</strong> Crea una gráfica de puntos.
+- <strong>polígono()</strong> Crea un polígono de cualquier forma (rectángulos, triángulos, etc.).
+- <strong>legend(x, y, at = c("“,”“), labels=c(”“,”"))</strong> Cree una leyenda para identificar los componentes de la figura.
+- <strong>axis(side)</strong> Agregue un eje con etiquetas predeterminadas o personalizadas a uno de los lados de un gráfico. Establezca el lado en 1 para la parte inferior, 2 para la izquierda, 3 para la parte superior y 4 para la derecha.
+- <strong>mtext(text, side)</strong> Comando para agregar <strong>m</strong>argen de <strong>text</strong>o. Esto le permite agregar una etiqueta de eje a uno de los lados con más control sobre cómo se presenta la etiqueta. Consulte el código que produce la Fig.  7.1 en la página 114 para ver un ejemplo de esto.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>Sin embargo, como alternativa, si un usuario tuviera algún índice de tiempo en el marco de datos, se podría producir un gráfico similar escribiendo algo como: <code>pres.energy<span class="math inline">\(Time&lt;-1:180; plot(y=pres.energy\)</span>Energy,x=pres.energy$Time,type=“l”</code>).<a href="la-función-plot.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="gráficos-univariados-en-el-paquete-base.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="usar-gráficos-lattice-en-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": true,
+"whatsapp": false,
+"all": ["vk", "linkedin", "twitter", "facebook"],
+"tumblr": false,
+"youtube": false,
+"instagram": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Jeshua-Romero-Guadarrama/CienciaPolitica/edit/master/Capitulo_03.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Ciencia_de_datos_para_el_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.epub"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

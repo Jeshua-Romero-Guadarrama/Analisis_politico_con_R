@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Problemas de práctica | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</title>
+  <meta name="description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Problemas de práctica | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R/" />
+  <meta property="og:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+  <meta property="og:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="github-repo" content="https://github.com/Jeshua-Romero-Guadarrama/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Problemas de práctica | Ciencia de datos para el análisis político y desarrollo de políticas públicas con R" />
+  
+  <meta name="twitter:description" content="El presente texto nace al calor de las exigencias pedagógicas de todos los ciudadanos mexicanos interesados en la ciencia política. A partir de los años que he pasado detrás de innumerables libros (con el objetivo de gestar, buscar y probar nuevos conocimientos), ve la luz pública este trabajo, que fué creciendo y cambiando lentamente, empezando como apuntes de la universidad. Creo que ha alcanzado la madurez suficiente para ser compartido con el mundo. Con independencia de su valor intrínseco, tengo entendido que hace mucho tiempo que no se hacía una obra de este tipo (lo que ciertamente le corresponde al lector juzgar). En la bibliografía especializada disponible en castellano, el antecedente más inmediato que conozco es Teorías políticas contemporáneas: Una introducción, de Klaus von Beyme. La primera edición alemana es de 1972, cuya edición en castellano (difícil de hallar), es de 1977. Esa obra fué mi primera orientación; en consecuencia, mantengo en lo fundamental su esquema y algo de su terminología (tengo una deuda intelectual con el formidable profesor de Heildelberg)." />
+  <meta name="twitter:image" content="https://jeshua-romero-guadarrama.github.io/Ciencia_de_datos_para_analisis_politico_y_desarrollo_de_politicas_publicas_con_R//images/cover.png" />
+
+<meta name="author" content="Jeshua Romero Guadarrama" />
+
+
+<meta name="date" content="2021-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+<link rel="prev" href="usar-gráficos-lattice-en-r.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<!-- font families -->
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico|Source+Sans+Pro" rel="stylesheet">
+
+<script src="js/hideOutput.js"></script>
+
+<!-- Mathjax -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/default.js"></script>
+
+ <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/AMSmath.js"],
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        jax: ["input/TeX","output/CommonHTML"]
+      });
+      MathJax.Hub.processSectionDelay = 0;
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110299877-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110299877-1');
+</script>
+
+<!-- open review block -->
+
+<script async defer src="https://hypothes.is/embed.js"></script>
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><img src="images/logo.png" alt="logo" width="50%" height="50%"style="margin: 15px 0 0 0"></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="índice-de-contenido.html"><a href="índice-de-contenido.html"><i class="fa fa-check"></i>Índice de contenido</a></li>
+<li class="chapter" data-level="1" data-path="1-Capítulo1.html"><a href="1-Capítulo1.html"><i class="fa fa-check"></i><b>1</b> Obtener R y descargar paquetes</a>
+<ul>
+<li class="chapter" data-level="" data-path="antecedentes-e-instalación.html"><a href="antecedentes-e-instalación.html"><i class="fa fa-check"></i>Antecedentes e instalación**</a></li>
+<li><a href="dónde-puedo-conseguir-r.html#dónde-puedo-conseguir-r"><strong>1.2 ¿Dónde puedo conseguir <em>R</em>?</strong></a></li>
+<li><a href="introducción-una-primera-sesión-en-r.html#introducción-una-primera-sesión-en-r"><strong>1.3 Introducción: Una primera sesión en <em>R</em></strong></a></li>
+<li><a href="guardar-entrada-y-salida.html#guardar-entrada-y-salida"><strong>1.4 Guardar entrada y salida</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-Capitulo2Cargaymanipulacióndedatos.html"><a href="2-Capitulo2Cargaymanipulacióndedatos.html"><i class="fa fa-check"></i><b>2</b> <strong>Capitulo 2: Carga y manipulación de datos</strong></a>
+<ul>
+<li class="chapter" data-level="" data-path="lectura-de-datos.html"><a href="lectura-de-datos.html"><i class="fa fa-check"></i>Lectura de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-Visualizaciondedatos.html"><a href="3-Visualizaciondedatos.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos</a>
+<ul>
+<li><a href="gráficos-univariados-en-el-paquete-base.html#gráficos-univariados-en-el-paquete-base">Gráficos univariados en el paquete <code>base</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficos-univariados-en-el-paquete-base.html"><a href="gráficos-univariados-en-el-paquete-base.html"><i class="fa fa-check"></i>Gráficos de barras</a></li>
+</ul></li>
+<li><a href="la-función-plot.html#la-función-plot">La función <strong>plot</strong></a>
+<ul>
+<li><a href="la-función-plot.html#gráficos-lineales-con-plot">Gráficos lineales con <strong>plot</strong></a></li>
+<li><a href="la-función-plot.html#construcción-de-figuras-con-plot-detalles-adicionales">Construcción de figuras con <strong>plot</strong>: Detalles adicionales</a></li>
+<li class="chapter" data-level="" data-path="la-función-plot.html"><a href="la-función-plot.html"><i class="fa fa-check"></i>Funciones complementarias</a></li>
+</ul></li>
+<li><a href="usar-gráficos-lattice-en-r.html#usar-gráficos-lattice-en-r">Usar gráficos <strong>lattice</strong> en R</a></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica.html"><a href="problemas-de-práctica.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-Estadísticasdescriptivas.html"><a href="4-Estadísticasdescriptivas.html"><i class="fa fa-check"></i><b>4</b> Estadísticas descriptivas</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i>Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#tablas-de-frecuencia"><i class="fa fa-check"></i>Tablas de frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i>Medidas de dispersión</a>
+<ul>
+<li class="chapter" data-level="" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#cuantiles-y-percentiles"><i class="fa fa-check"></i>Cuantiles y percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="problemas-de-práctica-1.html"><a href="problemas-de-práctica-1.html"><i class="fa fa-check"></i>Problemas de práctica</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-Inferenciasbásicasyasociaciónbivariante.html"><a href="5-Inferenciasbásicasyasociaciónbivariante.html"><i class="fa fa-check"></i><b>5</b> Inferencias básicas y asociación bivariante</a>
+<ul>
+<li class="chapter" data-level="" data-path="pruebas-de-significancia-para-medias.html"><a href="pruebas-de-significancia-para-medias.html"><i class="fa fa-check"></i>Pruebas de significancia para medias</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-Modeloslinealesydiagnósticosderegresión.html"><a href="6-Modeloslinealesydiagnósticosderegresión.html"><i class="fa fa-check"></i><b>6</b> Modelos lineales y diagnósticos de regresión</a></li>
+<li class="chapter" data-level="7" data-path="7-Modeloslinealesgeneralizados.html"><a href="7-Modeloslinealesgeneralizados.html"><i class="fa fa-check"></i><b>7</b> Modelos lineales generalizados</a></li>
+<li class="chapter" data-level="8" data-path="8-Usodepaquetesparaaplicarmodelosavanzados.html"><a href="8-Usodepaquetesparaaplicarmodelosavanzados.html"><i class="fa fa-check"></i><b>8</b> Uso de paquetes para aplicar modelos avanzados</a></li>
+<li class="chapter" data-level="9" data-path="9-Análisisdeseriestemporales.html"><a href="9-Análisisdeseriestemporales.html"><i class="fa fa-check"></i><b>9</b> Análisis de series temporales</a></li>
+<li class="chapter" data-level="10" data-path="10-Álgebralinealconaplicacionesdeprogramación.html"><a href="10-Álgebralinealconaplicacionesdeprogramación.html"><i class="fa fa-check"></i><b>10</b> Álgebra lineal con aplicaciones de programación</a></li>
+<li class="chapter" data-level="11" data-path="11-Herramientasdeprogramaciónadicionales.html"><a href="11-Herramientasdeprogramaciónadicionales.html"><i class="fa fa-check"></i><b>11</b> Herramientas de programación adicionales</a></li>
+<li class="chapter" data-level="" data-path="referencias-bibliográficas.html"><a href="referencias-bibliográficas.html"><i class="fa fa-check"></i>Referencias bibliográficas</a></li>
+<li class="divider"></li>
+<li><a href="https://www.jeshuanomics.com/" target="blank">Publicado por JeshuaNomics</a></li>
+<li><a href="https://github.com/JeshuaNomics" class="fa fa-github"><span class="label">  Git Hub</span></a></li>	
+<li><a href="https://www.facebook.com/JeshuaNomics/" class="fa fa-facebook"><span class="label">  Facebook</span></a></li>
+<li><a href="https://twitter.com/JeshuaNomics" class="fa fa-twitter"><span class="label">  Twitter</span></a></li>
+<li><a href="https://www.linkedin.com/in/jeshua-romero-guadarrama/" class="fa fa-linkedin"><span class="label">  Linkedin</span></a></li>
+<li><a href="https://vk.com/jeshuanomics" class="fa fa-vk"><span class="label">  Vkontakte</span></a></li>
+<li><a href="https://jeshuanomics.tumblr.com/" class="fa fa-tumblr"><span class="label">  Tumblr</span></a></li>
+<li><a href="https://www.youtube.com/channel/UCY7f84mJGvMN7TF7XI4-Jgg?view_as=subscriber/" class="fa fa-youtube-play"><span class="label">  YouTube</span></a></li>	
+<li><a href="https://www.instagram.com/JeshuaNomics/" class="fa fa-instagram"><span class="label">  Instagram</span></a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ciencia de datos para el análisis político y desarrollo de políticas públicas con R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="problemas-de-práctica" class="section level2 unnumbered">
+<h2>Problemas de práctica</h2>
+<p>Además de su análisis de la cobertura de la política energética presentado en este capítulo, Peake y Eshbaugh-Soha (2008) también estudian la cobertura de la póliza de medicamentos. Estos datos cuentan de manera similar el número de noticias de televisión nocturnas en un mes centradas en las drogas, desde enero de 1977 hasta diciembre de 1992. Sus datos se guardan en formato separado por comas en el archivo llamado drugCoverage.csv . Descargue sus datos del Dataverse mencionado en la página vii o del enlace de contenido del capítulo en la página 33. Las variables en este conjunto de datos son: un índice de tiempo basado en caracteres que muestra el mes y el año ( año ), cobertura de noticias de drogas ( drugsmedia ), un indicador de un discurso sobre drogas que pronunció Ronald Reagan en septiembre de 1986 ( rwr86 ), un indicador de un discurso que pronunció George HW Bush en septiembre de 1989 ( ghwb89 ), índice de aprobación del presidente ( aprobación) y la tasa de desempleo ( desempleo ).</p>
+<ol style="list-style-type: decimal">
+<li><p>Dibuja un histograma del recuento mensual de historias relacionadas con las drogas. Puede utilizar cualquiera de los comandos de histograma descritos en el capítulo.</p></li>
+<li><p>Dibuja dos diagramas de caja: uno de historias relacionadas con las drogas y otro de aprobación presidencial. ¿En qué se diferencian estas cifras y qué le dice eso sobre el contraste entre las variables?</p></li>
+<li><p>Dibuja dos diagramas de dispersión:</p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>En el primero, represente el número de historias relacionadas con las drogas en el eje vertical y coloque la tasa de desempleo en el eje horizontal.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>En el segundo, represente el número de historias relacionadas con las drogas en el eje vertical y coloque la aprobación presidencial en el eje horizontal.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-alpha">
+<li>¿En qué se diferencian las gráficas? ¿Qué te dicen de los datos?</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: lower-alpha">
+<li>Bonificación: agregue una línea de regresión lineal a cada uno de los diagramas de dispersión.</li>
+</ol></li>
+</ul></li>
+<li><p>Dibuja dos gráficos de líneas:</p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>En el primero, dibuje el número de historias relacionadas con las drogas por mes a lo largo del tiempo.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>En el segundo, obtenga la aprobación presidencial por mes a lo largo del tiempo.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-alpha">
+<li>¿Qué puedes aprender de estos gráficos?</li>
+</ol></li>
+</ul></li>
+<li><p>Cargue la biblioteca de celosía y dibuje una gráfica de densidad del número de historias relacionadas con drogas por mes.</p></li>
+<li><p>Bonificación: Dibuje un gráfico de barras de la frecuencia de las tasas de desempleo observadas. ( Sugerencia: intente usar el comando de tabla para crear el objeto que graficará). ¿Puede ir un paso más allá y dibujar una gráfica de barras del porcentaje de tiempo que se observa cada valor?</p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="usar-gráficos-lattice-en-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": true,
+"whatsapp": false,
+"all": ["vk", "linkedin", "twitter", "facebook"],
+"tumblr": false,
+"youtube": false,
+"instagram": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Jeshua-Romero-Guadarrama/CienciaPolitica/edit/master/Capitulo_03.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Ciencia_de_datos_para_el_analisis_politico_y_desarrollo_de_politicas_publicas_con_R.epub"],
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -30,7 +30,7 @@ A medida que trabajamos con estadísticas descriptivas, el ejemplo de trabajo en
 ## Medidas de tendencia central {-}
 Nuestra primera tarea será calcular las medidas de centralidad, que nos dan una idea de un valor típico de una distribución. Las medidas más comunes de tendencia central son la media, la mediana y la moda. El rango intercuartil, que ofrece el 50% medio de los datos, también es informativo. Para comenzar con algunos cálculos de ejemplo, primero debemos cargar los datos de LaLonde (llamados **LL**). Estos están disponibles como parte del paquete **C**oarsened **E**xact **M**atching (**cem**), del que hablaremos con mayor detalle en el Cap. 8 Al igual que con cualquier otro paquete definido por el usuario, nuestra primera tarea es instalar el paquete: 
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 install.packages("cem")
 
 library(cem)
@@ -50,7 +50,7 @@ $$
 
 Dentro de **R**, podemos aplicar la Ec.(4.1) utilizando la función <code>mean</code>. Entonces, si x en este caso fueran los ingresos que los participantes en la Demostración Nacional de Trabajo Apoyado ganaron en 1974, aplicaríamos la función a la variable <code>re74</code>:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 mean(LL$re74)
 ```
 
@@ -58,7 +58,7 @@ mean(LL$re74)
 
 Por supuesto, es recomendable seguir visualizando los datos utilizando las herramientas del Cap. 3 . Además de calcular la media de las ganancias reales en 1974, también podemos aprender mucho simplemente dibujando una gráfica de densidad. Podríamos hacer esto usando el código de **lattice** descrito en el último capítulo o con un poco más de control de usuario de la siguiente manera: 
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 dens.74<-density(LL$re74,from=0)
 
 plot(dens.74,main="Income in 1974")
@@ -81,7 +81,7 @@ $$
 
 Tenga en cuenta que la notación para la mediana está algo dispersa y $\tilde{x}$ es uno de los varios símbolos de uso común. Formalmente, siempre que tenemos un número impar de valores, simplemente tomamos la estadística de orden medio (o el valor medio cuando los datos se ordenan de menor a mayor). Siempre que tengamos un número par de valores, tomamos las dos estadísticas de orden medio y promediamos entre ellas. (Por ejemplo, para las observaciones de diez, divide la diferencia entre $x_{(5)}$ y $x_{(6)}$ para obtener la mediana.) **R** ordenará nuestros datos, encontrar los valores de en medio, y tomar las medias reportar la mediana si simplemente Tipo:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 median(LL$re74)
 ```
 
@@ -96,7 +96,7 @@ $$
 
 Las dos cantidades informadas se denominan primer y tercer cuartiles . El primer cuartil es un valor para el cual el 25% de los datos son menores o iguales al valor. Del mismo modo, el 75% de los datos son menores o iguales al tercer cuartil. De esta manera, el 50% medio de los datos cae entre estos dos valores. En **R**, hay dos comandos que podemos escribir para obtener información sobre el rango intercuartil:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 summary(LL$re74)
 
 IQR(LL$re74)
@@ -112,7 +112,7 @@ Esto es útil para obtener tres medidas de tendencia central a la vez, aunque te
 
 En la mayoría de las circunstancias, el redondeo y las ligeras diferencias en los resultados que producen estos comandos plantean pocos problemas. Sin embargo, si se desean más dígitos, el usuario puede controlar una variedad de opciones globales que dan forma a la forma en que **R** presenta los resultados con el comando de opciones que se mencionó en el Cap. 1 El argumento de los dígitos determina específicamente el número de dígitos presentados. Entonces, por ejemplo, podríamos escribir:  
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 options(digits=9)
 
 summary(LL$re74)
@@ -128,7 +128,7 @@ Por tanto, podemos ver que las discrepancias son una función del redondeo. Sin 
 
 También podríamos obtener un resumen general de todas las variables en un conjunto de datos a la vez simplemente escribiendo el nombre del marco de datos solo en el comando de resumen :
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 summary(LL)
 ```
 
@@ -138,7 +138,7 @@ Esto informa las mismas estadísticas descriptivas que antes, pero para todas la
 
 Para las variables que se miden nominal u ordinalmente, el mejor resumen de información suele ser una tabla simple que muestra la frecuencia de cada valor. En **R**, el comando table nos informa de esto. Por ejemplo, nuestros datos incluyen un indicador simple codificado con 1 si el encuestado es afroamericano y 0 en caso contrario. Para obtener las frecuencias relativas de esta variable, escribimos:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 table(LL$black)
 ```
 
@@ -152,7 +152,7 @@ Por lo tanto, 144 encuestados no son afroamericanos y 578 encuestados son afroam
 
 Como otro ejemplo, estos datos miden la educación en años. Medido de esta manera, podríamos pensar en esto como una variable continua. Sin embargo, el número de valores que adquiere esta variable es algo limitado, ya que nadie en la muestra tiene menos de tres o más de 16 años de educación. Por lo tanto, es posible que deseemos ver una tabla de frecuencias para esta variable también. Además, incluso si la media y la mediana son valores informativos, es posible que deseemos calcular la moda para saber cuál es el número más común de años de educación en estos datos. Para calcular la tabla de frecuencias y hacer que **R** devuelva automáticamente el modo, escribimos:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 table(LL$education)
 
 which.max(table(LL$education))
@@ -174,7 +174,7 @@ La primera línea, 11 , imprime la etiqueta de valor de la celda con la frecuenc
 
 Otra forma en que podríamos presentar nuestras frecuencias es en un diagrama de barras basado en la tabla anterior. Podríamos hacer esto con el siguiente código:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 barplot(table(LL$education),xlab="Years of Education",
 
      ylab="Frequency",cex.axis=.9,cex.names=.9,ylim=c(0,200))
@@ -191,7 +191,7 @@ Distribución del número de años de educación a partir de los datos de la dem
 
 Como punto lateral, suponga que un analista no solo quiere una tabla de frecuencias, sino el porcentaje de valores en cada categoría. Esto podría lograrse simplemente dividiendo la tabla por la cantidad de casos y multiplicándola por 100. Entonces, para el porcentaje de encuestados que cae en cada categoría en la variable de educación, escribimos:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 100*table(LL$education)/sum(table(LL$education))
 ```
 
@@ -225,7 +225,7 @@ $$
 
 En **R**, obtenemos esta cantidad con la función var . Para los ingresos en 1974, escribimos:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 var(LL$re74)
 ```
 
@@ -240,7 +240,7 @@ $$
 
 Esta simple transformación de la varianza tiene la buena propiedad de volver a poner nuestra medida de dispersión en la escala original. Podríamos tomar la raíz cuadrada de una varianza calculada o permitir que **R** haga todos los pasos del cálculo por nosotros:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 sd(LL$re74)
 ```
 
@@ -255,7 +255,7 @@ $$
 
 En este caso, usamos la mediana como nuestra medida de centralidad, en lugar de la media. Luego calculamos la diferencia absoluta entre cada observación y la mediana. Por último, calculamos la mediana de las desviaciones . Esto nos ofrece la sensación de una desviación típica de la mediana. En R,  el comando se escribe:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 mad(LL$re74)
 ```
 
@@ -267,7 +267,7 @@ Como tema final, los cuantiles y percentiles nos permiten tener una idea de la d
 
 En **R**, el cuantil de comando puede darnos cualquier cuantil que deseemos. De forma predeterminada, **R** imprime los cuantiles para q  ∈ {0. 00, 0. 25, 0. 50, 0. 75, 1. 00}. Sin embargo, tenemos la opción de especificar los cuantiles que queramos. La sintaxis es:
 
-```{r, warning=F, message=F}
+```{r eval=FALSE, message=FALSE, warning=TRUE, include=TRUE}
 quantile(LL$re74)
 
 quantile(LL$re74, c(0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1))
